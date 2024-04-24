@@ -1,0 +1,256 @@
+$color_link: #3a80bc;
+$color_link_visited: purple;
+$color_link_hover: midnightblue;
+$color_text_main: #868686;
+$blue: #282F6F;
+$green: #32845C;
+$primary: #3D5588;
+$secondary: #F26522;
+$yellow: #FCB405;
+$lightyellow: #FAF3D6;
+
+
+// $font_primary: 'Inter', sans-serif;
+// $font_secondary: 'Inter', sans-serif;
+
+$font_primary: "Proxima Nova", sans-serif;
+$font_secondary: "Trump Gothic Pro", "Oswald", sans-serif;
+// $font_secondary: "Oswald", sans-serif;
+
+
+$portrait:600px;
+$xswidth: 768px;
+$tabwidth: 880px;
+$midwidth: 980px;
+$deskwidth: 1200px;
+$xxl: 1300px;
+$wrapper: 1300px;
+
+
+@mixin xxs { @media (min-width: $portrait) { @content; } }
+@mixin xs { @media (min-width: $xswidth) { @content; } }
+@mixin tab { @media (min-width: $tabwidth) { @content; } }
+@mixin mid { @media (min-width: $midwidth) { @content; } }
+@mixin desk {  @media (min-width: $deskwidth) { @content; } }
+@mixin xxl {  @media (min-width: $xxl) { @content; } }
+@mixin min($width) {
+	@media screen and (min-width: $width) { @content; }
+}
+@mixin max($width) {
+	@media screen and (max-width: $width) { @content; }
+}
+
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+	clear: both;
+	*zoom: 1;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+@mixin flexbox(){
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+  }
+  @mixin flexbox-flex($first, $second, $third) {
+	-webkit-box-flex: $first $second $third;
+	-moz-box-flex: $first $second $third;
+	-webkit-flex: $first $second $third;
+	-ms-flex: $first $second $third;
+	flex: $first $second $third;
+  }
+  @mixin flexbox-wrap($value){
+	-webkit-flex-wrap: $value;
+	flex-wrap: $value;
+  }
+  @mixin flexbox-align-content($value){
+	-webkit-align-content: $value;
+	align-content: $value;
+  }
+  @mixin flexbox-align-items($value){
+	-webkit-align-items: $value;
+	align-items: $value;
+  }
+  @mixin flexbox-justify($value){
+	-webkit-justify-content: $value;
+	justify-content: $value;
+  }
+  @mixin flexbox-align-self($value){
+	-webkit-align-self: $value;
+	align-self: $value;
+  }
+  @mixin flexbox-direction($value){
+	-webkit-flex-direction: $value;
+	flex-direction: $value;
+  }
+  @mixin translatexy($value1,$value2){
+	-ms-transform: translateX($value1) translateY($value2);
+	-moz-transform: translateX($value1) translateY($value2);
+	-webkit-transform: translateX($value1) translateY($value2);
+	transform: translateX($value1) translateY($value2);
+  }
+
+@mixin flexgroup() {
+	@include flexbox();
+	@include flexbox-wrap(wrap);
+	@include flexbox-direction(row);
+}
+
+@mixin flexgroup-center() {
+	@include flexbox();
+	@include flexbox-wrap(wrap);
+	@include flexbox-direction(row);
+	@include flexbox-align-items(center);
+}
+
+@mixin animateThis($duration:1s) {
+	-webkit-animation-duration: $duration;
+	animation-duration: $duration;
+}
+
+@mixin animateEffect($effect:fadeIn) {
+	-webkit-animation-name: $effect;
+  animation-name: $effect;
+}
+
+@mixin fontblock() {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+@mixin roundedButton($bgcolor:#F26522) {
+	display: inline-block;
+  text-decoration: none;
+  background: $bgcolor;
+  color: #FFF!important;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 11px 30px 10px !important;
+  border-radius: 100px;
+	border: none!important;
+	appearance: none;
+  &:hover, &:focus {
+    background: $yellow!important;
+    box-shadow: 0 6px 20px rgba(0,0,0,.15);
+  }
+	&:focus {
+		outline: 1px dotted #000;
+	}
+}
+
+@mixin fontHeadingBlock($color:#FFF) {
+	font-family: $font-secondary;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.4;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 0 0 20px;
+	color: $color;
+}
+
+@mixin fontAwesome() {
+	font-family: "Font Awesome 5 Free";
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 900;
+	text-rendering: auto;
+	line-height: 1;
+}
+
+@mixin customFonts() {
+	display: inline-block;
+  font-family: 'custom-icon';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+@mixin backgroundImage($position:center) {
+	background-size: cover;
+	background-position: $position;
+	background-repeat: no-repeat;
+}
+
+@mixin blueGradient() {
+  background: linear-gradient(to right, #028ae7 0%,#01cdf9 100%);
+}
+
+@mixin greenBlueGradient() {
+  background: #00ffb3;
+  background: -moz-linear-gradient(left,  #00ffb3 0%, #00b0fa 100%);
+  background: -webkit-linear-gradient(left,  #00ffb3 0%,#00b0fa 100%);
+  background: linear-gradient(to right,  #00ffb3 0%,#00b0fa 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffb3', endColorstr='#00b0fa',GradientType=1 );
+}
+
+@mixin broken_lines_dark() {
+	background-image: url("data:image/svg+xml,%3csvg width='100%30' height='100%30' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%30' height='100%30' fill='none' stroke='%23333' stroke-width='3' stroke-dasharray='5%2c10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+@mixin broken_lines_white() {
+	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='white' stroke-width='4' stroke-dasharray='5%2c15' stroke-dashoffset='16' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+@mixin broken_lines_white_v2() {
+	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='white' stroke-width='2' stroke-dasharray='6%2c 20' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+@mixin clip_large_left() {
+	clip-path: polygon(0 0, 85% 0, 100% 11%, 100% 100%, 0 100%);
+}
+
+@mixin clip_small_left() {
+	clip-path: polygon(0 0, 78% 0, 100% 10%, 100% 100%, 0 100%);
+}
+
+@mixin clip_xl_left() {
+	clip-path: polygon(0 0, 83% 0, 100% 11%, 100% 100%, 0 100%);
+}
+
+@mixin clip_small_right() {
+	clip-path: polygon(0 10%, 22% 0, 100% 0, 100% 100%, 0 100%);
+}
+@mixin clip_large_right() {
+	clip-path: polygon(0 10%, 22% 0, 100% 0, 100% 100%, 0 100%);
+}
+@mixin clip_xl_right() {
+	clip-path: polygon(0 11%, 22% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+
