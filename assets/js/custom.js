@@ -15,6 +15,26 @@
 // }
 
 jQuery(document).ready(function ($) {
+  // $("li.menu-item-has-children").hover(
+  //        function() { $('.sub-menu', this).fadeIn(300);
+  //        },
+  //        function() { $('.sub-menu', this).fadeOut(300);
+  //    });
+
+  function displayWord() {
+    var words = document.getElementsByClassName("togglezz");
+    var wordCounter = 0;
+    setInterval(updateWord, 2000);
+    function updateWord() {
+      if (wordCounter >= words.length) wordCounter = 0;
+      for (var i = 0; i < words.length; i++) {
+        words[i].classList.remove('activezz');
+      }
+      words[wordCounter].classList.add('activezz');
+      wordCounter++;
+    }
+  }
+  displayWord();
   var siteNav = $('header.wp-block-template-part .wp-block-navigation__responsive-container').html();
   $('<div class="mobileNavigation"><button class="closeMobileNav"><span class="sr-only">Close Menu</span></button>' + siteNav + '</div>').insertAfter('header.wp-block-template-part');
   $('header.wp-block-template-part button[aria-label="Open menu"]').append('<span class="bar"><span></span></span>');

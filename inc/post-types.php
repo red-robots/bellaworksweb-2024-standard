@@ -22,7 +22,7 @@ function js_custom_init() {
             'plural'    => 'Services',
             'single'    => 'Service',
             'menu_icon' => 'dashicons-groups',
-            'supports'  => array('title','editor')
+            'supports'  => array('title','editor', 'excerpt', 'thubnail')
         ),
         // array(
         //     'post_type' => 'location',
@@ -41,7 +41,7 @@ function js_custom_init() {
             $plural_name = ( isset($p['plural']) && $p['plural'] ) ? $p['plural'] : "Custom Post";
             $menu_name = ( isset($p['menu_name']) && $p['menu_name'] ) ? $p['menu_name'] : $p['plural'];
             $menu_icon = ( isset($p['menu_icon']) && $p['menu_icon'] ) ? $p['menu_icon'] : "dashicons-admin-post";
-            $supports = ( isset($p['supports']) && $p['supports'] ) ? $p['supports'] : array('title','editor','custom-fields','thumbnail');
+            $supports = ( isset($p['supports']) && $p['supports'] ) ? $p['supports'] : array('title','editor','custom-fields','thumbnail', 'excerpt');
             $taxonomies = ( isset($p['taxonomies']) && $p['taxonomies'] ) ? $p['taxonomies'] : array();
             $parent_item_colon = ( isset($p['parent_item_colon']) && $p['parent_item_colon'] ) ? $p['parent_item_colon'] : "";
             $menu_position = ( isset($p['menu_position']) && $p['menu_position'] ) ? $p['menu_position'] : 20;

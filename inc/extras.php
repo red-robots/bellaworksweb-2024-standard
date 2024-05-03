@@ -118,52 +118,7 @@ function format_phone_number($string) {
     return $append.$string;
 }
 
-function get_social_media() {
-    $options = get_field("social_media_links","option");
-    $icons = social_icons();
-    $list = array();
-    if($options) {
-        foreach($options as $i=>$opt) {
-            if( isset($opt['link']) && $opt['link'] ) {
-                $url = $opt['link'];
-                $parts = parse_url($url);
-                $host = ( isset($parts['host']) && $parts['host'] ) ? $parts['host'] : '';
-                if($host) {
-                    foreach($icons as $type=>$icon) {
-                        if (strpos($host, $type) !== false) {
-                            $list[$i] = array('url'=>$url,'icon'=>$icon,'type'=>$type);
-                        }
-                    }
-                }
-            }
-        }
-    }
 
-    return ($list) ? $list : '';
-}
-
-// function get_social_links() {
-//     $social_types = social_icons();
-//     $social = array();
-//     foreach($social_types as $k=>$icon) {
-//         if( $value = get_field($k,'option') ) {
-//             $social[$k] = array('link'=>$value,'icon'=>$icon);
-//         }
-//     }
-//     return $social;
-// }
-
-function social_icons() {
-    $social_types = array(
-        'facebook'  => 'fab fa-facebook-square',
-        'twitter'   => 'fab fa-twitter',
-        'linkedin'  => 'fab fa-linkedin',
-        'instagram' => 'fab fa-instagram',
-        'youtube'   => 'fab fa-youtube',
-        'vimeo'  => 'fab fa-vimeo',
-    );
-    return $social_types;
-}
 
 function parse_external_url( $url = '', $internal_class = 'internal-link', $external_class = 'external-link') {
 

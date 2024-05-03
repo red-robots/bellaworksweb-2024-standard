@@ -14,24 +14,20 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div class="wp-site-blocks">
+	<main class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
+        <div class="pagewrapper">
 
 			<?php
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'parts/content', 'page' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+				the_content();
 
 			endwhile; // End of the loop.
 			?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+</main>
 <?php
 get_footer();
