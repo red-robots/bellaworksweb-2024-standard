@@ -14,7 +14,7 @@ function js_custom_init() {
             'plural'    => 'Portfolio',
             'single'    => 'Portfolio',
             'menu_icon' => 'dashicons-format-quote',
-            'supports'  => array('title','editor')
+            'supports'  => array('title','editor', 'thumbnail')
         ),
         array(
             'post_type' => 'service',
@@ -25,10 +25,10 @@ function js_custom_init() {
             'supports'  => array('title','editor', 'excerpt', 'thubnail')
         ),
         // array(
-        //     'post_type' => 'location',
-        //     'menu_name' => 'Locations',
-        //     'plural'    => 'Locations',
-        //     'single'    => 'Location',
+        //     'post_type' => 'testimonial',
+        //     'menu_name' => 'Testimonials',
+        //     'plural'    => 'Testimonials',
+        //     'single'    => 'Testimonial',
         //     'menu_icon' => 'dashicons-location',
         //     'supports'  => array('title','editor')
         // )

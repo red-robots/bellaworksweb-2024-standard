@@ -35,6 +35,15 @@ jQuery(document).ready(function ($) {
     }
   }
   displayWord();
+
+  /*
+  		FAQ dropdowns
+  __________________________________________
+  */
+  $('.question').click(function () {
+    $(this).next('.answer').slideToggle(500);
+    $(this).toggleClass('close');
+  });
   var siteNav = $('header.wp-block-template-part .wp-block-navigation__responsive-container').html();
   $('<div class="mobileNavigation"><button class="closeMobileNav"><span class="sr-only">Close Menu</span></button>' + siteNav + '</div>').insertAfter('header.wp-block-template-part');
   $('header.wp-block-template-part button[aria-label="Open menu"]').append('<span class="bar"><span></span></span>');

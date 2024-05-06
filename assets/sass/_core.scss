@@ -20,6 +20,8 @@
 	}
 }
 .site-footer {
+	width: 100%;
+	clear: both;
 	background-color: $gray;
 	padding: 20px 0;
 	.footer-contents {
@@ -106,9 +108,9 @@ a.cta {
 .pagewrapper {
 	width: 100%;
 	clear: both;
-	padding-top: 140px;
+	padding-top: 110px;
 	@include tab() {
-		padding-top: 110px;
+		padding-top: 100px;
 	}
 }
 body.single {
@@ -423,5 +425,370 @@ section.big-form {
 		position: relative;
 		margin: 0 0 50px 0;
 		float: left;
+	}
+}
+.faqrow {
+	width: auto;
+	overflow: hidden;
+	margin: 0 0 20px 0;	
+	background-color: rgba(255,255,255,.05);
+	border-radius: 10px;
+}
+.question {
+	width: auto;
+	float:left;
+	margin: 10px;
+	// font-family: 'Muli', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	cursor:pointer;	
+	line-height: 1.3;
+	position: relative;
+	padding: 0 0 0 20px ;
+}
+.question-image {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	left: 0px;
+	top: 3px;
+	background-image: url(images/faq.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;	
+}
+.question-image.close {
+	background-position: -15px 0;	
+}
+.answer {
+	width: auto;
+	float:left;
+	margin: 10px;
+	font-family: 'Muli', sans-serif;
+	font-size: 14px;
+	line-height: 1.3;
+	padding: 0 0 0 40px;
+	display:none;
+}
+section.work {
+	width: 100%;
+	float: left;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	@media screen and (min-width: $tabwidth) {
+
+	}
+	@media screen and (min-width: $deskwidth) {
+
+	}
+	a.third {
+		height: 250px;
+		overflow: hidden;
+		display: block;
+		width: 33.333%;
+		position: relative;
+		@media screen and (min-width: $tabwidth) {
+			height: 140px;
+		}
+		@media screen and (min-width: $midwidth) {
+			height: 200px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			height: 280px;
+		}
+		@media screen and (min-width: $largewidth) {
+			height: 360px;
+		}
+		@media screen and (min-width: $xlargewidth) {
+			height: 400px;
+		}
+		@media screen and (min-width: $xxlargewidth) {
+			height: 460px;
+		}
+		.cover {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 10;
+			img {
+				width: 100%;
+			}
+		}
+		.title {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			z-index: 11;
+			text-align: center;
+			background-color: $header-blue;
+			@include transition(all ease .3s);
+			h2 {
+				font-size: 1.3rem;
+				color: #fff;
+				margin: 0;
+			}
+		}
+		&:hover {
+			.title {
+				opacity: 1;
+			}
+		}
+	}
+}
+section.single-portfolio {
+	width: 100%;
+	float: left;
+	.intro {
+		padding: 40px;
+		width: 100%;
+		float: left;
+		.logo {
+			width: 250px;
+			margin: 20px auto;
+			img {
+				width: 100%;
+			}
+		}
+		h2 {
+			width: 100%;
+			text-align: center;
+			margin: 20px auto;
+			font-size: 5rem;
+		}
+		.desc {
+			width: 100%;
+			margin: 0 auto;
+			font-size: 22px;
+			@include tab() {
+				width: 50%;
+			}
+		}
+	}
+	.hero {
+		img {
+			width: 100%;
+		}
+	}
+	.blurbs {
+		width: 100%;
+		@include tab() {
+			display: flex;
+			flex-direction: row;
+			align-items: stretch;
+			justify-content: center;
+		}
+		.color-logo {
+			@include tab() {
+				width: 50%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			.logo {
+				width: 250px;
+				margin: 0 auto;
+				img {
+					width: 100%;
+				}
+			}
+		}
+		.blurb {
+			font-size: 22px;
+			padding: 30px;
+			@include tab() {
+				width: 50%;
+			}
+		}
+	}
+	.details {
+		width: 100%;
+		@include tab() {
+			display: flex;
+			flex-direction: row;
+			align-items: stretch;
+		}
+		.left, .right {
+			width: 100%;
+			@include tab() {
+				width: 50%;
+			}
+			img {width: 100%}
+		}
+		.left {
+			@include tab() {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+		.right {
+			@include tab() {
+				padding-left: 20px;
+			}
+		}
+		.detail {
+			width: 100%;
+			img {
+				width: 100%;
+			}
+		}
+		.key-features {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 30px;
+			font-size: 22px;
+			flex-grow: 1;
+			background-color: #eee;
+			@include tab() {
+				margin-top: 20px;
+			}
+		}
+	}
+	.colors {
+		width: 100%;
+		@include tab() {
+			display: flex;
+			flex-direction: row;
+			align-items: stretch;
+			justify-content: center;
+		}
+		.left, .right {
+			width: 100%;
+			padding: 30px; 
+			@include tab() {
+				width: 50%;
+			}
+		}
+		.left {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			
+			font-size: 22px;
+		}
+		.right {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			.color {
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				margin: 20px;
+				@include tab() {
+					width: 200px;
+					height: 200px;
+				}
+			}
+		}
+	}
+	.detail-photos {
+		width: 100%;
+		@include tab() {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+		.photo {
+			width: 100%;
+			padding: 10px;
+			@include tab() {
+				width: 50%;
+				
+			}
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+section.news {
+	width: 100%;
+	background-color: $green;
+	@include tab() {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+	}
+	.left {
+		width: 100%;
+		@include tab() {
+			width: 50%;
+		}
+	}
+	.right {
+		width: 100%;
+		padding: 30px 0;
+		@include tab() {
+			width: 50%;
+		}
+	}
+	.post {
+		width: 100%;
+		background-color: rgba(#fff, .5);
+		margin-bottom: 30px;
+		a {
+			display: flex;
+			flex-direction: row;
+			text-decoration: none;
+		}
+		@include tab() {
+			// width: 28%;
+		}
+		.img {
+			width: 150px;
+			line-height: 0;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		.desc {
+			flex-grow: 1;
+			padding: 0 0 0 30px;
+			text-align: left;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			color: $header-blue;
+			h2 {
+				font-size: 2rem;
+			}
+		}
+	}
+}
+.navigation {
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+	li {
+		display: inline-block;
+		list-style: none;
+		margin: 0 10px;
+	}
+	a {
+		width: 75px;
+		height: 75px;
+		border-radius: 50%;
+		background-color: rgba(#fff, .5);
+		display: block;
+		line-height: 75px;
+		text-align: center;
+		text-decoration: none;
+		font-size: 2rem;
+		transition: all ease .3s;
+		color: $green;
+		&:hover, &.active {
+			background-color: rgba(#fff, 1);
+		}
 	}
 }

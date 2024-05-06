@@ -21,7 +21,7 @@ include( locate_template('scripts-from-blocks.php') );
 
 	<header class="wp-block-template-part">
 		
-		<div class="wp-block-group alignwide header-content has-background has-global-padding  wp-block-group-is-layout-constrained" style=" padding-top:20px;padding-bottom:20px">
+		<div class="wp-block-group alignwide header-content has-background has-global-padding  wp-block-group-is-layout-constrained">
 			<div class="global-wrapper">
 			<div class="wp-block-group alignwide header-row-container is-content-justification-space-between is-layout-flex wp-container-core-group-is-layout-2 wp-block-group-is-layout-flex">
 

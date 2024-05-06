@@ -14,8 +14,29 @@
                 </div>
                 <div class="content">
                     <?php the_content(); ?>
+
+                    <?php 
+                        $section_title = get_field('section_title');
+                        $faqs = get_field('faqs');
+
+                        if( $faqs ) {
+                     ?>
+
+                     <section class="faqs">
+                         <h2><?php echo $section_title; ?></h2>
+                         <?php foreach( $faqs as $f ) { ?>
+                            <div class="faqrow">
+                               <div class="question"><div class="question-image"></div><?php echo $f['question']; ?></div>
+                               <div class="answer"><?php echo $f['answer']; ?></div>
+                            </div>
+                         <?php } ?>
+                     </section>
+
+                    <?php } ?>
+
                 </div>
             </section>
+
 
         <?php endwhile; endif; ?>
         </div>

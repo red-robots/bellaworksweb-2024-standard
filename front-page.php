@@ -106,13 +106,26 @@
 		<div class="wp-block-group alignfull homeSection5 has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="background-color:#e6e7e8;padding-top:5rem;padding-right:0;padding-bottom:5rem;padding-left:0">
 			<div class="wp-block-group wrapper ourPartners has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="background-color:#ffffff00">
 				<h2 class="wp-block-heading has-text-align-center has-text-color has-link-color wp-elements-47abba28bddb85b0f9b9911e91e2f68c" style="color:#bbbdbf;margin-bottom:0.5em;font-size:clamp(3.037rem, 3.037rem + ((1vw - 0.2rem) * 4.39), 6rem);">Our Valued Partners</h2>
-				<figure class="wp-block-gallery has-nested-images columns-5 is-cropped partnersImages has-background wp-block-gallery-3 is-layout-flex wp-block-gallery-is-layout-flex" style="background-color:#ffffff00" data-aos="fade-up">
-					<figure class="wp-block-image size-large">
-						<a href="<?php bloginfo('url'); ?>/wp-content/uploads/2024/02/bellaworks-client-midwood-Smokehouse.png">
-							<img loading="lazy" decoding="async" width="300" height="223" src="<?php bloginfo('url'); ?>/wp-content/uploads/2024/02/bellaworks-client-midwood-Smokehouse.png" alt="" class="wp-image-2875"/>
-						</a>
+				
+					<figure class="wp-block-gallery has-nested-images columns-5 is-cropped partnersImages has-background wp-block-gallery-3 is-layout-flex wp-block-gallery-is-layout-flex" style="background-color:#ffffff00" data-aos="fade-up">
+						<?php 
+							$partners = get_field('partners', 'option');
+							foreach( $partners as $p ) {
+								// echo '<pre>';
+								// print_r($p);
+								// echo '</pre>';
+								$url = get_field('url', $p['ID']);
+						 ?>
+						<figure class="wp-block-image size-large">
+							<div class="inner">
+								<a href="<?php echo $url; ?>" target="_blank">
+									<img loading="lazy" decoding="async" width="300" height="223" src="<?php echo $p['url']; ?>" alt="" class="wp-image-2875"/>
+								</a>
+							</div>
+						</figure>
+						<?php } ?>
 					</figure>
-				</figure>
+				
 			</div>
 		</div>
 
