@@ -1487,10 +1487,10 @@ section.single-portfolio{width:100%;float:left}
 section.single-portfolio .intro{padding:40px;width:100%;float:left}
 section.single-portfolio .intro .logo{width:250px;margin:20px auto}
 section.single-portfolio .intro .logo img{width:100%}
-section.single-portfolio .intro h2{width:100%;text-align:center;margin:20px auto;font-size:5rem}
+section.single-portfolio .intro h1{width:100%;text-align:center;margin:50px auto;font-size:5rem;display:inline-block}
 section.single-portfolio .intro .desc{width:100%;margin:0 auto;font-size:22px}
 section.single-portfolio .hero img{width:100%}
-section.single-portfolio .blurbs{width:100%}
+section.single-portfolio .blurbs{width:100%;padding:100px 0}
 section.single-portfolio .blurbs .color-logo .logo{width:250px;margin:0 auto}
 section.single-portfolio .blurbs .color-logo .logo img{width:100%}
 section.single-portfolio .blurbs .blurb{font-size:22px;padding:30px}
@@ -1500,6 +1500,7 @@ section.single-portfolio .details .left img,section.single-portfolio .details .r
 section.single-portfolio .details .detail{width:100%}
 section.single-portfolio .details .detail img{width:100%}
 section.single-portfolio .details .key-features{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:30px;font-size:22px;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;background-color:#eee}
+section.single-portfolio .details .key-features h2{color:#223e60}
 section.single-portfolio .colors{width:100%}
 section.single-portfolio .colors .left,section.single-portfolio .colors .right{width:100%;padding:30px}
 section.single-portfolio .colors .left{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;font-size:22px}
@@ -1557,7 +1558,7 @@ section.about div.left figure{width:50%}
 section.about div.right{width:50%;padding-top:10rem;padding-right:5rem;padding-bottom:10rem;padding-left:5rem}
 section.about div.right:before{content:"";display:block;width:100%;height:280px;position:absolute;top:3vw;right:0;background-image:url(assets/images/decoration/connect.svg);background-size:contain;background-position:right center;background-repeat:no-repeat}
 section.big-form .wrapper{width:60%;margin:0 auto}
-section.single-portfolio .intro .desc{width:50%}
+section.single-portfolio .intro .desc{width:50%;max-width:800px}
 section.single-portfolio .blurbs{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 section.single-portfolio .blurbs .color-logo{width:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 section.single-portfolio .blurbs .blurb{width:50%}
@@ -1565,9 +1566,10 @@ section.single-portfolio .details{display:-webkit-box;display:-ms-flexbox;displa
 section.single-portfolio .details .left,section.single-portfolio .details .right{width:50%}
 section.single-portfolio .details .left{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 section.single-portfolio .details .right{padding-left:20px}
-section.single-portfolio .details .key-features{margin-top:20px}
+section.single-portfolio .details .key-features{margin-top:20px;padding:50px}
 section.single-portfolio .colors{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 section.single-portfolio .colors .left,section.single-portfolio .colors .right{width:50%}
+section.single-portfolio .colors .left{padding:50px}
 section.single-portfolio .colors .right .color{width:200px;height:200px}
 section.single-portfolio .detail-photos{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap}
 section.single-portfolio .detail-photos .photo{width:50%}

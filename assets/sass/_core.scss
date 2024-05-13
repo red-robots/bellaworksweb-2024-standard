@@ -557,11 +557,12 @@ section.single-portfolio {
 				width: 100%;
 			}
 		}
-		h2 {
+		h1 {
 			width: 100%;
 			text-align: center;
-			margin: 20px auto;
+			margin: 50px auto;
 			font-size: 5rem;
+			display: inline-block;
 		}
 		.desc {
 			width: 100%;
@@ -569,6 +570,7 @@ section.single-portfolio {
 			font-size: 22px;
 			@include tab() {
 				width: 50%;
+				max-width: 800px;
 			}
 		}
 	}
@@ -579,6 +581,7 @@ section.single-portfolio {
 	}
 	.blurbs {
 		width: 100%;
+		padding: 100px 0;
 		@include tab() {
 			display: flex;
 			flex-direction: row;
@@ -647,8 +650,12 @@ section.single-portfolio {
 			font-size: 22px;
 			flex-grow: 1;
 			background-color: #eee;
+			h2 {
+				color: $header-blue;
+			}
 			@include tab() {
 				margin-top: 20px;
+				padding: 50px;
 			}
 		}
 	}
@@ -671,8 +678,10 @@ section.single-portfolio {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			
 			font-size: 22px;
+			@include tab() {
+				padding: 50px;
+			}
 		}
 		.right {
 			display: flex;
@@ -739,6 +748,9 @@ section.news {
 			display: flex;
 			flex-direction: row;
 			text-decoration: none;
+			&:hover {
+				
+			}
 		}
 		@include tab() {
 			// width: 28%;

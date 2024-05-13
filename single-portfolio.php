@@ -37,7 +37,7 @@ get_header(); ?>
 		        	<div class="logo">
 		        		<img src="<?php echo $client_logo['url']; ?>">
 		        	</div>
-		        	<h2 style="color: <?php echo $text_color; ?>"><?php echo $name; ?></h2>
+		        	<h1 style="color: <?php echo $text_color; ?>"><?php the_title(); ?></h1>
 		        	<div class="desc" style="color: <?php echo $text_color; ?>">
 		        		<?php echo $intro_text; ?>
 		        	</div>
@@ -80,6 +80,7 @@ get_header(); ?>
 		        			<img src="<?php echo $detail_photo['url']; ?>">
 		        		</div>
 		        		<div class="key-features">
+		        			<h2>Key Features</h2>
 		        			<?php echo $key_features; ?>
 		        		</div>
 		        	</div>
