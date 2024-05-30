@@ -10,7 +10,7 @@
     <div class="stepsContent">
         <div class="stepsInner">
             <div class="aos-init aos-animate wp-block-column is-vertically-aligned-center has-background is-layout-flow wp-block-column-is-layout-flow" style="background-color:#ffffff00;flex-basis:100%" data-aos="fade-right">
-                <a href="#">
+                <!-- <a href="#"> -->
                 <div class="wrap">
                     
                         <div class="flex">
@@ -19,11 +19,11 @@
                         </div>
                     
                 </div>
-                </a>
+                <!-- </a> -->
             </div>
 
             <div class="wp-block-column is-vertically-aligned-center has-background is-layout-flow wp-block-column-is-layout-flow aos-init aos-animate" style="background-color:#ffffff00;flex-basis:100%" data-aos="fade-up">
-                <a href="#">
+                <!-- <a href="#"> -->
                 <div class="wrap">
                     
                         <div class="flex">
@@ -32,11 +32,11 @@
                         </div>
                     
                 </div>
-                </a>
+                <!-- </a> -->
             </div>
 
             <div class="aos-init aos-animate wp-block-column is-vertically-aligned-center has-base-2-color has-text-color has-background has-link-color wp-elements-70aeb37eab07e5d5726552aa7d697e0d is-layout-flow wp-block-column-is-layout-flow" style="background-color:#ffffff00;flex-basis:100%" data-aos="fade-left">
-                <a href="#">
+                <!-- <a href="#"> -->
                 <div class="wrap">
                     
                         <div class="flex">
@@ -45,7 +45,7 @@
                         </div>
                     
                 </div>
-                </a>
+                <!-- </a> -->
             </div>
         </div>
     </div>
@@ -54,7 +54,7 @@
         <div class="wp-block-button">
             <a class="wp-block-button__link wp-element-button"
             style="padding-right:4em;padding-left:4em"
-            href="<?php bloginfo('url'); ?>/lets-talk"
+            href="<?php bloginfo('url'); ?>/lets-do-this"
             >BOOK A CALL</a>
         </div>
     </div>

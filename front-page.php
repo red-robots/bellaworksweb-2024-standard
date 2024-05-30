@@ -25,7 +25,7 @@
 					</h2>
 						<div class="wp-block-buttons is-content-justification-right is-layout-flex wp-container-core-buttons-is-layout-1 wp-block-buttons-is-layout-flex" data-aos-delay="2300" data-aos="fade-up">
 							<div class="wp-block-button orange-button">
-								<a class="wp-block-button__link has-base-2-color has-text-color has-background has-link-color wp-element-button" href="#" style="background-color:#db6e35">BOOK A CALL</a>
+								<a class="wp-block-button__link has-base-2-color has-text-color has-background has-link-color wp-element-button" href="<?php bloginfo('url'); ?>/lets-do-this" style="background-color:#db6e35">BOOK A CALL</a>
 							</div>
 						</div>
 					</div>
@@ -38,7 +38,7 @@
 				<div class="wp-block-column is-vertically-aligned-center leftCol is-layout-flow wp-block-column-is-layout-flow" style="padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)">
 					<div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:0;padding-bottom:0">
 						<figure class="pretty wp-block-image size-full is-resized" data-aos="fade-right">
-							<img fetchpriority="high" decoding="async" width="581" height="343" src="<?php bloginfo('template_url'); ?>/images/triangles.svg" alt="" class="wp-image-2857" style="width:522px;height:auto"/>
+							<img class="pretty-pad" fetchpriority="high" decoding="async" width="581" height="343" src="<?php bloginfo('template_url'); ?>/images/triangles.svg" alt="" class="wp-image-2857" style="width:522px;height:auto"/>
 						</figure>
 						<div class="wp-block-groupz is-content-justification-center is-nowrap is-layout-flex wp-container-core-group-is-layout-11 wp-block-group-is-layout-flex">
 							<h2 class=" pretty wp-block-heading has-text-align-right">More than just a<br><strong>PRETTY FACE</strong></h2>
@@ -57,7 +57,7 @@
 						</p>
 						<div class="wp-block-buttons is-content-justification-left is-layout-flex wp-container-core-buttons-is-layout-2 wp-block-buttons-is-layout-flex">
 							<div class="wp-block-button orange-button">
-								<a class="wp-block-button__link has-base-2-color has-text-color has-background has-link-color wp-element-button" href="#" style="background-color:#db6e35">BOOK A CALL</a>
+								<a class="wp-block-button__link has-base-2-color has-text-color has-background has-link-color wp-element-button" href="<?php bloginfo('url'); ?>/lets-do-this" style="background-color:#db6e35">BOOK A CALL</a>
 							</div>
 						</div>
 					</div>
@@ -71,32 +71,38 @@
 			</div>
 			<div class="wp-block-group ourWorkGallery has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="margin-top:2rem;margin-bottom:2rem">
 				<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-2 is-layout-flex wp-block-gallery-is-layout-flex">
+				<?php
+				$i=0;
+					$wp_query = new WP_Query();
+					$wp_query->query(array(
+					'post_type'=>'portfolio',
+					'posts_per_page' => 16
+				));
+					if ($wp_query->have_posts()) :  ?>
+					<section class="work">
+					<?php while ($wp_query->have_posts()) : $wp_query->the_post(); $i++;
+
+						$pId = get_the_ID();
+						$id = get_post_thumbnail_id($pId);
+						$iurl = get_the_post_thumbnail_url($pId, 'work');
+						if( $i<7 ) {
+							$src = 'src';
+							$lazy = '';
+						} else {
+							$src = 'data-src';
+							$lazy = 'lazy';
+						}
+
+						$image = get_the_post_thumbnail( $pId, 'tiny', array( 'class' => 'lazyload' ) );
+						$mimeType = get_post_mime_type($id);
+
+						?>
 					<figure class="wp-block-image size-large">
-						<img decoding="async" width="1024" height="731" src="<?php bloginfo('url'); ?>/wp-content/uploads/2024/02/featured-image-big-berverages-1024x731.jpg" alt="" class="wp-image-2860" srcset="<?php bloginfo('url'); ?>/wp-content/uploads/2024/02/featured-image-big-berverages-1024x731.jpg 1024w, <?php bloginfo('url'); ?>/wp-content/uploads/2024/02/featured-image-big-berverages-300x214.jpg 300w, <?php bloginfo('url'); ?>/wp-content/uploads/2024/02/featured-image-big-berverages-768x548.jpg 768w, <?php bloginfo('url'); ?>/wp-content/uploads/2024/02/featured-image-big-berverages.jpg 1400w" sizes="(max-width: 1024px) 100vw, 1024px" />
+						<a href="<?php the_permalink(); ?>" class="third">
+							<img src="<?php echo $iurl; ?>">
+						</a>
 					</figure>
-					<figure class="wp-block-image size-large blank">
-						<img decoding="async" width="100" height="100" src="<?php bloginfo('url'); ?>/wp-content/uploads/2024/02/placeholder.png" alt="" class="wp-image-2863"/></figure>
-					<figure class="wp-block-image size-large border-top-radius">
-						<img loading="lazy" decoding="async" width="1024" height="731" src="<?php bloginfo('url'); ?>/wp-content/uploads/2024/02/houstons-thumb-1024x731.jpg" alt="" class="wp-image-2867" srcset="<?php bloginfo('url'); ?>/wp-content/uploads/2024/02/houstons-thumb-1024x731.jpg 1024w, <?php bloginfo('url'); ?>/wp-content/uploads/2024/02/houstons-thumb-300x214.jpg 300w, <?php bloginfo('url'); ?>/wp-content/uploads/2024/02/houstons-thumb-768x548.jpg 768w, <?php bloginfo('url'); ?>/wp-content/uploads/2024/02/houstons-thumb.jpg 1400w" sizes="(max-width: 1024px) 100vw, 1024px" />
-					</figure>
-					<figure class="wp-block-image size-large blank">
-						<img decoding="async" width="100" height="100" src="<?php bloginfo('url'); ?>/wp-content/uploads/2024/02/placeholder.png" alt="" class="wp-image-2863"/>
-					</figure>
-					<figure class="wp-block-image size-large">
-						<img loading="lazy" decoding="async" width="1024" height="731" src="<?php bloginfo('url'); ?>/wp-content/uploads/2024/02/frenzel-thumb-1024x731.png" alt="" class="wp-image-2864" srcset="<?php bloginfo('url'); ?>/wp-content/uploads/2024/02/frenzel-thumb-1024x731.png 1024w, <?php bloginfo('url'); ?>/wp-content/uploads/2024/02/frenzel-thumb-300x214.png 300w, <?php bloginfo('url'); ?>/wp-content/uploads/2024/02/frenzel-thumb-768x548.png 768w, <?php bloginfo('url'); ?>/wp-content/uploads/2024/02/frenzel-thumb.png 1400w" sizes="(max-width: 1024px) 100vw, 1024px" />
-					</figure>
-					<figure class="wp-block-image size-large">
-						<img loading="lazy" decoding="async" width="1024" height="731" src="<?php bloginfo('url'); ?>/wp-content/uploads/2024/02/garfinkel-featured-1024x731.jpg" alt="" class="wp-image-2862" srcset="<?php bloginfo('url'); ?>/wp-content/uploads/2024/02/garfinkel-featured-1024x731.jpg 1024w, <?php bloginfo('url'); ?>/wp-content/uploads/2024/02/garfinkel-featured-300x214.jpg 300w, <?php bloginfo('url'); ?>/wp-content/uploads/2024/02/garfinkel-featured-768x548.jpg 768w, <?php bloginfo('url'); ?>/wp-content/uploads/2024/02/garfinkel-featured.jpg 1400w" sizes="(max-width: 1024px) 100vw, 1024px" />
-					</figure>
-					<figure class="wp-block-image size-large">
-						<img loading="lazy" decoding="async" width="1024" height="731" src="<?php bloginfo('url'); ?>/wp-content/uploads/2024/02/isd-thumb-1024x731.png" alt="" class="wp-image-2865" srcset="<?php bloginfo('url'); ?>/wp-content/uploads/2024/02/isd-thumb-1024x731.png 1024w, <?php bloginfo('url'); ?>/wp-content/uploads/2024/02/isd-thumb-300x214.png 300w, <?php bloginfo('url'); ?>/wp-content/uploads/2024/02/isd-thumb-768x548.png 768w, <?php bloginfo('url'); ?>/wp-content/uploads/2024/02/isd-thumb.png 1400w" sizes="(max-width: 1024px) 100vw, 1024px" />
-					</figure>
-					<figure class="wp-block-image size-large">
-						<img loading="lazy" decoding="async" width="1024" height="731" src="<?php bloginfo('url'); ?>/wp-content/uploads/2024/02/yafo-thumb-1024x731.png" alt="" class="wp-image-2866" srcset="<?php bloginfo('url'); ?>/wp-content/uploads/2024/02/yafo-thumb-1024x731.png 1024w, <?php bloginfo('url'); ?>/wp-content/uploads/2024/02/yafo-thumb-300x214.png 300w, <?php bloginfo('url'); ?>/wp-content/uploads/2024/02/yafo-thumb-768x548.png 768w, <?php bloginfo('url'); ?>/wp-content/uploads/2024/02/yafo-thumb.png 1400w" sizes="(max-width: 1024px) 100vw, 1024px" />
-					</figure>
-					<figure class="wp-block-image size-large blank">
-						<img decoding="async" width="100" height="100" src="<?php bloginfo('url'); ?>/wp-content/uploads/2024/02/placeholder.png" alt="" class="wp-image-2863"/>
-					</figure>
+					<?php endwhile; endif; ?>
 				</figure>
 			</div>
 		</div>

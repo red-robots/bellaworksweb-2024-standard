@@ -9,27 +9,33 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div class="wp-site-blocks">
+	<main class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
+        <div class="pagewrapper">
 
 		<?php
-		while ( have_posts() ) : the_post();
+		while ( have_posts() ) : the_post(); ?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<header class="entry-header">
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				</header><!-- .entry-header -->
+				<div class="thumbnail">
+					<?php the_post_thumbnail(); ?>
+				</div>	
+				<div class="entry-content">
+					<?php the_content(); ?>
+				</div><!-- .entry-content -->
 
-			get_template_part( 'parts/content', get_post_format() );
-
-			the_post_navigation();
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
+				<footer class="entry-footer">
+					<?php //bellaworks_entry_footer(); ?>
+				</footer><!-- .entry-footer -->
+			</article><!-- #post-## -->
+		<?php endwhile; // End of the loop.
 		?>
-
+		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();
