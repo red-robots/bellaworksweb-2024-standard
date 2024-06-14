@@ -203,6 +203,15 @@ body.page, body.single {
 		  display: flex;
 		  justify-content: space-evenly;
 		  gap: 4rem;
+		  @include tab() {
+		  	gap: 2rem;
+		  }
+		  @include desk() {
+		  	gap: 2rem;
+		  }
+		  @include largewidth() {
+		  	gap: 4rem;
+		  }
 		  li.menu-item-has-children {
 		  	// position: static !important;
 		  	&:hover {
@@ -234,9 +243,10 @@ body.page, body.single {
 		font-family: $font_secondary;
 		text-transform: uppercase;
 		font-size: 25px;
-		font-weight: 400;
+		font-weight: 600;
 		line-height: 1.2;
 		color: #FFF;
+		letter-spacing: 3px;
 	  }
 	}
   }
@@ -691,7 +701,7 @@ body.page, body.single {
 	}
 	.ourWorkGallery {
 	  margin: 0 0;
-	  padding-right: 13vw;
+	  padding-right: 14vw;
 	  padding-left: 8px;
 	  .wp-block-gallery {
 		padding: 0;
@@ -713,12 +723,12 @@ body.page, body.single {
 	.titleDiv {
 	  position: absolute;
 	  top: 40vh;
-	  right: 0;
+	  right: -40px;
 	}
 
 	h2.wp-block-heading {
 	  font-size: 7vw;
-	  font-weight: 400;
+	  font-weight: 600;
 	  color: #BBBDBF;
 	  transform: rotate(90deg);
 	}
@@ -828,51 +838,106 @@ body.page, body.single {
 	  width: 100%;
 	  margin: 0 auto;
 	}
+	.wp-block-heading {
+		font-weight: 600;
+	}
 	.wp-block-heading,
 	.wp-block-gallery {
 	  max-width: 100%!important;
 	  width: 100%!important;
 	}
+	.ourWorkGallery {
+		width: 100%;
+		overflow: hidden;
+	}
+	.partners {
+		width: 200px;
+		height: 200px;
+		
+		// background-color: #e6e7e8;
+		position: relative;
+		
+		@include tab() {
+			width: 200px;
+			height: 200px;
+		}
+		@include desk() {
+			width: 250px;
+			height: 250px;
+		}
+		
+		img {
+			width: 80%;
+			display: inline-block;
+			// margin-top: 30px;
+			@include tab() {
+
+			}
+			@include desk() {
+
+			}
+		}
+		a {
+			// display: block;
+			background-color: $header-blue;
+			border-radius: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left:0;
+			text-align: center;
+			display: flex;
+			flex-direction: colomn;
+			justify-content: center;
+			height: 100%;
+			@include tab() {
+				width: 200px;
+				height: 200px;
+			}
+			@include desk() {
+				width: 250px;
+				height: 250px;
+			}
+		}
+	}
 	.wp-block-gallery {
 	  gap: 0;
-	  display: flex;
-	  flex-wrap: wrap;
-	  justify-content: center;
+	  // display: flex;
+	  // flex-wrap: wrap;
+	  // justify-content: center;
 	  .wp-block-image {
 		position: relative;
 		overflow: hidden;
-		width: 20%!important;
-		flex-basis: unset!important;
-		flex-grow: unset!important;
+		// width: 20%!important;
+		// animation: scroll 20s linear infinite;
+		width: 300px;
+		height: 300px;
+		// flex-basis: unset!important;
+		// flex-grow: unset!important;
 		box-sizing: border-box;
 		padding: 15px;
-		@media screen and (max-width: 900px) {
-		  width: 25%!important;
-		}
-		@media screen and (max-width: 480px) {
-		  width: 50%!important;
-		}
+		
 	  }
 	  .inner {
 		background-color: #e6e7e8;
 		border-radius: 100%;
 	  }
-	  img.helper {
-		width: 100%;
-		height: auto;
-		float: left;
-	  }
-	  img:not(.helper) {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 70%!important;
-		height: 70%!important;
-		object-fit: contain!important;
-		object-position: center!important;
-		z-index: 5;
-		transform: translateX(-50%) translateY(-50%);
-	  }
+	 //  img.helper {
+		// width: 100%;
+		// height: auto;
+		// float: left;
+	 //  }
+	 //  img:not(.helper) {
+		// position: absolute;
+		// top: 50%;
+		// left: 50%;
+		// width: 70%!important;
+		// height: 70%!important;
+		// object-fit: contain!important;
+		// object-position: center!important;
+		// z-index: 5;
+		// transform: translateX(-50%) translateY(-50%);
+	 //  }
 	}
   }
 
@@ -922,6 +987,7 @@ body.page, body.single {
 	h2.wp-block-heading {
 	  padding-left: 110px;
 	  font-size: 8vw!important;
+	  font-weight: 600;
 	  line-height: 1!important;
 	  margin: 0 0!important;
 	  position: relative;
@@ -942,8 +1008,8 @@ body.page, body.single {
 	}
 	h3.wp-block-heading {
 	  position: absolute;
-	  top: 1vw;
-	  right: -8.5vw;
+	  top: -.5vw;
+	  right: -10vw;
 	  line-height: 1!important;
 	  margin: 0 0!important;
 	  transform: rotate(90deg);
@@ -1062,7 +1128,7 @@ body.page, body.single {
 	  padding-left: 18vw!important;
 	}
 	.homeSection6 .titleDiv {
-	  left: -10vw;
+	  left: -5vw;
 	}
   }
 

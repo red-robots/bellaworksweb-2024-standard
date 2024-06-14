@@ -21,6 +21,11 @@ jQuery(document).ready(function ($) {
   //        function() { $('.sub-menu', this).fadeOut(300);
   //    });
 
+  /*
+  	Homepage Words
+  __________________________________________
+  */
+
   function displayWord() {
     var words = document.getElementsByClassName("togglezz");
     var wordCounter = 0;
@@ -35,6 +40,48 @@ jQuery(document).ready(function ($) {
     }
   }
   displayWord();
+
+  /*
+  		Our Partners
+  __________________________________________
+  */
+  var swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false
+    },
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination'
+    },
+    breakpoints: {
+      600: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      880: {
+        slidesPerView: 4,
+        spaceBetween: 10
+      },
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 20
+      }
+    },
+    // Navigation arrows
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar'
+    }
+  });
 
   /*
   		FAQ dropdowns

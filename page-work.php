@@ -61,11 +61,7 @@ get_header(); ?>
 							<div class="title">
 								<h2><?php the_title(); ?></h2>
 							</div>
-							<div class="cover">
-								
-
-								<img src="<?php echo $iurl; ?>">
-							</div>
+							<img src="<?php echo $iurl; ?>">
 							
 						</a>
 					

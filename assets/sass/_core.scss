@@ -1,6 +1,9 @@
 .togglezz {
 	display: none;
 }
+.space-letters {
+	letter-spacing: 4px;
+}
 .activezz {
   display: inline-block;
 }
@@ -83,6 +86,10 @@ p.pretty {
 	@include tab() {
 		width: 60%;
 	}
+}
+.fp-extra-pad {
+	width: 100%;
+	padding-top: 100px !important;
 }
 p.home-p {
 	font-size: 22px;
@@ -191,13 +198,13 @@ section.services {
 		padding: 60px 20px;
 		color: #fff;
 		&:nth-child(1) {
-			background-color: $baby-blue;
+			background-color: $blue;
 		}
 		&:nth-child(2) {
 			background-color: $header-blue;
 		}
 		&:nth-child(3) {
-			background-color: $baby-blue;
+			background-color: $blue;
 		}
 		&:nth-child(4) {
 			background-color: $header-blue;
@@ -207,13 +214,13 @@ section.services {
 			width: 50%;
 			padding: 8vw 8vh;
 			&:nth-child(1) {
-				background-color: $baby-blue;
+				background-color: $blue;
 			}
 			&:nth-child(2) {
 				background-color: $header-blue;
 			}
 			&:nth-child(4) {
-				background-color: $baby-blue;
+				background-color: $blue;
 			}
 			&:nth-child(3) {
 				background-color: $header-blue;
@@ -353,18 +360,19 @@ section.service {
 		width: 100%;
 		overflow: hidden;
 		background-color: #fff;
-		padding-bottom: 30px;
+		
 		@include tab() {
 			display: flex;
 			flex-direction: row;
 			align-items: stretch;
+			padding-bottom: 30px;
 		}
 		h2 {
 			width: auto;
 			position: relative;
 			display: inline-block;
 			font-weight: 400 !important;
-		    font-size: 8vh !important;
+		    font-size: 10vh !important;
 		    line-height: 1.2;
 		    color: $green;
 
@@ -407,7 +415,7 @@ section.service {
 		.right {
 			background-color: $green;
 			padding: 30px;
-			font-size: 20px;
+			font-size: 26px;
 			@include tab() {
 				width: 50%;
 				padding: 150px 10% 150px 80px;
@@ -420,7 +428,7 @@ section.service {
 		width: 100%;
 		background-color: $baby-blue;
 		color: #fff;
-		font-size: 20px;
+		font-size: 26px;
 		@include tab() {
 			display: flex;
 			flex-direction: row;
@@ -432,19 +440,21 @@ section.service {
 			margin: 20px 0;
 		}
 		.left {
-			width: 50%;
+			width: 100%;
 			background-color: $blue;
 			padding: 30px;
 			@include tab() {
 				border-top-right-radius: 250px;
 				padding: 150px;
+				width: 50%;
 			}
 		}
 		.right {
-			width: 50%;
+			width: 100%;
 			padding: 30px;
 			@include tab() {
 				padding: 150px;
+				width: 50%;
 			}
 		}
 	}
@@ -452,7 +462,7 @@ section.service {
 		width: 100%;
 		background-color: #fff;
 		color: #fff;
-		font-size: 20px;
+		font-size: 26px;
 		@include tab() {
 			display: flex;
 			flex-direction: row;
@@ -464,12 +474,13 @@ section.service {
 			margin: 20px 0;
 		}
 		.left {
-			width: 50%;
+			width: 100%;
 			background-color: $header-blue;
 			padding: 30px;
 			@include tab() {
 				border-bottom-right-radius: 250px;
 				padding: 150px;
+				width: 50%;
 			}
 			&.alt {
 				@include tab() {
@@ -479,11 +490,12 @@ section.service {
 			}
 		}
 		.right {
-			width: 50%;
+			width: 100%;
 			padding: 30px;
 			color: $dark-gray;
 			@include tab() {
 				padding: 150px;
+				width: 50%;
 			}
 			.wrapper {
 				width: 100%;
@@ -559,7 +571,7 @@ section.about {
 	    h1 {
 	    	font-size: 7rem;
 	    	text-transform: uppercase;
-	    	margin: 0;
+	    	margin: 0 0 20px 0;
 	    	color: $header-blue;
 	    }
 	}
@@ -663,14 +675,18 @@ section.faqs {
 		width: 60%;
 		// padding: 100px 0 100px 275px;
 		padding-left: 275px;
+		margin: 0 auto;
 	}
 	.faq-title {
 		width: auto;
-		padding-right: 100px;
-		position: absolute;
-		top: 100px;
-		left: 0;
-		transform: translateY(-25%) rotate(-90deg);
+		
+		@include tab() {
+			padding-right: 100px;
+			position: absolute;
+			top: 100px;
+			left: 0;
+			transform: translateY(-25%) rotate(-90deg);
+		}
 	}
 	h2.faqs {
 		width: auto;
@@ -707,13 +723,14 @@ section.faqs {
 	margin: 10px;
 	// font-family: 'Muli', sans-serif;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 24px;
 	cursor:pointer;	
 	line-height: 1.3;
 	position: relative;
 	padding: 40px ;
 	background-color: $mustard;
 	color: #fff;
+	font-family: $font_primary;
 }
 .question-image {
 	width: 15px;
@@ -729,11 +746,11 @@ section.faqs {
 	background-position: -15px 0;	
 }
 .answer {
-	width: 98%;
+	width: 97%;
 	float:left;
 	margin: 10px;
-	font-family: 'Muli', sans-serif;
-	font-size: 14px;
+	font-family: $font_primary;
+	font-size: 22px;
 	line-height: 1.3;
 	padding: 0 0 0 40px;
 	display:none;
@@ -741,6 +758,9 @@ section.faqs {
 	color: $dark-gray;
 	background-color: #fff;
 	border: 1px solid $mustard;
+	@include tab() {
+		width: 98%;
+	}
 }
 section.work {
 	width: 100%;
@@ -755,29 +775,36 @@ section.work {
 
 	}
 	a.third {
-		height: 250px;
+		height: auto;
 		overflow: hidden;
 		display: block;
-		width: 33.333%;
+		width: 50%;
 		position: relative;
-		@media screen and (min-width: $tabwidth) {
-			height: 140px;
+		line-height: 0;
+		@include tab() {
+			width: 33.333%;
 		}
-		@media screen and (min-width: $midwidth) {
-			height: 200px;
+		img {
+			width: 100%;
 		}
-		@media screen and (min-width: $deskwidth) {
-			height: 280px;
-		}
-		@media screen and (min-width: $largewidth) {
-			height: 360px;
-		}
-		@media screen and (min-width: $xlargewidth) {
-			height: 400px;
-		}
-		@media screen and (min-width: $xxlargewidth) {
-			height: 460px;
-		}
+		// @media screen and (min-width: $tabwidth) {
+		// 	height: 140px;
+		// }
+		// @media screen and (min-width: $midwidth) {
+		// 	height: 200px;
+		// }
+		// @media screen and (min-width: $deskwidth) {
+		// 	height: 280px;
+		// }
+		// @media screen and (min-width: $largewidth) {
+		// 	height: 360px;
+		// }
+		// @media screen and (min-width: $xlargewidth) {
+		// 	height: 400px;
+		// }
+		// @media screen and (min-width: $xxlargewidth) {
+		// 	height: 460px;
+		// }
 		.cover {
 			width: 100%;
 			height: 100%;
@@ -802,9 +829,10 @@ section.work {
 			z-index: 11;
 			text-align: center;
 			background-color: $header-blue;
+			line-height: 1.1;
 			@include transition(all ease .3s);
 			h2 {
-				font-size: 1.3rem;
+				font-size: 5rem;
 				color: #fff;
 				margin: 0;
 			}
@@ -846,8 +874,31 @@ section.single-portfolio {
 				max-width: 800px;
 			}
 		}
+		.intro-wrap {
+			width: auto;
+			margin: 0 auto;
+			@include tab() {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 50px;
+			}
+		}
+		.left {
+			@include tab() {
+				padding-right: 70px;
+			}
+		}
+		.right {
+			@include tab() {
+				padding-left: 70px;
+				border-left: 1px solid rgba(#fff, .3);
+			}
+		}
 	}
 	.hero {
+		width: 100%;
 		img {
 			width: 100%;
 		}
@@ -855,6 +906,7 @@ section.single-portfolio {
 	.blurbs {
 		width: 100%;
 		padding: 100px 0;
+		clear: both;
 		@include tab() {
 			display: flex;
 			flex-direction: row;
@@ -862,8 +914,11 @@ section.single-portfolio {
 			justify-content: center;
 		}
 		.color-logo {
+			width: 100%;
+			padding-top: 20px;
 			@include tab() {
 				width: 50%;
+				padding-top: 0;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -1033,7 +1088,7 @@ section.news {
 			// width: 28%;
 		}
 		.img {
-			width: 75px;
+			width: 25%;
 			line-height: 0;
 			float: left;
 			@include tab() {
@@ -1045,7 +1100,7 @@ section.news {
 			}
 		}
 		.desc {
-			width: auto;
+			width: 75%;
 			padding: 10px;
 			text-align: left;
 			float: left;
@@ -1059,7 +1114,11 @@ section.news {
 			padding: 0 0 0 30px;
 			}
 			h2 {
-				font-size: 2rem;
+				font-size: 1.5rem;
+				margin: 0;
+				@include tab() {
+					font-size: 2rem;
+				}
 			}
 		}
 	}
@@ -1072,7 +1131,7 @@ section.news {
 	li {
 		display: inline-block;
 		list-style: none;
-		margin: 0 10px;
+		margin: 10px;
 	}
 	a {
 		width: 75px;

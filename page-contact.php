@@ -21,14 +21,16 @@ get_header(); ?>
 						<figure>
 							<img src="<?php bloginfo('template_url'); ?>/images/triangles.svg">
 						</figure>
-						<h1><?php the_title(); ?></h1>
-						<div class="address">
-							Bellaworks Web Design<br>
-							436 E 36th Street<br>
-							Charlotte, North Carolina 28205<br>
-							P 704.375.0831<br>
-							M info@bellaworksweb.com<br>
-						</div>	
+						<div class="contactinfo">
+							<h1><?php the_title(); ?></h1>
+							<div class="address">
+								Bellaworks Web Design<br>
+								436 E 36th Street<br>
+								Charlotte, North Carolina 28205<br>
+								P 704.375.0831<br>
+								M info@bellaworksweb.com<br>
+							</div>	
+						</div>
 					</div>
 					<div class="right contact-contents">
 

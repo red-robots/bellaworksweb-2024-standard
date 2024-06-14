@@ -34,10 +34,19 @@ get_header(); ?>
 	            
 		        ?>  
 		        <div class="intro" style="background-color: <?php echo $background_color;  ?>;">
-		        	<div class="logo">
-		        		<img src="<?php echo $client_logo['url']; ?>">
+		        	<div class="intro-wrap">
+		        		<h1 style="color: <?php echo $text_color; ?>"><?php the_title(); ?></h1>
+		        		<!-- <div class="left">
+			        		<div class="logo">
+				        		<img src="<?php echo $client_logo['url']; ?>">
+				        	</div>
+			        	</div> -->
+			        	<!-- <div class="right">
+			        		<h1 style="color: <?php echo $text_color; ?>"><?php the_title(); ?></h1>
+			        	</div> -->
 		        	</div>
-		        	<h1 style="color: <?php echo $text_color; ?>"><?php the_title(); ?></h1>
+		        	
+		        	
 		        	<div class="desc" style="color: <?php echo $text_color; ?>">
 		        		<?php echo $intro_text; ?>
 		        	</div>

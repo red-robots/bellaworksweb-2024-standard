@@ -31,6 +31,7 @@ $xswidth: 768px;
 $tabwidth: 880px;
 $midwidth: 980px;
 $deskwidth: 1200px;
+$xxl: 1300px;
 $largewidth: 1500px;
 $xlargewidth: 1700px;
 $xxlargewidth: 1900px;
@@ -44,6 +45,9 @@ $wrapper: 1300px;
 @mixin mid { @media (min-width: $midwidth) { @content; } }
 @mixin desk {  @media (min-width: $deskwidth) { @content; } }
 @mixin xxl {  @media (min-width: $xxl) { @content; } }
+@mixin largewidth {  @media (min-width: $largewidth) { @content; } }
+@mixin xlargewidth {  @media (min-width: $xlargewidth) { @content; } }
+@mixin xxlargewidth {  @media (min-width: $xxlargewidth) { @content; } }
 @mixin min($width) {
 	@media screen and (min-width: $width) { @content; }
 }
