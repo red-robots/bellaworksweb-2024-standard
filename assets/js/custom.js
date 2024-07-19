@@ -4,16 +4,13 @@
  *	Custom jQuery Scripts
  *	Developed by: Lisa DeBona
  */
-
 // window.onload = function(){
 //   //hide the preloader
 //   setTimeout(function(){
 //     document.getElementById("preloader").style.display = "none";
 //     document.body.classList.add("preloader-off");
 //   },2000);
-
 // }
-
 jQuery(document).ready(function ($) {
   // $("li.menu-item-has-children").hover(
   //        function() { $('.sub-menu', this).fadeIn(300);
@@ -25,26 +22,29 @@ jQuery(document).ready(function ($) {
   	Homepage Words
   __________________________________________
   */
-
   function displayWord() {
     var words = document.getElementsByClassName("togglezz");
     var wordCounter = 0;
     setInterval(updateWord, 2000);
+
     function updateWord() {
       if (wordCounter >= words.length) wordCounter = 0;
+
       for (var i = 0; i < words.length; i++) {
         words[i].classList.remove('activezz');
       }
+
       words[wordCounter].classList.add('activezz');
       wordCounter++;
     }
   }
-  displayWord();
 
+  displayWord();
   /*
   		Our Partners
   __________________________________________
   */
+
   var swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -76,17 +76,16 @@ jQuery(document).ready(function ($) {
     //   nextEl: '.swiper-button-next',
     //   prevEl: '.swiper-button-prev',
     // },
-
     // And if we need scrollbar
     scrollbar: {
       el: '.swiper-scrollbar'
     }
   });
-
   /*
   		FAQ dropdowns
   __________________________________________
   */
+
   $('.question').click(function () {
     $(this).next('.answer').slideToggle(500);
     $(this).toggleClass('close');
@@ -104,39 +103,41 @@ jQuery(document).ready(function ($) {
     setTimeout(function () {
       $('.mobileNavigation').removeClass('active fadeInUp');
     }, 200);
-  });
-
-  // AOS.init({
+  }); // AOS.init({
   //   duration: 1000,
   //   delay: 2000,
   //   once: true,
   //   mirror: true
   // });
+
   AOS.init({
     easing: 'ease-out-back',
     duration: 1000,
     delay: 1000
-  });
-
-  //$('header.wp-block-template-part').attr('data-aos','fade-down');
+  }); //$('header.wp-block-template-part').attr('data-aos','fade-down');
 
   homerow1_adjust();
   $(window).on('resize', function () {
     homerow1_adjust();
   });
+
   function homerow1_adjust() {
     if ($('.homeSection1 .column.left h2').length) {
       var homeColLeft = $('.homeSection1 .leftTitle').height();
+
       if ($('.homeSection1 .column.right h2').length) {
         $('.homeSection1 .column.right .wp-block-group').css('height', homeColLeft + 'px');
       }
+
       $('.homeSection1 .column.left h2 strong').each(function () {
         $(this).attr('data-aos', 'fade-right');
       });
     }
+
     if ($('.homeSection1 .column.right h2').length) {
       var homeColRightH2Width = $('.homeSection1 .column.right h2').width();
       var homeColRightH2Height = $('.homeSection1 .column.right .wp-block-group').height() + 30;
+
       if ($('.homeSection1 .column.right .wp-block-button').length) {
         $('.homeSection1 .column.right .wp-block-buttons').css('margin-top', homeColRightH2Height + 'px');
         $('.homeSection1 .column.right .wp-block-buttons').each(function () {
@@ -147,11 +148,14 @@ jQuery(document).ready(function ($) {
       }
     }
   }
+
   if ($('.ourWorkGallery .wp-block-gallery figure').length) {
     $('.ourWorkGallery .wp-block-gallery figure').each(function () {
       $(this).wrapInner('<div class="inner"></div>');
+
       if ($(this).find('img').length) {
         var src = $(this).find('img').attr('src');
+
         if (src.includes('placeholder.png')) {
           $(this).addClass('blank-image');
         }
@@ -164,6 +168,7 @@ jQuery(document).ready(function ($) {
       $(this).addClass('wp-block-image-' + ctr);
     });
   }
+
   if ($('.partnersImages.wp-block-gallery  .wp-block-image').length) {
     $('.partnersImages.wp-block-gallery .wp-block-image').each(function () {
       if ($(this).find('img.helper').length == 0) {
@@ -171,13 +176,12 @@ jQuery(document).ready(function ($) {
       }
     });
   }
+
   if ($('.ourPartners .wp-block-gallery .wp-block-image').length) {
     $('.ourPartners .wp-block-gallery .wp-block-image').each(function () {
       $(this).wrapInner('<div class="inner"></div>');
     });
-  }
-
-  // if( $('.stepsColumn').length ) {
+  } // if( $('.stepsColumn').length ) {
   //   $('<div class="stepsContent"><div class="stepsInner"></div></div>').insertAfter('.stepsColumn');
   //   $('.stepsColumn .wp-block-column').each(function(){
   // 	$(this).wrapInner('<div class="wrap"><div class="flex"></div></div>');
@@ -185,4 +189,5 @@ jQuery(document).ready(function ($) {
   //   });
   //   $('.stepsContent .wp-block-column').last().addClass('last');
   // }
+
 });

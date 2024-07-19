@@ -34,7 +34,8 @@ const config = require('./wpgulp.config.js');
 const gulp = require('gulp'); // Gulp of-course.
 
 // CSS related plugins.
-const sass = require('gulp-sass'); // Gulp plugin for Sass compilation.
+//const sass = require('gulp-sass'); // Gulp plugin for Sass compilation.
+const sass = require('gulp-sass')(require('sass'));
 const minifycss = require('gulp-uglifycss'); // Minifies CSS files.
 const autoprefixer = require('gulp-autoprefixer'); // Autoprefixing magic.
 const mmq = require('gulp-merge-media-queries'); // Combine matching media queries into one.

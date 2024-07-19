@@ -9,12 +9,20 @@
 }
 .clear {clear: both;}
 .global-wrapper {
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 	position: relative;
-	@include tab() {
-		width: 80%;
+  padding-left: 5vw;
+  padding-right: 5vw;
+	@include largewidth() {
+		width: 90vw;
+    padding-left: 0;
+    padding-right: 0;
 	}
+  @include max(1100px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 .padding-home {
 	padding: 0 40px !important;
@@ -1150,3 +1158,30 @@ section.news {
 		}
 	}
 }
+
+@include max($xxl) {
+  header.wp-block-template-part .wp-block-site-logo, 
+  header.wp-block-template-part .wp-block-group.siteNavigation {
+    width: 100%;
+  }
+  header.wp-block-template-part .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+  }
+  header.wp-block-template-part .wp-block-navigation .wp-block-navigation__responsive-container {
+    display: none;
+  }
+  .homeSection1 h2 {
+    font-size: 16vw !important;
+  }
+}
+
+@include max($tabwidth)  {
+  .entry-content .homeSection1 h2 {
+    font-size: 20vw!important;
+  }
+}
+
+
