@@ -206,3 +206,37 @@ function wpdocs_my_function() {
 }
 
 
+// add new buttons
+add_filter( 'mce_buttons', 'myplugin_register_buttons' );
+
+function myplugin_register_buttons( $buttons ) {
+  array_push( $buttons,'edbutton1','edbutton2');
+
+  return $buttons;
+}
+ 
+// Load the TinyMCE plugin : editor_plugin.js (wp2.5)
+add_filter( 'mce_external_plugins', 'myplugin_register_tinymce_javascript' );
+function myplugin_register_tinymce_javascript( $plugin_array ) {
+   $plugin_array['BUTTON1'] = get_stylesheet_directory_uri() . '/assets/js/custom-tinymce.js';
+   return $plugin_array;
+}
+
+
+add_shortcode( 'portfolio_feeds', 'portfolio_feeds_func' );
+function portfolio_feeds_func( $atts ) {
+  $a = shortcode_atts( array(
+    'show' => 12
+  ), $atts );
+  $perpage = (isset($a['show']) && $a['show']) ? $a['show'] : 12;
+  if($perpage=='all') {
+    $perpage = -1;
+  }
+  $output = '';
+  ob_start();
+  include( locate_template('parts/portfolio-feeds.php') ); 
+  $output = ob_get_contents();
+  ob_end_clean();
+  return $output;
+}
+

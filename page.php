@@ -16,18 +16,16 @@ get_header(); ?>
 
 <div class="wp-site-blocks">
 	<main class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
-        <div class="pagewrapper">
+    <div class="pagewrapper">
 
-			<?php
-			while ( have_posts() ) : the_post();
+		<?php while ( have_posts() ) : the_post();
 
-				the_content();
+			the_content();
 
-			endwhile; // End of the loop.
-			?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</main>
+		  endwhile; // End of the loop.?>
+    
+    </div><!-- #primary -->
+	</main><!-- #main -->
+</div>
 <?php
 get_footer();

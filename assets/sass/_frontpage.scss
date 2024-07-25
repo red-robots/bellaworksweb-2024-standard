@@ -60,6 +60,9 @@ body.page, body.single {
 		}
 	}
 }
+.wp-site-blocks {
+  overflow: hidden;
+}
 .test {
 	font-size: 1px;
 }
@@ -524,13 +527,16 @@ body.page, body.single {
 	}
   }
 
-  .homeSection2 {
+.homeSection2 {
 	position: relative;
 	width: 100%;
 	clear: both;
 	overflow: hidden;
 	background-color: #FFF!important;
 	margin: 0 0!important;
+  .wp-block-columns {
+    height: auto!important;
+  }
 	.wp-block-group {
 	  background-color: #FFF!important;
 	  padding-top: 5rem;
@@ -661,7 +667,16 @@ body.page, body.single {
 	  }
 
 	}
+
+  @include max($midwidth) {
+    .wp-block-columns {
+      .leftCol,
+      .rightCol {
+        width: 100%;
+      }
+    }
   }
+}
 
   .homeSection3 {
 	padding-top: 70px;
@@ -734,7 +749,7 @@ body.page, body.single {
 	}
   }
 
-  .homeSection4 {
+.homeSection4 {
 	margin-right: 0!important;
 	margin-left: 0!important;
 	position: relative;
@@ -830,7 +845,53 @@ body.page, body.single {
 		}
 	  }
 	}
+
+  @include max($xxl) {
+    .wp-block-columns {
+      .rightCol {
+        padding-right: 30px;
+      }
+    }
   }
+
+  @include max($midwidth) {
+    .wp-block-columns {
+      .leftCol, .rightCol {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  @include max($xswidth) {
+    padding-top: 50px!important;
+    .wp-block-columns  {
+      .leftCol .inner  {
+        h2 {
+          font-size: 5rem;
+        }
+        h3 {
+          font-size: 3rem;
+        }
+      }
+      .leftCol {
+        justify-content: center;
+      }
+      .rightCol {
+        .group {
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+        .group .rounded-top,
+        .rounded-top {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
   .homeSection5 {
 	background-color: #FFF!important;
 	.wrapper {
@@ -1507,3 +1568,406 @@ body.page, body.single {
 
 	}
   }
+
+
+.main-content-home {
+  .homeHero {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: $blue;
+    color: #FFF;
+    display: flex;
+    flex-wrap: wrap;
+    @include max($tabwidth) {
+      .homeCol.right,
+      .homeCol.left {
+        width: 100%;
+      }
+      .homeCol.left {
+        justify-content: center;
+        align-items: flex-end;
+      }
+      .homeCol.right {
+        justify-content: center;
+        align-items: flex-start;
+        .inner br {
+          display: none;
+        }
+        .hero-button {
+          right: 0;
+          width: 100%;
+          text-align: center;
+        }
+      }
+      .homeCol .inner {
+        font-size: 18vw;
+        padding-bottom: 20px;
+      }
+    }
+  }
+  .homeCol {
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .inner {
+      padding:30px;
+      font-family: $font_secondary;
+      font-size: 9.2vw;
+      font-weight: 500;
+      line-height: 1;
+      position: relative;
+      @media screen and (min-width: 1600px) {
+        font-size: 9.75vw;
+      }
+    }
+    &.left {
+      justify-content: flex-end;
+    }
+    &.right {
+      justify-content: flex-start;
+      background: $header-blue;
+      .hero-button {
+        position: absolute;
+        right: 30px;
+        bottom: -50px;
+        transition: all ease .3s;
+      }
+    }
+
+    .togglezz {
+      position: relative;
+      &:after {
+        content:"";
+        display: block;
+        width: 100%;
+        height: 5px;
+        background: #FFF;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        animation-fill-mode: both;
+        animation-duration: 1s;
+        animation-name: borderBottom;
+        animation-delay: 0.5s;
+      }
+      &.activezz:after {
+        width: 100%;
+      }
+    }
+  }
+
+  .button {
+    color: #FFF;
+    background: $btn-orange;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    padding: 10px 20px 8px;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 200px;
+    transition: all ease .3s;
+    &:hover, &:focus {
+      background: $yellow;
+      color: $primary;
+    }
+  }
+
+  @keyframes borderBottom{
+    from {
+      opacity: 0;
+      width: 0;
+    }
+    to {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+}
+.togglezz {
+  display: none;
+}
+.space-letters {
+  letter-spacing: 4px;
+}
+.activezz {
+  display: inline-block;
+}
+
+.homeSection2 {
+  .wp-block-columns {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .leftCol, .rightCol {
+    width: 50%;
+    h2 {
+      font-size: 10vh;
+      font-weight: 400;
+      line-height: 1.1;
+      margin: 0 0 40px;
+      span {
+        font-weight: 500 !important;
+        text-decoration: none!important;
+        display: inline-block;
+        position: relative;
+        &:after {
+          content:"";
+          display: block;
+          width: 100%;
+          height: 7px;
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+        }
+      }
+    }
+  }
+  .leftCol {
+    .inner {
+      display: inline-block;
+      padding: 5vw 11vw;
+    }
+    p:has(img) {
+      margin: 0 0;
+    }
+    figure {
+      margin: 0 0;
+    }
+    img {
+      max-width: 400px;
+      width: 100%;
+    }
+    h2 {
+      color: $dark_green;
+      display: inline-block;
+      text-align: right;
+      span:after {
+        background: $dark_green;
+      }
+      span:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 50px solid $btn-orange;
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+        position: absolute;
+        left: -100px;
+        top: 40px;
+      }
+    }
+    p {
+      font-size: 22px;
+      color: $dark_green;
+    }
+  }
+  .wp-block-columns .rightCol,
+  .rightCol {
+    color: #FFF;
+    padding: 10vw 5vw 5vw;
+    background-color: $green;
+    h2 span:after {
+      background: #FFF;
+    }
+    p {
+      color: #FFF;
+    }
+  }
+}
+
+.homeSection4 {
+  background-color: $baby-blue;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  .wp-block-columns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center!important;
+  }
+  .leftCol {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    width: 50%;
+    .inner {
+      h2, h3, p {
+        color: #FFF;
+        text-align: right;
+      }
+      h2 {
+        font-weight: 500 !important;
+        line-height: .9;
+        font-size: 7rem;
+        margin: 0 0;
+      }
+      h3 {
+        margin: 10px 0 0;
+        font-size: 5rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+      }
+      .button {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      p:has(.custom-button-element){
+        text-align: center;
+      }
+    }
+  }
+  .rightCol {
+    width: 50%;
+    padding-right: 15vw;
+    .rounded-top-blocks {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 30px;
+    }
+    .rounded-top {
+      width: 48%;
+      margin: 20px 0;
+      // transition: transform 0.6s;
+      // transform-style: preserve-3d;
+      a {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: flex-end;
+        min-height: 260px;
+        width: 100%;
+        height: 100%;
+        background: $blue;
+        color: #FFF;
+        text-decoration: none;
+        font-family: $font_secondary!important;
+        font-size: 3.5rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        line-height: 1.1;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        transition: transform 0.6s;
+        // transform-style: preserve-3d;
+        &:hover {
+          transform: perspective(7em) rotateY(-18deg);
+        }
+      }
+    }
+    .rounded-top:first-child a {
+      border-top-left-radius: 70px;
+    }
+    .rounded-top:last-child a {
+      border-bottom-right-radius: 70px;
+    }
+    .rounded-top:first-child a {
+      text-align: right;
+    }
+    .rounded-top:nth-child(2) a {
+      text-align: left;
+      justify-content: flex-start;
+    }
+    .rounded-top:nth-child(3) a {
+      text-align: left;
+      align-items: flex-start!important;
+      justify-content: flex-start;
+    }
+    
+    .group {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 15px 0;
+      .rounded-top {
+        margin: 0 0;
+      }
+    }
+    .group:first-child {
+      .rounded-top:last-child a {
+        border-bottom-right-radius: 0;
+      }
+    }
+    .group:last-child {
+      .rounded-top:first-child a {
+        border-top-left-radius: 0;
+      }
+    }
+  }
+}
+
+.portfolio-feeds {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 15vw;
+  padding-left: 50px;
+  &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: 75px solid $green;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    z-index: 10;
+  }
+  .inner-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  figure {
+    margin: 0 0;
+    padding: 15px;
+    width: 33.333%;
+    a {
+      display: block;
+      position: relative;
+      padding-bottom: 70%;
+      transition: all ease .5s;
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0,0,0,.25);
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  @include max($midwidth)  {
+    position: relative;
+    figure {
+      width: 50%;
+    }
+  }
+  @include max($tabwidth)  {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 45px;
+    padding-left: 10px;
+    &:before {
+      transform: translateX(15px) scale(0.6);
+    }
+  }
+}
+
+
+
+
