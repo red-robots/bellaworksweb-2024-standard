@@ -1968,6 +1968,50 @@ body.page, body.single {
   }
 }
 
+.partners-section {
+  text-align: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 80px;
+  h2.title-block {
+    color: #bbbdbf;
+    font-weight: 500 !important;
+    line-height: .9;
+    font-size: 5rem;
+    margin: 0 0 50px;
+    @include tab {
+      font-size: 7rem;
+    }
+  }
+  a {
+    display: block;
+  }
+
+  @include max($tabwidth) {
+    .partners {
+      height: auto!important;
+      position: relative;
+      padding: 30px;
+      a {
+        display: block;
+        width: 100%;
+        padding: 20px 20px 95%;
+        position: relative;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: center;
+          transform: scale(0.85);
+        }
+      }
+    }
+  }
+}
+
 
 
 

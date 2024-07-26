@@ -155,6 +155,39 @@ get_header(); ?>
     </div>
     <?php } ?> 
 
+
+    <?php  
+    $row4_section_title = get_field('row4_section_title');
+    $row4_partners = get_field('partners');
+    if( $row4_partners ) { ?>
+    <div class="homeSection5 partners-section">
+      <div class="inner">
+        <?php if ($row4_section_title) { ?>
+        <h2 class="title-block"><?php echo $row4_section_title ?></h2> 
+        <?php } ?>
+
+        <?php if ($row4_partners) { ?>
+        <div class="partners-list">
+          <div class="swiper">
+          <div class="swiper-wrapper">
+            <?php 
+              foreach( $row4_partners as $p ) {
+                $url = get_field('url', $p['ID']);
+             ?>
+              <div class="partners swiper-slide">
+                <a href="<?php echo $url; ?>" target="_blank">
+                  <img  decoding="async" width="300" height="223" src="<?php echo $p['url']; ?>" alt="" class=""/>
+                </a>
+              </div>
+            <?php } ?>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <?php } ?>
+      </div>
+    </div>
+    <?php } ?> 
+
   <?php endwhile; ?>    
 </main><!-- #main -->
 <?php

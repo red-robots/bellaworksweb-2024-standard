@@ -1613,6 +1613,9 @@ header.wp-block-template-part button[aria-label="Open menu"] span.bar:after{top:
 .portfolio-feeds figure a{display:block;position:relative;padding-bottom:70%;-webkit-transition:all ease .5s;transition:all ease .5s}
 .portfolio-feeds figure a:hover{-webkit-transform:translateY(-10px);transform:translateY(-10px);-webkit-box-shadow:0 10px 20px rgba(0,0,0,.25);box-shadow:0 10px 20px rgba(0,0,0,.25)}
 .portfolio-feeds figure img{width:100%;height:100%;position:absolute;top:0;left:0;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}
+.partners-section{text-align:center;padding-left:5vw;padding-right:5vw;padding-bottom:80px}
+.partners-section h2.title-block{color:#bbbdbf;font-weight:500 !important;line-height:.9;font-size:5rem;margin:0 0 50px}
+.partners-section a{display:block}
 .clear{clear:both}
 .global-wrapper{width:100%;margin:0 auto;position:relative;padding-left:5vw;padding-right:5vw}
 .padding-home{padding:0 40px !important}
@@ -1770,6 +1773,7 @@ header.wp-block-template-part .header-content .siteNavigation ul.menu{gap:2rem}
 .homeSection2 .wp-block-columns .rightCol:before{height:280px}
 .homeSection5 .partners{width:200px;height:200px}
 .homeSection5 .partners a{width:200px;height:200px}
+.partners-section h2.title-block{font-size:7rem}
 .padding-home{padding:0}
 .site-footer .footer-contents{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .site-footer .footer-contents div{width:auto;margin-bottom:0}
@@ -1910,6 +1914,9 @@ button[aria-label="Close menu"]{display:none !important}
 .main-content-home .homeHero .homeCol .inner{font-size:18vw;padding-bottom:20px}
 .portfolio-feeds{padding-top:20px;padding-bottom:20px;padding-right:45px;padding-left:10px}
 .portfolio-feeds:before{-webkit-transform:translateX(15px) scale(0.6);transform:translateX(15px) scale(0.6)}
+.partners-section .partners{height:auto !important;position:relative;padding:30px}
+.partners-section .partners a{display:block;width:100%;padding:20px 20px 95%;position:relative}
+.partners-section .partners a img{position:absolute;top:0;left:0;width:100%;height:100%;-o-object-fit:contain;object-fit:contain;-o-object-position:center;object-position:center;-webkit-transform:scale(0.85);transform:scale(0.85)}
 .entry-content .homeSection1 h2{font-size:20vw !important}
 }@media screen and (max-width:860px){.flex-direction-nav .flex-prev{opacity:1;left:10px}
 .flex-direction-nav .flex-next{opacity:1;right:10px}
