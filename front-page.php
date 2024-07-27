@@ -157,33 +157,141 @@ get_header(); ?>
 
 
     <?php  
-    $row4_section_title = get_field('row4_section_title');
-    $row4_partners = get_field('partners');
-    if( $row4_partners ) { ?>
-    <div class="homeSection5 partners-section">
-      <div class="inner">
-        <?php if ($row4_section_title) { ?>
-        <h2 class="title-block"><?php echo $row4_section_title ?></h2> 
-        <?php } ?>
+    $row4_visibility = get_field('row4_visibility');
+    if( $row4_visibility!='hide' ) {
+      $row4_section_title = get_field('row4_section_title');
+      $row4_partners = get_field('partners');
+      if( $row4_partners ) { ?>
+      <div class="homeSection5 partners-section">
+        <div class="inner">
+          <?php if ($row4_section_title) { ?>
+          <h2 class="title-block"><?php echo $row4_section_title ?></h2> 
+          <?php } ?>
 
-        <?php if ($row4_partners) { ?>
-        <div class="partners-list">
-          <div class="swiper">
-          <div class="swiper-wrapper">
-            <?php 
-              foreach( $row4_partners as $p ) {
-                $url = get_field('url', $p['ID']);
-             ?>
-              <div class="partners swiper-slide">
-                <a href="<?php echo $url; ?>" target="_blank">
-                  <img  decoding="async" width="300" height="223" src="<?php echo $p['url']; ?>" alt="" class=""/>
-                </a>
+          <?php if ($row4_partners) { ?>
+          <div class="partners-list">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <?php 
+                  foreach( $row4_partners as $p ) {
+                    $url = get_field('url', $p['ID']);
+                 ?>
+                  <div class="partners swiper-slide">
+                    <a href="<?php echo $url; ?>" target="_blank">
+                      <img  decoding="async" width="300" height="223" src="<?php echo $p['url']; ?>" alt="" class=""/>
+                    </a>
+                  </div>
+                <?php } ?>
               </div>
-            <?php } ?>
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
-          <div class="swiper-pagination"></div>
+          <?php } ?>
+        </div>
+      </div>
+      <?php } ?> 
+    <?php } ?> 
+
+
+    <?php  
+    $row_5_content = get_field('row_5_content');
+    if( $row_5_content ) { ?>
+    <div class="section row_5_content">
+      <div class="inner" data-aos="fade-left">
+        <?php echo $row_5_content ?>
+      </div>
+    </div>
+    <?php } ?> 
+
+
+    <?php  
+    $row6_left_column = get_field('row6_left_column');
+    $row6_right_column = get_field('row6_right_column');
+    if( $row6_left_column ||  $row6_right_column ) { ?>
+    <div class="section row_6_content">
+      <div class="inner">
+        <?php if ($row6_left_column) { ?>
+        <div class="leftCol flexcol" data-aos="fade-right">
+          <div class="inside">
+            <?php echo $row6_left_column ?>
+          </div>
         </div>
         <?php } ?>
+
+        <?php if ($row6_right_column) { ?>
+        <div class="rightCol flexcol">
+          <div class="inside">
+            <?php echo $row6_right_column ?>
+          </div>
+        </div>
+        <?php } ?>
+      </div>
+    </div>
+    <?php } ?> 
+
+
+    <?php  
+    $row7_title_section = get_field('row7_title_section');
+    $row7_btn = get_field('row7_cta_button');
+    $titlediv = get_field('row7_title_section');
+    $small_title = ( isset($titlediv['small_title']) && $titlediv['small_title'] ) ? $titlediv['small_title'] : '';
+    $large_title = ( isset($titlediv['large_title']) && $titlediv['large_title'] ) ? $titlediv['large_title'] : '';
+    $row7_column_content = get_field('row7_column_content');
+
+    $btnTitle7 = (isset($row7_btn['title']) && $row7_btn['title']) ? $row7_btn['title'] : '';
+    $btnLink7 = (isset($row7_btn['url']) && $row7_btn['url']) ? $row7_btn['url'] : '';
+    $btnTarget7 = (isset($row7_btn['target']) && $row7_btn['target']) ? $row7_btn['target'] : '_self';
+
+    if( ($small_title || $large_title) ||  $row7_column_content ) { ?>
+    <div class="section row7_column_content">
+      <div class="inner">
+
+        <?php if ($small_title) { ?>
+        <div class="headerTitle">
+          <?php if ($small_title) { ?>
+          <div class="small-title"><?php echo $small_title ?></div>
+          <?php } ?>
+
+          <?php if ($large_title) { ?>
+          <div class="large-title"><?php echo $large_title ?></div>
+          <?php } ?>
+        </div>
+        <?php } ?>
+
+        <?php if ($row7_column_content) { ?>
+        <div class="container">
+          <div class="blocks-repeatable">
+            <?php $x=1; 
+            $count = count($row7_column_content);
+            foreach ($row7_column_content as $v) { 
+            $details = $v['details'];
+            $clickthrough = $v['clickthrough'];
+            $r7_btnTitle = (isset($clickthrough['title']) && $clickthrough['title']) ? $clickthrough['title'] : '';
+            $r7_btnLink = (isset($clickthrough['url']) && $clickthrough['url']) ? $clickthrough['url'] : '';
+            $r7_btnTarget = (isset($clickthrough['target']) && $clickthrough['target']) ? $clickthrough['target'] : '_self';
+            $effect = 'fade-up';
+            if($x==1) {
+              $effect = 'fade-right';
+            }
+            else if($x==$count) {
+              $effect = 'fade-left';
+            }
+            ?>
+            <div class="infobox" data-aos="<?php echo $effect ?>">
+              <?php if ($r7_btnLink) { ?>
+               <a href="<?php echo $r7_btnLink ?>" class="inner" target="<?php echo $r7_btnTarget ?>"><?php echo $details ?></a> 
+              <?php } else { ?>
+                <div class="nolink inner"><?php echo $details ?></div>
+              <?php } ?> 
+            </div>
+            <?php $x++; } ?>
+          </div>
+
+          <?php if ($btnTitle7 && $btnLink7) { ?>
+          <div class="buttondiv"><a href="<?php echo $btnLink7 ?>" target="<?php echo $btnTarget7 ?>" class="button wide"><?php echo $btnTitle7 ?></a></div>
+          <?php } ?>
+        </div>
+        <?php } ?> 
       </div>
     </div>
     <?php } ?> 

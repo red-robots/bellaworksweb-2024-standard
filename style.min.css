@@ -1565,6 +1565,7 @@ header.wp-block-template-part button[aria-label="Open menu"] span.bar:after{top:
 .main-content-home .homeCol .togglezz.activezz:after{width:100%}
 .main-content-home .button{color:#fff;background:#db6e35;font-size:16px;font-weight:700;letter-spacing:.05em;padding:10px 20px 8px;text-decoration:none;display:inline-block;text-transform:uppercase;border-radius:200px;-webkit-transition:all ease .3s;transition:all ease .3s}
 .main-content-home .button:hover,.main-content-home .button:focus{background:#fcb405;color:#3d5588}
+.main-content-home .button.wide{padding-left:60px;padding-right:60px}
 .togglezz{display:none}
 .space-letters{letter-spacing:4px}
 .activezz{display:inline-block}
@@ -1619,6 +1620,40 @@ header.wp-block-template-part button[aria-label="Open menu"] span.bar:after{top:
 .partners-section .partners.swiper-slide{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .partners-section .partners.swiper-slide a{display:block;position:relative}
 .partners-section .partners.swiper-slide a img{position:absolute;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);width:80%;height:auto}
+.row_5_content{color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
+.row_5_content .inner{width:90%;background:#bcbc54;padding:40px;border-bottom-left-radius:80px}
+.row_5_content .inner p{font-size:22px;line-height:1.5}
+.row_6_content{padding-top:50px;padding-bottom:50px}
+.row_6_content .inner{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.row_6_content .flexcol{width:100%}
+.row_6_content .flexcol.leftCol{border-top-right-radius:80px;background:#223e60;color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;padding:40px}
+.row_6_content .flexcol.leftCol p{margin:0}
+.row_6_content .flexcol.leftCol p:has(img){display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
+.row_6_content .flexcol.leftCol p:has(img) img{display:inline-block}
+.row_6_content .flexcol.leftCol h2{width:100%;margin:10px 0 0;font-size:6rem;font-weight:400;line-height:1.05}
+.row_6_content .flexcol.rightCol{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:40px}
+.row_6_content .flexcol.rightCol .inside{width:100%}
+.row_6_content .flexcol.rightCol p{color:#929497;font-size:22px;line-height:1.5}
+.row7_column_content{padding-top:80px;padding-bottom:100px}
+.row7_column_content .headerTitle{text-align:center}
+.row7_column_content .headerTitle .small-title,.row7_column_content .headerTitle .large-title{width:100%;color:#d0d2d3;font-family:"Trump Gothic Pro","Oswald",sans-serif !important;font-weight:500;font-style:normal;font-size:25px}
+.row7_column_content .headerTitle .small-title{font-size:5rem;line-height:1.1;letter-spacing:.02em}
+.row7_column_content .headerTitle .large-title{font-size:9rem;line-height:1.1;letter-spacing:.03em}
+.row7_column_content .headerTitle h2{width:100%;margin:10px 0 0;font-size:6rem;font-weight:400;line-height:1.05;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.row7_column_content .container{max-width:1200px;width:100%;margin:0 auto}
+.row7_column_content .blocks-repeatable{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-left:-10px;margin-right:-10px}
+.row7_column_content .blocks-repeatable h2,.row7_column_content .blocks-repeatable p{color:#fff;width:100%}
+.row7_column_content .blocks-repeatable p{font-size:20px;line-height:1.3}
+.row7_column_content .blocks-repeatable .infobox{width:95%;padding:10px;position:relative;min-height:250px;text-align:center}
+.row7_column_content .blocks-repeatable .infobox:first-child .inner{border-bottom-left-radius:150px}
+.row7_column_content .blocks-repeatable .infobox:last-child .inner{border-top-right-radius:150px}
+.row7_column_content .blocks-repeatable .inner{background:#3689b4;padding:50px 50px;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:center;align-content:center;text-align:center;text-decoration:none}
+.row7_column_content .blocks-repeatable h2{margin:0 0 15px;font-size:3.5em;line-height:1.1;letter-spacing:.015em}
+.row7_column_content .blocks-repeatable p{margin-top:0}
+.row7_column_content .blocks-repeatable p:last-child{margin-bottom:0}
+.row7_column_content .buttondiv{margin-top:20px;text-align:center}
+.row7_column_content .buttondiv .button{text-decoration:none;-webkit-transition:-webkit-transform .6s;transition:-webkit-transform .6s;transition:transform .6s;transition:transform .6s,-webkit-transform .6s}
+.row7_column_content .buttondiv .button:hover{-webkit-transform:perspective(7em) rotateY(-18deg);transform:perspective(7em) rotateY(-18deg)}
 .clear{clear:both}
 .global-wrapper{width:100%;margin:0 auto;position:relative;padding-left:5vw;padding-right:5vw}
 .padding-home{padding:0 40px !important}
@@ -1777,6 +1812,11 @@ header.wp-block-template-part .header-content .siteNavigation ul.menu{gap:2rem}
 .homeSection5 .partners{width:200px;height:200px}
 .homeSection5 .partners a{width:200px;height:200px}
 .partners-section h2.title-block{font-size:7rem}
+.row_5_content .inner{width:70%;min-height:35vw;padding:5vw 10vw;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:center;align-content:center;border-bottom-left-radius:200px}
+.row_6_content .flexcol{width:50%}
+.row_6_content .flexcol.leftCol{border-top-right-radius:200px;padding:10vw 5rem}
+.row_6_content .flexcol.rightCol{padding:10vw 5rem}
+.row7_column_content .blocks-repeatable .infobox{width:33.33%;min-height:350px}
 .padding-home{padding:0}
 .site-footer .footer-contents{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .site-footer .footer-contents div{width:auto;margin-bottom:0}
