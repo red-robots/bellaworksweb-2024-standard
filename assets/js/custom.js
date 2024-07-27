@@ -62,13 +62,21 @@ jQuery(document).ready(function ($) {
         slidesPerView: 2,
         spaceBetween: 10
       },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 10
+      },
       880: {
         slidesPerView: 4,
         spaceBetween: 10
       },
-      1200: {
+      1300: {
+        slidesPerView: 4,
+        spaceBetween: 10
+      },
+      1380: {
         slidesPerView: 5,
-        spaceBetween: 20
+        spaceBetween: 10
       }
     },
     // Navigation arrows

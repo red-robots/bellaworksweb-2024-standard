@@ -923,8 +923,8 @@ body.page, body.single {
 			height: 200px;
 		}
 		@include desk() {
-			width: 250px;
-			height: 250px;
+			width: 270px;
+			height: 270px;
 		}
 		
 		img {
@@ -1972,7 +1972,8 @@ body.page, body.single {
   text-align: center;
   padding-left: 5vw;
   padding-right: 5vw;
-  padding-bottom: 80px;
+  padding-top: 50px;
+  padding-bottom: 100px;
   h2.title-block {
     color: #bbbdbf;
     font-weight: 500 !important;
@@ -1986,12 +1987,28 @@ body.page, body.single {
   a {
     display: block;
   }
-
+  .partners.swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    a {
+      display: block;
+      position: relative;
+    }
+    a img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 80%;
+      height: auto;
+    }
+  }
   @include max($tabwidth) {
-    .partners {
+    .partners.swiper-slide {
       height: auto!important;
       position: relative;
-      padding: 30px;
+      padding: 15px;
       a {
         display: block;
         width: 100%;
