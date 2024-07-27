@@ -46,9 +46,11 @@ get_header(); ?>
 					 ?>
 						<div class="cube">
 							<h3><?php echo $name; ?></h3>
+              <?php if( isset($pic['url']) && $pic['url'] ) { ?>
 							<div class="pic">
 								<img src="<?php echo $pic['url']; ?>">
 							</div>
+              <?php } ?>
 							<div class="desc">
 								<?php echo $bio; ?>
 							</div>
