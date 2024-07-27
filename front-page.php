@@ -205,28 +205,31 @@ get_header(); ?>
 
 
     <?php  
-    $row6_left_column = get_field('row6_left_column');
-    $row6_right_column = get_field('row6_right_column');
-    if( $row6_left_column ||  $row6_right_column ) { ?>
-    <div class="section row_6_content">
-      <div class="inner">
-        <?php if ($row6_left_column) { ?>
-        <div class="leftCol flexcol" data-aos="fade-right">
-          <div class="inside">
-            <?php echo $row6_left_column ?>
+    $row6_visibility = get_field('row6_visibility');
+    if( $row6_visibility!='hide' ) {
+      $row6_left_column = get_field('row6_left_column');
+      $row6_right_column = get_field('row6_right_column');
+      if( $row6_left_column ||  $row6_right_column ) { ?>
+      <div class="section row_6_content">
+        <div class="inner">
+          <?php if ($row6_left_column) { ?>
+          <div class="leftCol flexcol" data-aos="fade-right">
+            <div class="inside">
+              <?php echo $row6_left_column ?>
+            </div>
           </div>
-        </div>
-        <?php } ?>
+          <?php } ?>
 
-        <?php if ($row6_right_column) { ?>
-        <div class="rightCol flexcol">
-          <div class="inside">
-            <?php echo $row6_right_column ?>
+          <?php if ($row6_right_column) { ?>
+          <div class="rightCol flexcol">
+            <div class="inside">
+              <?php echo $row6_right_column ?>
+            </div>
           </div>
+          <?php } ?>
         </div>
-        <?php } ?>
       </div>
-    </div>
+      <?php } ?> 
     <?php } ?> 
 
 
@@ -247,7 +250,7 @@ get_header(); ?>
       <div class="inner">
 
         <?php if ($small_title) { ?>
-        <div class="headerTitle">
+        <div class="headerTitle" data-aos="flip-up">
           <?php if ($small_title) { ?>
           <div class="small-title"><?php echo $small_title ?></div>
           <?php } ?>
