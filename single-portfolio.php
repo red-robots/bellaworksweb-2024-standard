@@ -99,7 +99,7 @@ get_header(); ?>
               $detail_photo2 = get_sub_field('detail_photo2');
 	            $full_site_photo = get_sub_field('full_site_photo');
 	            $key_features = get_sub_field('key_features'); 
-              $site_url_link = get_sub_field('site_url_link'); 
+              $website_url = get_sub_field('website__url'); 
               ?>
   		        <div class="details">
   		        	<div class="left">
@@ -114,14 +114,14 @@ get_header(); ?>
   		        		</div>
                   <?php } ?>
 
-                  <?php if ($key_features || $site_url_link) { ?>
+                  <?php if ($key_features || $website_url) { ?>
   		        		<div class="key-features">
   		        			<h2>Key Features</h2>
   		        			<?php echo $key_features; ?>
 
-                    <?php if ($site_url_link) { ?>
+                    <?php if ($website_url) { ?>
                     <div class="buttondiv">
-                      <a href="<?php echo $site_url_link ?>" class="button-default wide" target="_blank">View Website</a>
+                      <a href="<?php echo $website_url ?>" class="button-default wide" target="_blank">View Website</a>
                     </div>
                     <?php } ?>
   		        		</div>
