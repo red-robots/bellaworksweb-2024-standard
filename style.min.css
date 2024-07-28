@@ -1571,7 +1571,7 @@ header.wp-block-template-part button[aria-label="Open menu"] span.bar:after{top:
 .activezz{display:inline-block}
 .homeSection2 .wp-block-columns{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .homeSection2 .leftCol,.homeSection2 .rightCol{width:50%}
-.homeSection2 .leftCol h2,.homeSection2 .rightCol h2{font-size:7rem;font-weight:400;line-height:1.1;margin:0 0 40px}
+.homeSection2 .leftCol h2,.homeSection2 .rightCol h2{font-size:7em;font-weight:400;line-height:1.1;margin:0 0 40px}
 .homeSection2 .leftCol h2 span,.homeSection2 .rightCol h2 span{font-weight:500 !important;text-decoration:none !important;display:inline-block;position:relative}
 .homeSection2 .leftCol h2 span:after,.homeSection2 .rightCol h2 span:after{content:"";display:block;width:100%;height:7px;position:absolute;left:0;bottom:-10px}
 .homeSection2 .leftCol .inner{display:inline-block;padding:5vw 11vw}
@@ -1789,10 +1789,15 @@ section.single-portfolio .details .key-features h2{color:#223e60}
 section.single-portfolio .colors{width:100%}
 section.single-portfolio .colors .left,section.single-portfolio .colors .right{width:100%;padding:30px}
 section.single-portfolio .colors .left{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;font-size:22px}
-section.single-portfolio .colors .left.testimonial-info{width:100%;padding-bottom:0}
-section.single-portfolio .colors .left.testimonial-info .inner{max-width:1200px;width:100%;margin:0 auto;padding:0 30px;text-align:center}
-section.single-portfolio .colors .right{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+section.single-portfolio .colors .left.testimonial-info{width:100%;padding-top:60px;padding-bottom:60px;background-color:#223e60;color:#fff}
+section.single-portfolio .colors .left.testimonial-info .inner{max-width:1100px;width:100%;margin:0 auto;padding:0 30px;text-align:center}
+section.single-portfolio .colors .right{display:block;width:100%}
 section.single-portfolio .colors .right .color{width:100px;height:100px;border-radius:50%;margin:20px}
+section.single-portfolio .colors .right .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;max-width:1120px;width:100%;margin:0 auto;padding-top:50px;padding-bottom:50px}
+section.single-portfolio .colors .right .flexwrap .fxcol{width:100%}
+section.single-portfolio .colors .right .flexwrap .colorsText{color:#6d6d6d;font-size:22px;line-height:1.5}
+section.single-portfolio .colors .right .flexwrap .variations{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+section.single-portfolio .colors .right .flexwrap.full .fxcol{width:100% !important}
 section.single-portfolio .detail-photos{width:100%}
 section.single-portfolio .detail-photos .photo{width:100%;padding:10px}
 section.single-portfolio .detail-photos .photo img{width:100%}
@@ -1887,6 +1892,8 @@ section.single-portfolio .colors{display:-webkit-box;display:-ms-flexbox;display
 section.single-portfolio .colors .left,section.single-portfolio .colors .right{width:50%}
 section.single-portfolio .colors .left{padding:50px}
 section.single-portfolio .colors .right .color{width:200px;height:200px}
+section.single-portfolio .colors .right .flexwrap .fxcol{width:50%;padding:0 20px}
+section.single-portfolio .colors .right .flexwrap .colorsText{text-align:right}
 section.single-portfolio .detail-photos{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap}
 section.single-portfolio .detail-photos .photo{width:50%}
 section.news{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:nowrap;flex-wrap:nowrap}

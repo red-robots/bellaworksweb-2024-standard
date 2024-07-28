@@ -115,7 +115,9 @@ get_header(); ?>
 		        // Case: Download layout.
 		        elseif( get_row_layout() == 'color_palette' ): 
 		            $text_field = get_sub_field('text_field');
-		            $colors = get_sub_field('colors');
+		            $colorsText = get_sub_field('colors_description');
+                $colors = get_sub_field('colors');
+                $color_class = ($colorsText && $colors) ? 'half':'full';
 		        ?>
 		        <div class="colors">
 		        	<div class="left testimonial-info">
@@ -123,13 +125,23 @@ get_header(); ?>
                   <?php echo $text_field; ?>
                 </div>
 		        	</div>
+
+              <?php if ($colors || $colorsText) { ?>
 		        	<div class="right">
-		        		<?php foreach( $colors as $c ) { 
-		        		
-		        			?>
-		        			<div class="color" style="background-color: <?php echo $c['color']; ?>"></div>
-		        		<?php } ?>
+                <div class="flexwrap <?php echo $color_class ?>">
+                <?php if ($colorsText) { ?>
+                  <div class="fxcol colorsText"><?php echo $colorsText ?></div>
+                <?php } ?>
+                <?php if ($colors) { ?>
+                  <div class="fxcol variations">
+  		        		<?php foreach( $colors as $c ) { ?>
+  		        			<div class="color" style="background-color: <?php echo $c['color']; ?>"></div>
+  		        		<?php } ?>
+                  </div>
+                <?php } ?>
+                </div>
 		        	</div>
+              <?php } ?>
 		        </div>
 		            
 
