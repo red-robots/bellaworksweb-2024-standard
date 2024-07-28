@@ -53,13 +53,18 @@ get_header(); ?>
 					// echo '</pre>';
 					 $mimeType = get_post_mime_type($id);
     				// $base64 = get_post_meta($id, "base64")[0];
-
+           $taxonomy = 'business-type';
+           $terms = get_the_terms( $pId, $taxonomy );
+           $category = ( isset($terms[0]) ) ? $terms[0]->name : '';
 					?>	
 
 					
 						<a href="<?php the_permalink(); ?>" class="third">
 							<div class="title">
 								<h2><?php the_title(); ?></h2>
+                <?php if ($category) { ?>
+                <!-- <h3 class="type"><?php //echo $category; ?></h3> -->
+                <?php } ?>
 							</div>
 							<img src="<?php echo $iurl; ?>">
 							

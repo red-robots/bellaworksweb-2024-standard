@@ -93,14 +93,22 @@ function js_custom_init() {
 add_action( 'init', 'ii_custom_taxonomies', 0 );
 function ii_custom_taxonomies() {
         $posts = array(
-            array(
-                'post_type' => 'teams',
-                'menu_name' => 'Team Groups',
-                'plural'    => 'Team Groups',
-                'single'    => 'Team Group',
-                'taxonomy'  => 'team-groups',
-                'rewrite'   => 'team'
-            ),
+          array(
+            'post_type' => 'teams',
+            'menu_name' => 'Team Groups',
+            'plural'    => 'Team Groups',
+            'single'    => 'Team Group',
+            'taxonomy'  => 'team-groups',
+            'rewrite'   => 'team'
+          ),
+          array(
+            'post_type' => 'portfolio',
+            'menu_name' => 'Business Types',
+            'plural'    => 'Business Types',
+            'single'    => 'Business Type',
+            'taxonomy'  => 'business-type',
+            'rewrite'   => 'business-type'
+          )
         );
 
     if($posts) {

@@ -121,6 +121,13 @@ a.cta {
 	@include tab() {
 		padding-top: 100px;
 	}
+  h3.type {
+    margin: 0 0;
+    color: #FFF;
+    font-size: 45px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
 }
 body.single {
 	.pagewrapper {
@@ -900,6 +907,20 @@ section.single-portfolio {
 				align-items: center;
 				margin-bottom: 50px;
 			}
+
+      .titleWrap {
+        padding-top: 30px;
+        text-align: center;
+        h1 {
+          margin: 0 0;
+        }
+        div.type {
+          color: #FFF;
+          font-size: 35px;
+          line-height: 1.2;
+          margin-top: 10px;
+        }
+      }
 		}
 		.left {
 			@include tab() {

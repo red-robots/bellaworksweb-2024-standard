@@ -31,11 +31,20 @@ get_header(); ?>
 		            $text_color = get_sub_field('text_color');
 		            $name = get_sub_field('name');
 		            $intro_text = get_sub_field('intro_text');
-	            
+	             
+              $taxonomy = 'business-type';
+              $terms = get_the_terms( get_the_ID(), $taxonomy );
+              $category = ( isset($terms[0]) ) ? $terms[0]->name : '';
+
 		        ?>  
 		        <div class="intro" style="background-color: <?php echo $background_color;  ?>;">
 		        	<div class="intro-wrap">
-		        		<h1 style="color: <?php echo $text_color; ?>"><?php the_title(); ?></h1>
+                <div class="titleWrap">
+                  <h1 style="color: <?php echo $text_color; ?>"><?php the_title(); ?></h1>
+                  <?php if ($category) { ?>
+                  <div class="type"><?php echo $category; ?></div>
+                  <?php } ?>
+                </div>
 		        		<!-- <div class="left">
 			        		<div class="logo">
 				        		<img src="<?php echo $client_logo['url']; ?>">

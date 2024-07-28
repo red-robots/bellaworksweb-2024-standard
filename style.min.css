@@ -1673,6 +1673,7 @@ a.cta{font-size:16px;font-weight:700;letter-spacing:.05em;padding:10px 30px 12px
 a.cta:hover{background-color:#d1d374;color:#223e60}
 .address{text-align:left}
 .pagewrapper{width:100%;clear:both;padding-top:110px}
+.pagewrapper h3.type{margin:0;color:#fff;font-size:45px;line-height:1.2;letter-spacing:.02em}
 body.single .pagewrapper{background-color:#8dceb6}
 body.single-service .pagewrapper,body.single-post .pagewrapper{background-color:#fff}
 body.single-post article{max-width:800px;padding:40px;margin:0 auto;color:#58595b}
@@ -1768,6 +1769,9 @@ section.single-portfolio .intro .logo img{width:100%}
 section.single-portfolio .intro h1{width:100%;text-align:center;margin:50px auto;font-size:5rem;display:inline-block}
 section.single-portfolio .intro .desc{width:100%;margin:0 auto;font-size:22px}
 section.single-portfolio .intro .intro-wrap{width:auto;margin:0 auto}
+section.single-portfolio .intro .intro-wrap .titleWrap{padding-top:30px;text-align:center}
+section.single-portfolio .intro .intro-wrap .titleWrap h1{margin:0}
+section.single-portfolio .intro .intro-wrap .titleWrap div.type{color:#fff;font-size:35px;line-height:1.2;margin-top:10px}
 section.single-portfolio .hero{width:100%}
 section.single-portfolio .hero img{width:100%}
 section.single-portfolio .blurbs{width:100%;padding:100px 0;clear:both}
