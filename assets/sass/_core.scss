@@ -978,6 +978,9 @@ section.single-portfolio {
 	}
 	.details {
 		width: 100%;
+    figure {
+      margin: 0 0;
+    }
 		@include tab() {
 			display: flex;
 			flex-direction: row;

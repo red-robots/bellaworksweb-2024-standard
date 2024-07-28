@@ -1780,6 +1780,7 @@ section.single-portfolio .blurbs .color-logo .logo{width:250px;margin:0 auto}
 section.single-portfolio .blurbs .color-logo .logo img{width:100%}
 section.single-portfolio .blurbs .blurb{font-size:22px;padding:30px}
 section.single-portfolio .details{width:100%}
+section.single-portfolio .details figure{margin:0}
 section.single-portfolio .details .left,section.single-portfolio .details .right{width:100%}
 section.single-portfolio .details .left img,section.single-portfolio .details .right img{width:100%}
 section.single-portfolio .details .detail{width:100%}
