@@ -1571,7 +1571,7 @@ header.wp-block-template-part button[aria-label="Open menu"] span.bar:after{top:
 .activezz{display:inline-block}
 .homeSection2 .wp-block-columns{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .homeSection2 .leftCol,.homeSection2 .rightCol{width:50%}
-.homeSection2 .leftCol h2,.homeSection2 .rightCol h2{font-size:10vh;font-weight:400;line-height:1.1;margin:0 0 40px}
+.homeSection2 .leftCol h2,.homeSection2 .rightCol h2{font-size:7rem;font-weight:400;line-height:1.1;margin:0 0 40px}
 .homeSection2 .leftCol h2 span,.homeSection2 .rightCol h2 span{font-weight:500 !important;text-decoration:none !important;display:inline-block;position:relative}
 .homeSection2 .leftCol h2 span:after,.homeSection2 .rightCol h2 span:after{content:"";display:block;width:100%;height:7px;position:absolute;left:0;bottom:-10px}
 .homeSection2 .leftCol .inner{display:inline-block;padding:5vw 11vw}
@@ -1706,7 +1706,8 @@ section.service .intro figure{float:left;width:150px;margin:20px 0}
 section.service .intro figure img{width:100%}
 section.service .intro h1{float:left;width:auto;clear:both;color:#fff;font-size:80px;margin:0;padding-left:50px}
 section.service .section-two{width:100%;overflow:hidden;background-color:#fff}
-section.service .section-two h2{width:auto;position:relative;display:inline-block;font-weight:400 !important;font-size:10vh !important;line-height:1.2;color:#8dceb6}
+section.service .section-two h2{width:auto;position:relative;display:inline-block;font-weight:400 !important;font-size:7em !important;line-height:1;color:#8dceb6}
+section.service .section-two h2 strong{font-weight:500 !important}
 section.service .section-two h2 strong{width:auto;display:inline-block;position:relative;border-bottom:7px solid #6daf93}
 section.service .section-two h2 strong:before{content:"";display:block;width:0;height:0;border-left:50px solid #db6e35;border-top:25px solid transparent;border-bottom:25px solid transparent;position:absolute;left:-100px;top:20px}
 section.service .section-two .left{padding:30px}
@@ -1859,8 +1860,9 @@ section.about div.left figure{width:50%}
 section.about div.right{width:50%;padding-top:10rem;padding-right:5rem;padding-bottom:10rem;padding-left:5rem}
 section.about div.right:before{content:"";display:block;width:100%;height:280px;position:absolute;top:3vw;right:0;background-image:url(assets/images/decoration/connect.svg);background-size:contain;background-position:right center;background-repeat:no-repeat}
 section.big-form .wrapper{width:60%;margin:0 auto}
-section.faqs{width:60%;padding-left:275px;margin:0 auto}
 section.faqs .faq-title{padding-right:100px;position:absolute;top:100px;left:0;-webkit-transform:translateY(-25%) rotate(-90deg);transform:translateY(-25%) rotate(-90deg)}
+section.faqs{width:100%;padding-left:180px;left:0}
+section.faqs .faq-title{left:-90px}
 .answer{width:98%}
 section.work a.third{width:33.333%}
 section.single-portfolio .intro .desc{width:50%;max-width:800px}
@@ -1891,6 +1893,7 @@ section.news .post .desc h2{font-size:2rem}
 }@media(min-width:1200px){header.wp-block-template-part .header-content .siteNavigation ul.menu{gap:2rem}
 .homeSection5 .partners{width:270px;height:270px}
 .homeSection5 .partners a{width:250px;height:250px}
+section.faqs{max-width:1260px;width:100%;padding-left:275px;margin:0 auto;left:-5vw}
 }@media(min-width:1500px){header.wp-block-template-part .header-content .siteNavigation ul.menu{gap:4rem}
 .global-wrapper{width:90vw;padding-left:0;padding-right:0}
 }@media screen and (min-width:1600px){.main-content-home .homeCol .inner{font-size:9.75vw}

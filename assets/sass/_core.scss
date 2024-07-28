@@ -371,9 +371,12 @@ section.service {
 			position: relative;
 			display: inline-block;
 			font-weight: 400 !important;
-		    font-size: 10vh !important;
-		    line-height: 1.2;
-		    color: $green;
+	    font-size: 7em !important;
+	    line-height: 1;
+	    color: $green;
+      strong {
+        font-weight: 500 !important;
+      }
 
 			strong {
 				width: auto;
@@ -670,11 +673,16 @@ section.faqs {
 	width: 100%;
 	position: relative;
 	// padding-left: 275px;
-	@include tab() {
-		width: 60%;
+	@include desk() {
+		// width: 60%;
 		// padding: 100px 0 100px 275px;
-		padding-left: 275px;
-		margin: 0 auto;
+		// padding-left: 275px;
+		// margin: 0 auto;
+    max-width: 1260px;
+    width: 100%;
+    padding-left: 275px;
+    margin: 0 auto;
+    left: -5vw;
 	}
 	.faq-title {
 		width: auto;
@@ -708,6 +716,15 @@ section.faqs {
 		    transform: translateY(-50%);
 		}
 	}
+
+ @include tab() {
+    width: 100%;
+    padding-left: 180px;
+    left: 0;
+    .faq-title {
+      left: -90px;
+    }
+  }
 }
 .faqrow {
 	width: auto;
