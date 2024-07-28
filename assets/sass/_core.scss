@@ -855,9 +855,11 @@ section.work {
 			line-height: 1.1;
 			@include transition(all ease .3s);
 			h2 {
-				font-size: 5rem;
-				color: #fff;
-				margin: 0;
+        font-size: 3.75rem;
+        line-height: 1.2;
+        letter-spacing: 0.015em;
+        color: #fff;
+        margin: 0;
 			}
 		}
 		&:hover {

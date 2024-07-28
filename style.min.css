@@ -1760,7 +1760,7 @@ section.work a.third img{width:100%}
 section.work a.third .cover{width:100%;height:100%;position:absolute;top:0;left:0;z-index:10}
 section.work a.third .cover img{width:100%}
 section.work a.third .title{width:100%;height:100%;position:absolute;top:0;left:0;opacity:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;z-index:11;text-align:center;background-color:#223e60;line-height:1.1;-webkit-transition:all ease .3s;transition:all ease .3s}
-section.work a.third .title h2{font-size:5rem;color:#fff;margin:0}
+section.work a.third .title h2{font-size:3.75rem;line-height:1.2;letter-spacing:.015em;color:#fff;margin:0}
 section.work a.third:hover .title{opacity:1}
 section.single-portfolio{width:100%;float:left}
 section.single-portfolio .intro{padding:40px;width:100%;float:left}
