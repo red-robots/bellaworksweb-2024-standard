@@ -63,7 +63,7 @@ get_header(); ?>
 							<div class="title">
 								<h2><?php the_title(); ?></h2>
                 <?php if ($category) { ?>
-                <!-- <h3 class="type"><?php //echo $category; ?></h3> -->
+                <h3 class="type"><?php echo $category; ?></h3>
                 <?php } ?>
 							</div>
 							<img src="<?php echo $iurl; ?>">

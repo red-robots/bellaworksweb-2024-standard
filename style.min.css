@@ -1673,7 +1673,7 @@ a.cta{font-size:16px;font-weight:700;letter-spacing:.05em;padding:10px 30px 12px
 a.cta:hover{background-color:#d1d374;color:#223e60}
 .address{text-align:left}
 .pagewrapper{width:100%;clear:both;padding-top:110px}
-.pagewrapper h3.type{margin:0;color:#fff;font-size:45px;line-height:1.2;letter-spacing:.02em}
+.pagewrapper h3.type{margin:0;color:#fff;font-size:2.65rem;line-height:1.2;letter-spacing:.02em}
 body.single .pagewrapper{background-color:#8dceb6}
 body.single-service .pagewrapper,body.single-post .pagewrapper{background-color:#fff}
 body.single-post article{max-width:800px;padding:40px;margin:0 auto;color:#58595b}
