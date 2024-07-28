@@ -1150,6 +1150,29 @@ section.news {
 	}
 }
 
+.button-default {
+  color: #FFF;
+  background: $btn-orange;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  padding: 10px 20px 8px;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 200px;
+  transition: all ease .3s;
+  &:hover, &:focus {
+    background: $yellow;
+    color: $primary;
+  }
+  &.wide {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+
 @include max($xxl) {
   header.wp-block-template-part .wp-block-site-logo, 
   header.wp-block-template-part .wp-block-group.siteNavigation {

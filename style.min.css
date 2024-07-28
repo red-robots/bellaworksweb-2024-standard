@@ -1802,6 +1802,9 @@ section.news .post .desc h2{font-size:1.5rem;margin:0}
 .navigation li{display:inline-block;list-style:none;margin:10px}
 .navigation a{width:75px;height:75px;border-radius:50%;background-color:rgba(255,255,255,.5);display:block;line-height:75px;text-align:center;text-decoration:none;font-size:2rem;-webkit-transition:all ease .3s;transition:all ease .3s;color:#8dceb6}
 .navigation a:hover,.navigation a.active{background-color:#fff}
+.button-default{color:#fff;background:#db6e35;font-size:16px;font-weight:700;letter-spacing:.05em;padding:10px 20px 8px;text-decoration:none;display:inline-block;text-transform:uppercase;border-radius:200px;-webkit-transition:all ease .3s;transition:all ease .3s}
+.button-default:hover,.button-default:focus{background:#fcb405;color:#3d5588}
+.button-default.wide{padding-left:60px;padding-right:60px}
 @media screen and (min-width:600px){#cboxTitle{position:absolute;top:0;left:0;text-align:left;width:20%;font-weight:bold;color:#fff;padding:8% 2% 8% 2%;line-height:1.3;font-size:20px}
 }@media(min-width:880px){.wp-block-navigation__responsive-container-content a{padding:0}
 header.wp-block-template-part .header-content .wp-block-group.header-row-container{padding:20px 0 !important}
