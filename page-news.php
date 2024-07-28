@@ -23,7 +23,7 @@ get_header(); ?>
 				<section class="news about">
 					<div class="left">
 						<figure>
-							<img src="<?php bloginfo('template_url'); ?>/images/circles.svg">
+							<img src="<?php bloginfo('template_url'); ?>/images/circles-multicolor.svg">
 						</figure>
 						<h1><?php the_title(); ?></h1>
 					</div>
