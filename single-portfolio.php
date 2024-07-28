@@ -94,17 +94,21 @@ get_header(); ?>
 		        ?>
 		        <div class="details">
 		        	<div class="left">
-		        		<div class="detail">
-		        			<img src="<?php echo $detail_photo['url']; ?>">
-		        		</div>
+                <?php if ($detail_photo) { ?>
+  		        		<div class="detail">
+  		        			<img src="<?php echo $detail_photo['url']; ?>">
+  		        		</div>
+                <?php } ?>
 		        		<div class="key-features">
 		        			<h2>Key Features</h2>
 		        			<?php echo $key_features; ?>
 		        		</div>
 		        	</div>
+              <?php if ($full_site_photo) { ?>
 		        	<div class="right">
 		        		<img src="<?php echo $full_site_photo['url']; ?>">
 		        	</div>
+              <?php } ?>
 		        </div>
 
 		        <?php
@@ -114,8 +118,10 @@ get_header(); ?>
 		            $colors = get_sub_field('colors');
 		        ?>
 		        <div class="colors">
-		        	<div class="left">
-		        		<?php echo $text_field; ?>
+		        	<div class="left testimonial-info">
+                <div class="inner">
+                  <?php echo $text_field; ?>
+                </div>
 		        	</div>
 		        	<div class="right">
 		        		<?php foreach( $colors as $c ) { 
@@ -134,16 +140,17 @@ get_header(); ?>
 		        <?php
 				// Case: Download layout.
 		        elseif( get_row_layout() == 'detail_photos' ): 
-		            $photos = get_sub_field('photos');
-		        ?>
-		        <div class="detail-photos">
-		        	<?php foreach( $photos as $ph ) { 
-		        		?>
-			        	<div class="photo">
-			        		<img src="<?php echo $ph['photo']['url']; ?>">
-			        	</div>
-		        	<?php } ?>
-		        </div>
+		          $photos = get_sub_field('photos');
+              if($photos) { ?>
+  		        <div class="detail-photos">
+  		        	<?php foreach( $photos as $ph ) { 
+  		        		?>
+  			        	<div class="photo">
+  			        		<img src="<?php echo $ph['photo']['url']; ?>">
+  			        	</div>
+  		        	<?php } ?>
+  		        </div>
+            <?php } ?>
 		            
 
 		            

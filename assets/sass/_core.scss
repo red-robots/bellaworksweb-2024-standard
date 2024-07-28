@@ -1028,6 +1028,7 @@ section.single-portfolio {
 		width: 100%;
 		@include tab() {
 			display: flex;
+      flex-wrap: wrap;
 			flex-direction: row;
 			align-items: stretch;
 			justify-content: center;
@@ -1047,11 +1048,23 @@ section.single-portfolio {
 			@include tab() {
 				padding: 50px;
 			}
+      &.testimonial-info {
+        width: 100%;
+        padding-bottom: 0;
+        .inner {
+          max-width: 1200px;
+          width: 100%;
+          margin: 0 auto;
+          padding: 0 30px;
+          text-align: center;
+        }
+      }
 		}
 		.right {
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
+      justify-content: center;
 			.color {
 				width: 100px;
 				height: 100px;
