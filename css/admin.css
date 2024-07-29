@@ -1,0 +1,13 @@
+body.post-type-post #side-sortables [data-name="featured_post"] {
+  position: relative;
+}
+body.post-type-post #side-sortables [data-name="featured_post"] .acf-label {
+  padding-left: 22px;
+}
+body.post-type-post #side-sortables [data-name="featured_post"] .acf-input {
+  display: inline-block;
+  width: auto!important;
+  position: absolute;
+  top: 15px;
+  left: 14px;
+}

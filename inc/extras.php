@@ -240,3 +240,25 @@ function portfolio_feeds_func( $atts ) {
   return $output;
 }
 
+function get_featured_post($limit=1,$fields=null) {
+  global $wpdb;
+  $query = "SELECT p.* FROM " . $wpdb->prefix . "postmeta m, ".$wpdb->prefix."posts p 
+            WHERE p.ID=m.post_id AND m.meta_key='featured_post' AND m.meta_value=1 AND p.post_status='publish' 
+            AND p.post_type='post' ORDER BY p.post_modified DESC LIMIT " . $limit;
+  
+  if($fields && is_array($fields)) {
+    $field_items = '';
+    foreach($fields as $i=>$f) {
+      $comma = ($i>0) ? ',':'';
+      $field_items .= $comma . 'p.' . $f;
+    }
+
+    $query = "SELECT ".$field_items." FROM " . $wpdb->prefix . "postmeta m, ".$wpdb->prefix."posts p 
+            WHERE p.ID=m.post_id AND m.meta_key='featured_post' AND m.meta_value=1 AND p.post_status='publish' 
+            AND p.post_type='post' ORDER BY p.post_modified DESC LIMIT " . $limit;
+  }
+
+  $result = $wpdb->get_results($query);
+  return $result;
+}
+

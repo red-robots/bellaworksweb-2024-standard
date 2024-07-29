@@ -1273,6 +1273,224 @@ section.news {
   }
 }
 
+.news-page-content {
+  padding-top: 100px;
+  background: $green;
+  .topSection {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .left, .right {
+      width: 100%;
+      @include tab {
+        width: 50%;
+      }
+    }
+    .left {
+      padding: 30px 30px 0;
+      text-align: center;
+      @include tab {
+        padding: 3vw 5vw 0;
+      }
+      .titlediv {
+        width: 100%;
+        position: relative;
+      }
+      .circles {
+        display: block;
+        width: 100%;
+        height: 15vw;
+        margin-bottom: 20px;
+        background-image: url('images/circles-multicolor.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      h1 {
+        font-size: 7rem;
+        text-transform: uppercase;
+        margin: 0 0 20px 0;
+        color: $header-blue;
+      }
+    }
+
+    .right {
+      padding: 20px 30px 0;
+      @include tab {
+        padding: 2vw 3vw 0 3vw;
+      }
+      figure {
+        margin: 0 0;
+      }
+      @include max($tabwidth - 1px) {
+        .featured-post-item:last-child {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .featured-post-item {
+    margin: 20px 0px;
+    .inside {
+      height: 100%;
+      a.postlink {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+        background: #FFF;
+        width: 100%;
+        height: 100%;
+        min-height: 180px;
+        transition: all ease .3s;
+        padding: 20px;
+        @include mid {
+          min-height: 200px;
+        }
+        figure {
+          margin: 0 0;
+          position: relative;
+          width: 40%;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        h2 {
+          font-size: 2.25em;
+          line-height: 1.1;
+          width: 55%;
+          margin: 0 0;
+          color: $header-blue;
+          transition: all ease .3s;
+          // padding: 30px 30px 30px 0;
+        }
+        &:hover, &:focus {
+          box-shadow: 0 5px 12px rgba(0,0,0,.25);
+          h2 {
+            color: $btn-orange;
+          }
+        }
+      }
+    }
+  }
+
+  .featured-post-item:last-child {
+    margin-bottom: 10px;
+  }
+
+  .bottomSection {
+    margin: 0 0;
+    padding: 0 30px 30px;
+    @include tab {
+      padding: 0 3vw 3vw 3vw;
+    }
+    .news-feeds {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+    .post-item {
+      width: 100%;
+      padding: 10px;
+      @include tab {
+        width: 50%;
+      }
+      @include mid {
+        width: 33.333%;
+      }
+      .inside {
+        height: 100%;
+        // display: flex;
+        // flex-wrap: wrap;
+        // align-content: center;
+      }
+      a.postlink {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+        background: #FFF;
+        min-height: 180px;
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+        @include mid {
+          min-height: 200px;
+        }
+        figure {
+          margin: 0 0;
+          position: relative;
+          width: 40%;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        h2 {
+          font-size: 2.25em;
+          line-height: 1.1;
+          width: 55%;
+          margin: 0 0;
+          // padding: 30px 30px 30px 0;
+          color: $header-blue;
+          transition: all ease .3s;
+        }
+        &:hover, &:focus {
+          box-shadow: 0 5px 12px rgba(0,0,0,.25);
+          h2 {
+            color: $btn-orange;
+          }
+        }
+      }
+
+      &.no-image {
+        .inside a {
+          justify-content: center;
+          padding: 30px;
+          h2 {
+            width: 100%;
+            text-align: center;
+            padding: 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  .pagination {
+    margin-top: 20px;
+    a, span {
+      display: inline-block;
+      padding: 1px 9px 0;
+      margin-right: 3px;
+      background: $blue;
+      color: #FFF;
+      text-decoration: none;
+      min-width: 25px;
+      text-align: center;
+    }
+    span.current {
+      background: $text_gray;
+    }
+    a {
+      &:hover, &:focus {
+        background: $btn-orange;
+      }
+    }
+  }
+}
+
 
 @include max($xxl) {
   header.wp-block-template-part .wp-block-site-logo, 
