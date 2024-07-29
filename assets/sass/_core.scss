@@ -1287,11 +1287,11 @@ section.news {
       }
     }
     .left {
-      padding: 30px 30px 0;
+      padding: 20px 20px;
       text-align: center;
-      @include tab {
-        padding: 3vw 5vw 0;
-      }
+      // @include tab {
+      //   padding: 3vw 5vw 0;
+      // }
       .titlediv {
         width: 100%;
         position: relative;
@@ -1305,6 +1305,10 @@ section.news {
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+        margin-top: 50px;
+        @include tab {
+          margin-top: 0;
+        }
       }
       h1 {
         font-size: 7rem;
@@ -1315,10 +1319,10 @@ section.news {
     }
 
     .right {
-      padding: 20px 30px 0;
-      @include tab {
-        padding: 2vw 3vw 0 3vw;
-      }
+      padding: 0 20px 0 20px;
+      // @include tab {
+      //   padding: 2vw 3vw 0 3vw;
+      // }
       figure {
         margin: 0 0;
       }
@@ -1386,10 +1390,10 @@ section.news {
 
   .bottomSection {
     margin: 0 0;
-    padding: 0 30px 30px;
-    @include tab {
-      padding: 0 3vw 3vw 3vw;
-    }
+    padding: 0 20px 20px;
+    // @include tab {
+    //   padding: 0 3vw 3vw 3vw;
+    // }
     .news-feeds {
       display: flex;
       flex-wrap: wrap;
