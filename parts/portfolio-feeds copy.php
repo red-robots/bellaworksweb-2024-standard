@@ -14,6 +14,11 @@ if ( $news->have_posts() ) {
       <?php $i=1; while ( $news->have_posts() ) : $news->the_post();  
         $attachment_id = get_post_thumbnail_id( get_the_ID() );
         $imageUrl = wp_get_attachment_image_src($attachment_id, 'full'); ?>
+        <?php if ($i==2 || $i==3) { ?>
+        <figure class="project blank-block">
+          <span class="blank"></span>
+        </figure>
+        <?php } ?>
         <?php if($imageUrl) { ?>
         <figure class="project project--<?php echo $i ?>" data-aos="fade-up">
           <a href="<?php echo get_permalink(); ?>" aria-label="<?php echo get_the_title() ?>">

@@ -28,7 +28,7 @@ get_header(); ?>
 				'post_type'=>'portfolio',
 				'posts_per_page' => 16
 			));
-				if ($wp_query->have_posts()) :  ?>
+			if ($wp_query->have_posts()) :  ?>
 				<section class="work">
 				<?php while ($wp_query->have_posts()) : $wp_query->the_post(); $i++;
 

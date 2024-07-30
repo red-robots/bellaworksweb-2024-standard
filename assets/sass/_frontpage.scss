@@ -176,18 +176,22 @@ body.page, body.single {
 	  top: 0;
 	  left: 0;
 	  background-color: transparent;
+    padding-top: 25px;
+    @include tab {
+      padding-top: 0;
+    }
 	  .wp-block-group.header-row-container {
-		max-width: 100%!important;
-		width: 100%!important;
-		background-color: transparent!important;
-		
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		gap: 0;
-		@include tab() {
-			padding: 20px 0!important;
-		}
+      max-width: 100%!important;
+      width: 100%!important;
+      background-color: transparent!important;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0;
+      @include tab {
+        padding: 20px 0!important;
+      }
 	  }
 	  .wp-block-site-logo,
 	  .siteNavigation {
@@ -1716,6 +1720,9 @@ body.page, body.single {
       font-weight: 400;
       line-height: 1.1;
       margin: 0 0 40px;
+      @include max($tabwidth) {
+        font-size: 5em;
+      }
       span {
         font-weight: 500 !important;
         text-decoration: none!important;
@@ -1908,12 +1915,8 @@ body.page, body.single {
   }
 }
 
-.portfolio-feeds {
+.portfolio-section {
   position: relative;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-right: 15vw;
-  padding-left: 50px;
   &:before {
     content: "";
     display: block;
@@ -1927,50 +1930,141 @@ body.page, body.single {
     right: 0;
     z-index: 10;
   }
-  .inner-content {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  figure {
-    margin: 0 0;
-    padding: 15px;
-    width: 33.333%;
-    a {
-      display: block;
+  .titleDiv {
+    position: absolute;
+    top: 5px;
+    right: -15px;
+    pointer-events: none;
+    h2 {
+      font-size: 8em;
+      font-weight: 500;
+      line-height: 1;
+      text-transform: uppercase;
+      margin: 0 0;
+      color: $gray;
+      transform: translateY(10vw) rotate(90deg);
       position: relative;
-      padding-bottom: 70%;
-      transition: all ease .5s;
-      &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0,0,0,.25);
+      left: 0;
+      top: 0;
+    }
+    @include max($deskwidth) {
+      top: 65px;
+    }
+  }
+
+  .portfolio-feeds {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 15vw;
+    padding-left: 50px;
+    .inner-content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    figure {
+      margin: 0 0;
+      padding: 15px;
+      width: 33.333%;
+      .blank {
+        display: block;
+        position: relative;
+        padding-bottom: 70%;
+      }
+      a {
+        display: block;
+        position: relative;
+        padding-bottom: 70%;
+        transition: all ease .5s;
+        &:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 10px 20px rgba(0,0,0,.25);
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: center;
       }
     }
-    img {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      object-fit: cover;
-      object-position: center;
+
+    @include tab {
+      figure.project--3 a {
+        border-top-right-radius: 130px;
+        overflow: hidden;
+      }
+      // figure.project--8,
+      // figure.project--9 {
+      //   display: none;
+      // }
+    }
+    @include max($deskwidth) {
+      width: 90vw;
+    }
+    @include max($midwidth)  {
+      position: relative;
+      figure {
+        width: 50%;
+      }
+    }
+    @include max($tabwidth)  {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-right: 45px;
+      padding-left: 10px;
+      &:before {
+        transform: translateX(15px) scale(0.6);
+      }
     }
   }
-  @include max($midwidth)  {
-    position: relative;
-    figure {
-      width: 50%;
-    }
-  }
-  @include max($tabwidth)  {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 45px;
-    padding-left: 10px;
+
+  @include max($midwidth) {
     &:before {
-      transform: translateX(15px) scale(0.6);
+      top: 38px;
+    }
+    .titleDiv {
+      position: relative;
+      top: 45px;
+      margin-bottom: 70px;
+      padding-right: 100px;
+      h2 {
+        text-align: right;
+        transform: none;
+        font-size: 5em;
+      }
+    }
+    .portfolio-feeds {
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 0;
+      margin-top: 0;
     }
   }
+
+  @include max($tabwidth) {
+    .portfolio-feeds {
+      padding-left: 10px;
+      padding-right: 10px;
+      figure {
+        padding: 10px;
+      }
+      figure.blank-block {
+        display: none;
+      }
+      figure.project--3 a {
+        border-top-right-radius: 80px;
+        overflow: hidden;
+      }
+    }
+  }
+  
 }
+
 
 .partners-section {
   text-align: center;
@@ -2038,13 +2132,45 @@ body.page, body.single {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  position: relative;
+  .titleDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    h2 {
+      font-size: 8em;
+      font-weight: 500;
+      line-height: 1;
+      text-transform: uppercase;
+      margin: 0 0;
+      color: $gray;
+      transform: translateY(10vw) rotate(-90deg);
+      position: relative;
+      left: -7vw;
+      top: 0;
+      padding-left: 115px;
+      &:before {
+        content:"";
+        display: block;
+        width: 0; 
+        height: 0;
+        border-top: 100px solid $btn-orange;
+        border-left: 50px solid transparent; 
+        border-right: 50px solid transparent; 
+        position: absolute;
+        top: 15px;
+        left: 0;
+      }
+    }
+  }
   .inner {
     width: 90%;
     background: $mustard;
     padding: 40px;
     border-bottom-left-radius: 80px;
     @include tab {
-      width: 70%;
+      width: 85vw;
       min-height: 35vw;
       padding: 5vw 10vw;
       display: flex;
@@ -2055,6 +2181,50 @@ body.page, body.single {
     p {
       font-size: 22px;
       line-height: 1.5;
+    }
+  }
+
+  @include max($deskwidth) {
+    .inner {
+      width: 80vw;
+    }
+    .titleDiv {
+      padding-top: 30px;
+    }
+    .titleDiv h2 {
+      font-size: 6em;
+      top: 0;
+      left: -10vw;
+      &:before {
+        border-top: 60px solid $btn-orange;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        top: 12px;
+        left: 38px;
+      }
+    }
+  }
+
+  @include max($tabwidth) {
+    padding-left: 20px;
+    .titleDiv {
+      position: relative;
+      text-align: left;
+      width: 100%;
+      padding-bottom: 20px;
+      h2 {
+        font-size: 5em;
+        transform: none;
+        left: 0;
+        padding-left: 85px;
+        &:before {
+          top: 8px;
+          left: 5px;
+        }
+      }
+    }
+    .inner {
+      width: 100%;
     }
   }
 }
@@ -2129,6 +2299,9 @@ body.page, body.single {
   padding-bottom: 100px;
   .headerTitle {
     text-align: center;
+    @include max($tabwidth) {
+      padding:0 30px;
+    }
     .small-title, .large-title {
       width: 100%;
       color: $gray;
@@ -2141,11 +2314,18 @@ body.page, body.single {
       font-size: 5rem;
       line-height: 1.1;
       letter-spacing: 0.02em;
+      @include max($tabwidth) {
+        font-size: 3rem;
+      }
     }
     .large-title {
       font-size: 9rem;
       line-height: 1.1;
       letter-spacing: 0.03em;
+      @include max($tabwidth) {
+        font-size: 4rem;
+        line-height: 1;
+      }
     }
 
 
@@ -2173,6 +2353,12 @@ body.page, body.single {
     flex-wrap: wrap;
     margin-left: -10px;
     margin-right: -10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include tab {
+      padding-left: 0;
+      padding-right: 0;
+    }
     h2, p {
       color: #FFF;
       width: 100%;
@@ -2182,7 +2368,7 @@ body.page, body.single {
       line-height: 1.3;
     }
     .infobox {
-      width: 95%;
+      width: 100%;
       padding: 10px;
       position: relative;
       min-height: 250px;

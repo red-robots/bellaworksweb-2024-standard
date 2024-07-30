@@ -146,9 +146,15 @@ get_header(); ?>
     <?php } ?> 
 
     <?php  
+    $row3_title = get_field('row3_title');
     $portfolio_shortcode = get_field('portfolio_shortcode');
     if( $portfolio_shortcode && do_shortcode($portfolio_shortcode) ) { ?>
     <div class="portfolio-section">
+      <?php if ($row3_title) { ?>
+      <div class="titleDiv" data-aos="fade-up" data-aos-delay="500">
+        <h2><?php echo $row3_title ?></h2>
+      </div>
+      <?php } ?>
       <div class="inner">
         <?php echo do_shortcode($portfolio_shortcode); ?>
       </div>
@@ -195,8 +201,14 @@ get_header(); ?>
 
     <?php  
     $row_5_content = get_field('row_5_content');
+    $row_5_title = get_field('row_5_title');
     if( $row_5_content ) { ?>
     <div class="section row_5_content">
+      <?php if ($row_5_title) { ?>
+       <div class="titleDiv" data-aos="fade-up" data-aos-delay="500">
+         <h2><?php echo $row_5_title ?></h2>
+       </div> 
+      <?php } ?>
       <div class="inner" data-aos="fade-left">
         <?php echo $row_5_content ?>
       </div>

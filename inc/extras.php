@@ -226,7 +226,7 @@ function myplugin_register_tinymce_javascript( $plugin_array ) {
 add_shortcode( 'portfolio_feeds', 'portfolio_feeds_func' );
 function portfolio_feeds_func( $atts ) {
   $a = shortcode_atts( array(
-    'show' => 12
+    'show' => 9
   ), $atts );
   $perpage = (isset($a['show']) && $a['show']) ? $a['show'] : 12;
   if($perpage=='all') {
