@@ -215,10 +215,9 @@ section.services {
 		&:nth-child(4) {
 			background-color: $header-blue;
 		}
-		@include tab() {
-			padding: 4vw 4vh;
+		@include tab {
 			width: 50%;
-			padding: 8vw 8vh;
+			padding: 4vw 8vh 2vw;
 			&:nth-child(1) {
 				background-color: $blue;
 			}
@@ -267,6 +266,7 @@ section.services {
 	h2 {
 		color: $green;
 		font-size: 4rem;
+    margin: 2rem 0;
 		@include tab() {
 			font-size: 6rem;
 		}
@@ -552,41 +552,41 @@ section.about {
 		flex-direction: row;
 	}
 	div.left {
-		width: 100%;
-		padding-top: 5rem;
-	    padding-right: 2rem;
-	    padding-bottom: 2rem;
-	    padding-left: 2rem;
-	    text-align: center;
-	    display: flex;
-	    flex-direction: column;
-	    align-items: center;
-	    @include tab() {
-	    	width: 50%;
-	    	padding-top: 10rem;
-		    padding-right: 5rem;
-		    padding-bottom: 10rem;
-		    padding-left: 5rem;
-	    }
-	    figure {
-	    	width: 80%;
-	    	@include tab() {
-	    		width: 50%;
-	    	}
-	    	img {
-	    		width: 100%;
-	    	}
-	    }
-	    h1 {
-	    	font-size: 7rem;
-	    	text-transform: uppercase;
-	    	margin: 0 0 20px 0;
-	    	color: $header-blue;
-	    }
+    width: 100%;
+    padding-top: 5rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tab {
+      width: 50%;
+      padding-top: 3rem;
+      padding-right: 5rem;
+      padding-bottom: 10rem;
+      padding-left: 5rem;
+	  }
+    figure {
+      width: 80%;
+      @include tab {
+        width: 50%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    h1 {
+      font-size: 7rem;
+      text-transform: uppercase;
+      margin: 0 0 20px 0;
+      color: $header-blue;
+    }
 	}
 	div.right {
-		width: 100%;
-		padding-top: 5rem;
+		  width: 100%;
+		  padding-top: 5rem;
 	    padding-right: 2rem;
 	    padding-bottom: 10rem;
 	    padding-left: 2rem;
@@ -597,7 +597,7 @@ section.about {
 	    overflow: hidden;
 	    @include tab() {
 	    	width: 50%;
-	    	padding-top: 10rem;
+	    	padding-top: 3rem;
 		    padding-right: 5rem;
 		    padding-bottom: 10rem;
 		    padding-left: 5rem;
@@ -605,7 +605,7 @@ section.about {
 	    h2 {
 	    	color: $header-blue;
 	    }
-	    @include tab() {
+	    @include tab {
 			&:before {
 				content: "";
 			    display: block;
@@ -1521,6 +1521,12 @@ section.news {
   }
 }
 
+body.page-template-page-about {
+  .section-title:before,
+  section.about div.right:before {
+    display: none!important;
+  }
+}
 
 
 

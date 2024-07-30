@@ -1700,7 +1700,7 @@ section.services .cube:nth-child(4){background-color:#223e60}
 section.services .cube .pic{width:100%}
 section.services .cube .pic img{width:100%}
 .section-title{width:100%;padding:0;text-align:center;position:relative}
-.section-title h2{color:#8dceb6;font-size:4rem}
+.section-title h2{color:#8dceb6;font-size:4rem;margin:2rem 0}
 section.service{width:100%;color:#fff}
 section.service .dots{width:200px;margin:20px auto}
 section.service .dots .dot-one{background-color:#fcb405}
@@ -1860,6 +1860,7 @@ section.news .post .desc h2{font-size:1.5rem;margin:0}
 .news-page-content .pagination a,.news-page-content .pagination span{display:inline-block;padding:1px 9px 0;margin-right:3px;background:#3689b4;color:#fff;text-decoration:none;min-width:25px;text-align:center}
 .news-page-content .pagination span.current{background:#929497}
 .news-page-content .pagination a:hover,.news-page-content .pagination a:focus{background:#db6e35}
+body.page-template-page-about .section-title:before,body.page-template-page-about section.about div.right:before{display:none !important}
 @media screen and (min-width:600px){#cboxTitle{position:absolute;top:0;left:0;text-align:left;width:20%;font-weight:bold;color:#fff;padding:8% 2% 8% 2%;line-height:1.3;font-size:20px}
 }@media(min-width:880px){.wp-block-navigation__responsive-container-content a{padding:0}
 header.wp-block-template-part .header-content{padding-top:0}
@@ -1888,7 +1889,7 @@ p.pretty{width:60%}
 h2.pretty.wp-block-heading{padding:2vh 5vw 1vh 5vw}
 .pagewrapper{padding-top:100px}
 section.services{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
-section.services .cube{padding:4vw 4vh;width:50%;padding:8vw 8vh}
+section.services .cube{width:50%;padding:4vw 8vh 2vw}
 section.services .cube:nth-child(1){background-color:#3689b4}
 section.services .cube:nth-child(2){background-color:#223e60}
 section.services .cube:nth-child(4){background-color:#3689b4}
@@ -1912,9 +1913,9 @@ section.service .section-four .left.alt{border-top-right-radius:250px;border-bot
 section.service .section-four .right{padding:150px;width:50%}
 section.service .content{padding-top:10vw;padding-right:4rem;padding-bottom:10vw;padding-left:4rem}
 section.about{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
-section.about div.left{width:50%;padding-top:10rem;padding-right:5rem;padding-bottom:10rem;padding-left:5rem}
+section.about div.left{width:50%;padding-top:3rem;padding-right:5rem;padding-bottom:10rem;padding-left:5rem}
 section.about div.left figure{width:50%}
-section.about div.right{width:50%;padding-top:10rem;padding-right:5rem;padding-bottom:10rem;padding-left:5rem}
+section.about div.right{width:50%;padding-top:3rem;padding-right:5rem;padding-bottom:10rem;padding-left:5rem}
 section.about div.right:before{content:"";display:block;width:100%;height:280px;position:absolute;top:3vw;right:0;background-image:url(assets/images/decoration/connect.svg);background-size:contain;background-position:right center;background-repeat:no-repeat}
 section.big-form .wrapper{width:60%;margin:0 auto}
 section.faqs .faq-title{padding-right:100px;position:absolute;top:100px;left:0;-webkit-transform:translateY(-25%) rotate(-90deg);transform:translateY(-25%) rotate(-90deg)}
