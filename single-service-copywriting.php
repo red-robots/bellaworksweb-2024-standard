@@ -14,15 +14,12 @@ Template Post Type: service
 
             <section class="service">
                 <div class="intro">
-                    <!-- <figure>
-                        <img src="<?php bloginfo('template_url'); ?>/images/CIRCLES.svg">
-                    </figure> -->
-                    <h1>Website Copywriting</h1>
+                    <h1><?php the_title(); ?></h1>
                 </div>
                 <div class="section-two">
                     <div class="left">
                         <div class="title">
-                            <h2 class="  wp-block-heading has-text-align-right">Create Words<br>
+                            <h2 class="wp-block-heading has-text-align-right">Create Words<br>
                             <strong>That Connect</strong></h2>
                         </div>
                         

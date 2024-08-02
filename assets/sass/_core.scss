@@ -622,6 +622,22 @@ section.about {
 		}
 	}
 }
+body.page-template-page-contact {
+  section.about div.right:before {
+    display: none;
+  }
+  .contact-contents {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .c-block-inner {
+      width: 100%;
+    }
+    .c-block:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
 section.big-form {
 	width: 100%;
 	padding: 50px;
@@ -1473,7 +1489,7 @@ section.news {
   }
 
   .pagination {
-    margin-top: 20px;
+    margin-top: 30px;
     a, span {
       display: inline-block;
       padding: 1px 9px 0;
@@ -1494,7 +1510,101 @@ section.news {
     }
   }
 }
-
+.news-page-content.news-new-layout {
+  background-color: #FFF;
+  .pagination {
+    display: flex;
+    justify-content: center;
+  }
+}
+.newsfeeds-wrapper {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 70px;
+  @include mid {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  .news {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .news-post-item {
+    padding: 20px;
+    width: 100%;
+    @include xs {
+      width: 50%;
+    }
+    @include mid {
+      padding: 3vw;
+      width: 33.333%;
+    }
+    h2 {
+      text-decoration: none;
+      margin: 0 0 30px;
+      transition: all ease .3s;
+      @include max($deskwidth) {
+        font-size: 1.85rem;
+        line-height: 1.2;
+        letter-spacing: 0.01em;
+      }
+    }
+    figure {
+      display: block;
+      margin: 0 0;
+      position: relative;
+      width: 100%;
+      padding-bottom: 70%;
+      img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+    .inside {
+      height: 100%;
+      a {
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border-bottom: 4px solid #efefef;
+        &:hover, &:focus {
+          h2 {
+            color: $blue;
+          }
+        }
+        @include max($tabwidth) {
+          justify-content: center;
+          text-align: center;
+        }
+      }
+    }
+    .postdate {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #afafaf;
+      margin-bottom:3px;
+      display: flex;
+      align-items: flex-end;
+    }
+    .titlediv {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      h2, .postdate {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
 
 @include max($xxl) {
   header.wp-block-template-part .wp-block-site-logo, 

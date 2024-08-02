@@ -14,11 +14,7 @@ Template Post Type: service
 
             <section class="service">
                 <div class="intro">
-                    <!-- <figure>
-                        <img src="<?php bloginfo('template_url'); ?>/images/CIRCLES.svg">
-                    </figure> -->
-                    <h1>Website Design<br>
-                    & Development</h1>
+                  <h1><?php the_title(); ?></h1>
                 </div>
                 <div class="section-two">
                     <div class="left">
