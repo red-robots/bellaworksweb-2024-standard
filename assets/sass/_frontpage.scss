@@ -2178,6 +2178,9 @@ body.page, body.single {
       align-content: center;
       border-bottom-left-radius: 200px;
     }
+    @include mid {
+      padding-right: 15vw;
+    }
     p {
       font-size: 22px;
       line-height: 1.5;

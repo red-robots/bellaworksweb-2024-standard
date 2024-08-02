@@ -16,32 +16,35 @@ Template Post Type: service
                 <div class="intro">
                     <h1><?php the_title(); ?></h1>
                 </div>
+                <?php 
+                  $row1_title = get_field('row1_title');
+                  $row1_content = get_field('row1_content');
+                ?>
                 <div class="section-two">
+                    <?php if ($row1_title) { ?>
                     <div class="left">
-                        <div class="title">
-                            <h2 class="wp-block-heading has-text-align-right">Create Words<br>
-                            <strong>That Connect</strong></h2>
-                        </div>
-                        
+                      <div class="title">
+                        <h2 class="wp-block-heading has-text-align-right">
+                          <?php echo $row1_title ?>
+                        </h2>
+                      </div>
                     </div>
+                    <?php } ?>
                     
+                    <?php if ($row1_title) { ?>
                     <div class="right">
-                        <p>Before we design your website, you need powerful words to set the stage for your site. But let's face it: people read websites like they're scanning for the good stuff rather than reading word-for-word like with magazines or novels. Writing website copy that encourages your audience to take action requires skill. And you need to know where words should go.</p>
-
+                      <?php echo $row1_content ?>
                     </div>
+                    <?php } ?>
                 </div>
-                <!-- <div class="section-three">
-                    <div class="left">
-                        
-                    </div>
-                    <div class="right">
-                        
-                    </div>
-                </div> -->
+
+                <?php 
+                  $row2_content = get_field('row2_content');
+                ?>
+                <?php if ($row1_title) { ?>
                 <div class="section-four">
                     <div class="left alt">
-                    	<p>With our website copywriting services, we learn about your business, audience, industry, and competitors. Then, we combine these insights with strategy and website best practices. Want to show up in search engines like Google? We'll research keywords and sprinkle keyword phrases into your website copy to help you be found online while considering searcher intent and keeping the copy engaging.</p>
-                    	<p>Save time crafting online-scannable copy that inspires more people to engage with your site, and positions your brand as an expert by leaving the copywriting to us.</p>
+                    	<?php echo $row2_content ?>
                     </div>
                     <div class="right">
                         <div class="wrapper">
@@ -55,6 +58,7 @@ Template Post Type: service
                         </div>
                     </div>
                 </div>
+                <?php } ?>
                 <?php 
                         $section_title = get_field('section_title');
                         $faqs = get_field('faqs');
