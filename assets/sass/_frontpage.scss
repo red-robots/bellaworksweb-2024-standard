@@ -543,15 +543,15 @@ body.page, body.single {
   }
 	.wp-block-group {
 	  background-color: #FFF!important;
-	  padding-top: 5rem;
+	  padding-top: 2rem;
 		padding-right: 2rem;
 		padding-bottom: 10rem;
 		padding-left: 2rem;
-		@include tab() {
-			padding-top: 0rem;
-		    padding-right: 5rem;
-		    padding-bottom: 10rem;
-		    padding-left: 5rem;
+		@include largewidth {
+      padding-top: 0rem;
+      padding-right: 5rem;
+      padding-bottom: 10rem;
+      padding-left: 5rem;
 		}
 	}
 	.wp-block-columns {
@@ -1783,8 +1783,11 @@ body.page, body.single {
   .wp-block-columns .rightCol,
   .rightCol {
     color: #FFF;
-    padding: 10vw 5vw 5vw;
+    padding: 30px 30px 0 30px;
     background-color: $green;
+    @include desk {
+      padding: 6vw 5vw 0 5vw;
+    }
     h2 span:after {
       background: #FFF;
     }

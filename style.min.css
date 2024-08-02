@@ -1468,7 +1468,7 @@ body .entry-content .wp-block-group.alignfull{margin-top:0 !important;margin-bot
 .homeSection1 .wp-block-group.column.right .wp-block-group .wp-block-buttons .wp-block-button__link{font-size:16px;font-weight:700;letter-spacing:.05em;padding:10px 20px 8px}
 .homeSection2{position:relative;width:100%;clear:both;overflow:hidden;background-color:#fff !important;margin:0 0 !important}
 .homeSection2 .wp-block-columns{height:auto !important}
-.homeSection2 .wp-block-group{background-color:#fff !important;padding-top:5rem;padding-right:2rem;padding-bottom:10rem;padding-left:2rem}
+.homeSection2 .wp-block-group{background-color:#fff !important;padding-top:2rem;padding-right:2rem;padding-bottom:10rem;padding-left:2rem}
 .homeSection2 .wp-block-columns{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;gap:0;width:100%;position:relative}
 .homeSection2 .wp-block-columns .wp-block-column{padding:0 0 !important}
 .homeSection2 .wp-block-columns .wp-block-image.size-large{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
@@ -1582,7 +1582,7 @@ header.wp-block-template-part button[aria-label="Open menu"] span.bar:after{top:
 .homeSection2 .leftCol h2 span:after{background:#6daf93}
 .homeSection2 .leftCol h2 span:before{content:"";display:block;width:0;height:0;border-left:50px solid #db6e35;border-top:25px solid transparent;border-bottom:25px solid transparent;position:absolute;left:-100px;top:40px}
 .homeSection2 .leftCol p{font-size:22px;color:#6daf93}
-.homeSection2 .wp-block-columns .rightCol,.homeSection2 .rightCol{color:#fff;padding:10vw 5vw 5vw;background-color:#8dceb6}
+.homeSection2 .wp-block-columns .rightCol,.homeSection2 .rightCol{color:#fff;padding:30px 30px 0 30px;background-color:#8dceb6}
 .homeSection2 .wp-block-columns .rightCol h2 span:after,.homeSection2 .rightCol h2 span:after{background:#fff}
 .homeSection2 .wp-block-columns .rightCol p,.homeSection2 .rightCol p{color:#fff}
 .homeSection4{background-color:#71cbef;padding-top:5vw;padding-bottom:5vw}
@@ -1892,7 +1892,6 @@ header.wp-block-template-part .header-content{padding-top:0}
 header.wp-block-template-part .header-content .wp-block-group.header-row-container{padding:20px 0 !important}
 header.wp-block-template-part .header-content .wp-block-site-logo,header.wp-block-template-part .header-content .siteNavigation{margin-bottom:0}
 header.wp-block-template-part .header-content .siteNavigation ul.menu{gap:2rem}
-.homeSection2 .wp-block-group{padding-top:0;padding-right:5rem;padding-bottom:10rem;padding-left:5rem}
 .homeSection2 .wp-block-columns{height:100vh;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch}
 .homeSection2 .wp-block-columns .rightCol:before{height:280px}
 .homeSection5 .partners{width:200px;height:200px}
@@ -1987,8 +1986,10 @@ section.news .post .desc h2{font-size:2rem}
 }@media(min-width:1200px){header.wp-block-template-part .header-content .siteNavigation ul.menu{gap:2rem}
 .homeSection5 .partners{width:270px;height:270px}
 .homeSection5 .partners a{width:250px;height:250px}
+.homeSection2 .wp-block-columns .rightCol,.homeSection2 .rightCol{padding:6vw 5vw 0 5vw}
 section.faqs{max-width:1260px;width:100%;padding-left:275px;margin:0 auto;left:-5vw}
 }@media(min-width:1500px){header.wp-block-template-part .header-content .siteNavigation ul.menu{gap:4rem}
+.homeSection2 .wp-block-group{padding-top:0;padding-right:5rem;padding-bottom:10rem;padding-left:5rem}
 .global-wrapper{width:90vw;padding-left:0;padding-right:0}
 }@media screen and (min-width:1600px){.main-content-home .homeCol .inner{font-size:9.75vw}
 }@media screen and (max-width:1480px){.homeSection3:before{border-right:55px solid #8dceb6;border-top:30px solid transparent;border-bottom:30px solid transparent}
