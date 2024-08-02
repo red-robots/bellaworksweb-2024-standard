@@ -39,23 +39,28 @@ Template Post Type: service
                 </div>
 
                 <?php 
-                  $row2_content = get_field('row2_content');
+                  $row2_content_left = get_field('row2_content_left');
+                  $row2_content_right = get_field('row2_content_right');
                 ?>
-                <?php if ($row1_title) { ?>
+                <?php if ($row2_content_left) { ?>
                 <div class="section-four">
                     <div class="left alt">
-                    	<?php echo $row2_content ?>
+                    	<?php echo $row2_content_left ?>
                     </div>
                     <div class="right">
-                        <div class="wrapper">
-                            <div class="dots">
-                                <div class="dot-one"></div>
-                                <div class="dot-two"></div>
-                                <div class="dot-three"></div>
-                                <div class="dot-four"></div>
-                            </div>
-                            
+                      <div class="wrapper">
+                        <div class="dots">
+                          <div class="dot-one"></div>
+                          <div class="dot-two"></div>
+                          <div class="dot-three"></div>
+                          <div class="dot-four"></div>
                         </div>
+                        <?php if ($row2_content_right) { ?>
+                        <div class="textblock">
+                          <?php echo $row2_content_right ?>
+                        </div>
+                        <?php } ?>
+                      </div>
                     </div>
                 </div>
                 <?php } ?>
