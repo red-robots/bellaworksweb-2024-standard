@@ -1609,8 +1609,8 @@ header.wp-block-template-part button[aria-label="Open menu"] span.bar:after{top:
 .homeSection4 .rightCol .group:last-child .rounded-top:first-child a{border-top-left-radius:0}
 .portfolio-section{position:relative}
 .portfolio-section:before{content:"";display:block;width:0;height:0;border-right:75px solid #8dceb6;border-top:40px solid transparent;border-bottom:40px solid transparent;position:absolute;top:20%;right:0;z-index:10}
-.portfolio-section .titleDiv{position:absolute;top:5px;right:-15px;pointer-events:none}
-.portfolio-section .titleDiv h2{font-size:8em;font-weight:500;line-height:1;text-transform:uppercase;margin:0;color:#d0d2d3;-webkit-transform:translateY(10vw) rotate(90deg);transform:translateY(10vw) rotate(90deg);position:relative;left:0;top:0}
+.portfolio-section .titleDiv{position:absolute;top:8px;right:-15px;pointer-events:none}
+.portfolio-section .titleDiv h2{font-size:8em;font-weight:500;line-height:1;text-transform:uppercase;margin:0;color:#d0d2d3;-webkit-transform:translateY(10vw) rotate(90deg);transform:translateY(10vw) rotate(90deg);position:relative;left:0;top:0;letter-spacing:.035en}
 .portfolio-section .portfolio-feeds{position:relative;padding-top:50px;padding-bottom:50px;padding-right:15vw;padding-left:50px}
 .portfolio-section .portfolio-feeds .inner-content{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .portfolio-section .portfolio-feeds figure{margin:0;padding:15px;width:33.333%}
@@ -1626,7 +1626,7 @@ header.wp-block-template-part button[aria-label="Open menu"] span.bar:after{top:
 .partners-section .partners.swiper-slide a img{position:absolute;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);width:80%;height:auto}
 .row_5_content{color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;position:relative}
 .row_5_content .titleDiv{position:absolute;top:0;left:0;pointer-events:none}
-.row_5_content .titleDiv h2{font-size:8em;font-weight:500;line-height:1;text-transform:uppercase;margin:0;color:#d0d2d3;-webkit-transform:translateY(10vw) rotate(-90deg);transform:translateY(10vw) rotate(-90deg);position:relative;left:-7vw;top:0;padding-left:115px}
+.row_5_content .titleDiv h2{font-size:8em;font-weight:500;line-height:1;text-transform:uppercase;margin:0;color:#d0d2d3;-webkit-transform:translateY(10vw) rotate(-90deg);transform:translateY(10vw) rotate(-90deg);position:relative;left:-7vw;top:0;padding-left:115px;letter-spacing:.04em}
 .row_5_content .titleDiv h2:before{content:"";display:block;width:0;height:0;border-top:100px solid #db6e35;border-left:50px solid transparent;border-right:50px solid transparent;position:absolute;top:15px;left:0}
 .row_5_content .inner{width:90%;background:#bcbc54;padding:40px;border-bottom-left-radius:80px}
 .row_5_content .inner p{font-size:22px;line-height:1.5}

@@ -1935,7 +1935,7 @@ body.page, body.single {
   }
   .titleDiv {
     position: absolute;
-    top: 5px;
+    top: 8px;
     right: -15px;
     pointer-events: none;
     h2 {
@@ -1949,6 +1949,7 @@ body.page, body.single {
       position: relative;
       left: 0;
       top: 0;
+      letter-spacing: 0.035en;
     }
     @include max($deskwidth) {
       top: 65px;
@@ -2153,6 +2154,7 @@ body.page, body.single {
       left: -7vw;
       top: 0;
       padding-left: 115px;
+      letter-spacing: 0.04em;
       &:before {
         content:"";
         display: block;
