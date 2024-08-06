@@ -1589,7 +1589,7 @@ header.wp-block-template-part button[aria-label="Open menu"] span.bar:after{top:
 .homeSection4 .wp-block-columns{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important}
 .homeSection4 .leftCol{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;padding-right:30px;width:50%}
 .homeSection4 .leftCol .inner h2,.homeSection4 .leftCol .inner h3,.homeSection4 .leftCol .inner p{color:#fff;text-align:right}
-.homeSection4 .leftCol .inner h2{font-weight:500 !important;line-height:.9;font-size:7rem;margin:0}
+.homeSection4 .leftCol .inner h2{font-weight:500 !important;line-height:.9;font-size:7rem;letter-spacing:.015em;margin:0}
 .homeSection4 .leftCol .inner h3{margin:10px 0 0;font-size:5rem;font-weight:500;letter-spacing:.02em}
 .homeSection4 .leftCol .inner .button{padding-left:40px;padding-right:40px}
 .homeSection4 .leftCol .inner p:has(.custom-button-element){text-align:center}
