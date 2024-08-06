@@ -1663,6 +1663,49 @@ body.page-template-page-about {
   }
 }
 
-
+.entryHeader {
+  padding-top: 15rem;
+  padding-bottom: 10rem;
+  padding-left: 11rem;
+  background: $baby-blue;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  &:before {
+    content:"";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 100px solid #fff;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    position: absolute;
+    top: 56%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  h1 {
+    font-family: $font_secondary;
+    font-weight: 500;
+    font-size: 5rem;
+    line-height: 1.2;
+    margin: 0 0;
+    color: #FFF;
+    @include tab {
+      font-size: 8.5rem;
+    }
+  }
+}
+section.service.intro-text-wrap,
+section.intro-text-wrap {
+  margin-top: 0!important;
+  .section-two h2 {
+    font-size: 6em !important;
+    line-height: 1.1;
+  }
+}
 
 
