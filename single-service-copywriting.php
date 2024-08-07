@@ -64,15 +64,16 @@ Template Post Type: service
                     </div>
                 </div>
                 <?php } ?>
+                
                 <?php 
-                        $section_title = get_field('section_title');
-                        $faqs = get_field('faqs');
-
-                        if( $faqs ) {
-                     ?>
+                $section_title = get_field('section_title');
+                $faqs = get_field('faqs');
+                if($faqs) { ?>
                 <div class="content">
                     <?php //the_content(); ?>
-                    
+                    <?php 
+                        if( $faqs ) {
+                     ?>
 
                      <section class="faqs">
                         <div class="faq-title">
@@ -87,11 +88,9 @@ Template Post Type: service
                          <?php } ?>
                      </section>
 
-                   
-                    
-
+                    <?php } ?>
                 </div>
-                 <?php } ?>
+                <?php } ?>
             </section>
 
 

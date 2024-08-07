@@ -58,31 +58,31 @@ Template Post Type: service
               </div>
           </div>
           <?php 
-            $section_title = get_field('section_title');
-            $faqs = get_field('faqs');
-            if($faqs) { ?>
-            <div class="content">
-                <?php //the_content(); ?>
-                <?php 
-                    if( $faqs ) {
-                 ?>
+          $section_title = get_field('section_title');
+          $faqs = get_field('faqs');
+          if($faqs) { ?>
+          <div class="content">
+              <?php //the_content(); ?>
+              <?php 
+                  if( $faqs ) {
+               ?>
 
-                 <section class="faqs">
-                    <div class="faq-title">
-                        <h2 class="faqs">FAQS</h2>
-                    </div>
-                     
-                     <?php foreach( $faqs as $f ) { ?>
-                        <div class="faqrow">
-                           <div class="question"><div class="question-image"></div><?php echo $f['question']; ?></div>
-                           <div class="answer"><?php echo $f['answer']; ?></div>
-                        </div>
-                     <?php } ?>
-                 </section>
+               <section class="faqs">
+                  <div class="faq-title">
+                      <h2 class="faqs">FAQS</h2>
+                  </div>
+                   
+                   <?php foreach( $faqs as $f ) { ?>
+                      <div class="faqrow">
+                         <div class="question"><div class="question-image"></div><?php echo $f['question']; ?></div>
+                         <div class="answer"><?php echo $f['answer']; ?></div>
+                      </div>
+                   <?php } ?>
+               </section>
 
-                <?php } ?>
-            </div>
-            <?php } ?>
+              <?php } ?>
+          </div>
+          <?php } ?>
 
       </section>
     <?php endwhile; endif; ?>
