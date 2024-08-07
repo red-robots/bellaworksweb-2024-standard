@@ -12,7 +12,7 @@ $btnLink7 = (isset($row7_btn['url']) && $row7_btn['url']) ? $row7_btn['url'] : '
 $btnTarget7 = (isset($row7_btn['target']) && $row7_btn['target']) ? $row7_btn['target'] : '_self';
 
 if( ($small_title || $large_title) ||  $row7_column_content ) { ?>
-<div class="section row7_column_content">
+<div class="section row7_column_content three-steps-section">
   <div class="inner">
 
     <?php if ($small_title) { ?>
