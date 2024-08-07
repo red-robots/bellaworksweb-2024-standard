@@ -1922,7 +1922,7 @@ p.pretty{width:60%}
 h2.pretty.wp-block-heading{padding:2vh 5vw 1vh 5vw}
 .pagewrapper{padding-top:100px}
 section.services{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
-section.services .cube{width:50%;padding:4vw 8vh 2vw}
+section.services .cube{width:50%;padding:4vw 8vh 4.25vw}
 section.services .cube:nth-child(1){background-color:#3689b4}
 section.services .cube:nth-child(2){background-color:#223e60}
 section.services .cube:nth-child(4){background-color:#3689b4}
