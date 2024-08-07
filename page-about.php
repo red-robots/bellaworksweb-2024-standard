@@ -13,11 +13,11 @@ get_header(); ?>
 	<main class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
 		<?php
 		while ( have_posts() ) : the_post(); ?>
-    <header class="entryHeader">
-      <div class="inner">
+    <section class="service pageTitleDiv">
+      <div class="intro">
         <h1><?php the_title() ?></h1>
       </div>
-    </header>
+    </section>
     <?php  
     $row1_title = get_field('row1_title');
     $row1_text = get_field('row1_text');

@@ -1664,11 +1664,14 @@ body.page-template-page-about {
 }
 
 .entryHeader {
-  padding-top: 15rem;
-  padding-bottom: 10rem;
-  padding-left: 11rem;
-  background: $baby-blue;
-  height: 80vh;
+  // padding-top: 15rem;
+  // padding-bottom: 10rem;
+  // padding-left: 11rem;
+  padding-top: 10vw;
+  padding-right: 4rem;
+  padding-bottom: 10vw;
+  padding-left: 10rem;
+  background: $header-blue;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1697,6 +1700,14 @@ body.page-template-page-about {
     @include tab {
       font-size: 8.5rem;
     }
+  }
+}
+
+.service.pageTitleDiv .intro {
+  padding-top: 15vw;
+  padding-bottom: 12vw;
+  &:before {
+    top: 45%;
   }
 }
 section.service.intro-text-wrap,
