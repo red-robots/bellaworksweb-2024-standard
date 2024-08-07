@@ -75,17 +75,19 @@ get_header(); ?>
      </section>
 
 
-		
-
-				<div class="section-title">
-					<h2>OUR TEAM</h2>
-				</div>
-
+		<?php 
+      $bios = get_field('bios');
+      $bios_title = get_field('bios_title');
+    ?>
+      <?php if ($bios) { ?>
+        <?php if ($bios_title) { ?>
+  			<div class="section-title">
+  				<h2><?php echo $bios_title ?></h2>
+  			</div>
+        <?php } ?>
 			<section class="services">
 				
 				<?php 
-					$bios = get_field('bios');
-
 					foreach( $bios as $b ) {
 						$name = $b['name'];
 						$pic = $b['pic'];
@@ -105,6 +107,7 @@ get_header(); ?>
 					</div>
 				<?php } ?>
 			</section>
+      <?php } ?>
 		<?php endwhile; // End of the loop.
 		?>
   </main><!-- #main -->
