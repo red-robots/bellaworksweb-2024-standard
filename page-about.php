@@ -82,7 +82,7 @@ get_header(); ?>
       <?php if ($bios) { ?>
         <?php if ($bios_title) { ?>
   			<div class="section-title">
-  				<h2><?php echo $bios_title ?></h2>
+  				<h2 class="large-gray"><?php echo $bios_title ?></h2>
   			</div>
         <?php } ?>
 			<section class="services">

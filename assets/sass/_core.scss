@@ -271,6 +271,12 @@ section.services {
 		@include tab {
 			font-size: 6rem;
 		}
+    &.large-gray {
+      color: $gray;
+      @include tab {
+        font-size: 6.75rem;
+      }
+    }
 	}
 }
 section.service {
