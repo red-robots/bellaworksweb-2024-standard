@@ -1700,7 +1700,7 @@ section.services .cube:nth-child(4){background-color:#223e60}
 section.services .cube .pic{width:100%}
 section.services .cube .pic img{width:100%}
 .section-title{width:100%;padding:0;text-align:center;position:relative}
-.section-title h2{color:#8dceb6;font-size:4rem;margin:2rem 0}
+.section-title h2{color:#d0d2d3;font-size:4rem;margin:2rem 0 1rem}
 section.service{width:100%;color:#fff}
 section.service .dots{width:200px;margin:20px auto}
 section.service .dots .dot-one{background-color:#fcb405}
@@ -1925,7 +1925,7 @@ section.services .cube:nth-child(1){background-color:#3689b4}
 section.services .cube:nth-child(2){background-color:#223e60}
 section.services .cube:nth-child(4){background-color:#3689b4}
 section.services .cube:nth-child(3){background-color:#223e60}
-.section-title{padding:30px 0}
+.section-title{padding:30px 0 0}
 .section-title:before{content:"";display:block;width:100%;height:280px;position:absolute;top:3vw;right:0;background-image:url(assets/images/decoration/connect.svg);background-size:contain;background-position:right center;background-repeat:no-repeat;-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}
 .section-title h2{font-size:6rem}
 section.service .intro:before{border-left:100px solid #fff;border-top:50px solid transparent;border-bottom:50px solid transparent}

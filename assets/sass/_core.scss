@@ -245,7 +245,7 @@ section.services {
 	text-align: center;
 	position: relative;
 	@include tab() {
-		padding: 30px 0;
+		padding: 30px 0 0;
 	}
 	@include tab() {
 		&:before {
@@ -264,10 +264,11 @@ section.services {
 		}
 	}
 	h2 {
-		color: $green;
+		// color: $green;
+    color: $gray;
 		font-size: 4rem;
-    margin: 2rem 0;
-		@include tab() {
+    margin: 2rem 0 1rem;
+		@include tab {
 			font-size: 6rem;
 		}
 	}
