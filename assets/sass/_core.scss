@@ -1985,3 +1985,92 @@ section.services.services-grid {
   margin-top: 0!important;
   padding-top: 0!important;
 }
+
+
+body.page-template-page-green-body {
+  background: $green;
+  div.wp-site-blocks.green-content {
+    background: $green;
+    main {
+      max-width: 100%;
+      width: 100%;
+      margin: 0 auto;
+      .pagewrapper {
+        padding-top: 150px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      @include tab {
+        max-width: 1000px!important;
+      }
+      .entry-header {
+        h2 {
+          font-size: 3.5rem;
+          line-height: 1.2;
+          margin: 0 0 20px;
+          color: $header-blue;
+        }
+      }
+      p {
+        color: $header-blue;
+        font-size: 18px;
+        line-height: 1.4;
+      }
+      .gform_wrapper {
+        .ginput_container {
+          overflow: visible;
+          padding: 2px;
+          color: $header-blue;
+        }
+        li.gfield {
+          color: $header-blue;
+          a {
+            color: #1653d4;
+          }
+        }
+        label {
+          color: $header-blue;
+        }
+        input[type="text"],input[type="email"],input[type="number"],
+        input[type="url"],input[type="tel"],
+        select,textarea {
+          border: 1px solid #000;
+          border-radius: 0;
+          padding: 10px 15px!important;
+          font-size: 18px;
+          color: #000;
+          transition: all ease .3s;
+          &:focus {
+            outline: 0;
+            border-color: #80bdff;
+            box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+          }
+        }
+        input[type="text"],input[type="email"],input[type="number"],
+        input[type="url"], input[type="tel"], select {
+          height: 50px;
+        }
+        .gform_button.button {
+          border: none;
+          border-radius: 150px;
+          background-color: $btn-orange;
+          color: #FFF;
+          font-size: 20px;
+          font-weight: 600;
+          padding: 8px 20px 10px;
+          min-width: 150px;
+          transition: all ease .3s;
+          &:hover, &:focus {
+            color: $header-blue;
+            background-color: $btn-hover;
+            box-shadow: 0 3px 10px rgba(0,0,0,.11);
+          }
+        }
+      }
+      .gform_legacy_markup_wrapper .top_label div.ginput_container {
+        margin-top: 2px;
+      }
+    }
+  }
+}
