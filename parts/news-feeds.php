@@ -18,6 +18,7 @@ if ( $news->have_posts() ) {  $rpcount = $news->found_posts; ?>
       $attachment_id = get_post_thumbnail_id($pid);
       $image_src = wp_get_attachment_image_src($attachment_id,'full'); 
       $has_image = ($image_src) ? 'has-image':'no-image';
+      $is_show_date = false;
       ?>
       <article id="news-post-item-<?php echo $pid ?>"  class="news-post-item <?php echo $has_image ?>">
         <div class="inside">
@@ -29,9 +30,11 @@ if ( $news->have_posts() ) {  $rpcount = $news->found_posts; ?>
             <?php } ?>
             <div class="titlediv">
               <h2><?php echo get_the_title() ?></h2>
+              <?php if ($is_show_date) { ?>
               <div class="postdate">
                 <?php echo get_the_date('F j, Y') ?>
               </div>
+              <?php } ?>
             </div>
           </a>
         </div>
