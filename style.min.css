@@ -1571,7 +1571,8 @@ header.wp-block-template-part button[aria-label="Open menu"] span.bar:after{top:
 .activezz{display:inline-block}
 .homeSection2 .wp-block-columns{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .homeSection2 .leftCol,.homeSection2 .rightCol{width:50%}
-.homeSection2 .leftCol h2,.homeSection2 .rightCol h2{font-size:7em;font-weight:400;line-height:1.1;margin:0 0 40px}
+.homeSection2 .leftCol h2,.homeSection2 .rightCol h2{font-size:7em;font-weight:500;line-height:1.1;margin:0 0 40px}
+.homeSection2 .leftCol h2 strong,.homeSection2 .rightCol h2 strong{font-weight:600 !important}
 .homeSection2 .leftCol h2 span,.homeSection2 .rightCol h2 span{font-weight:500 !important;text-decoration:none !important;display:inline-block;position:relative}
 .homeSection2 .leftCol h2 span:after,.homeSection2 .rightCol h2 span:after{content:"";display:block;width:100%;height:7px;position:absolute;left:0;bottom:-10px}
 .homeSection2 .leftCol .inner{display:inline-block;padding:5vw 11vw}
@@ -1715,8 +1716,8 @@ section.service .intro figure{float:left;width:150px;margin:20px 0}
 section.service .intro figure img{width:100%}
 section.service .intro h1{float:left;width:auto;clear:both;color:#fff;font-size:80px;margin:0;padding-left:50px}
 section.service .section-two{width:100%;overflow:hidden;background-color:#fff}
-section.service .section-two h2{width:auto;position:relative;display:inline-block;font-weight:400 !important;font-size:7em !important;line-height:1;color:#8dceb6}
-section.service .section-two h2 strong{font-weight:500 !important}
+section.service .section-two h2{width:auto;position:relative;display:inline-block;font-weight:500 !important;font-size:7em !important;line-height:1;color:#8dceb6}
+section.service .section-two h2 strong{font-weight:600 !important}
 section.service .section-two h2 strong{width:auto;display:inline-block;position:relative;border-bottom:7px solid #6daf93}
 section.service .section-two h2 strong:before{content:"";display:block;width:0;height:0;border-left:50px solid #db6e35;border-top:25px solid transparent;border-bottom:25px solid transparent;position:absolute;left:-100px;top:20px}
 section.service .section-two .left{padding:30px}
@@ -1892,7 +1893,7 @@ body.page-template-page-about .section-title:before,body.page-template-page-abou
 .service.pageTitleDiv .intro{padding-top:15vw;padding-bottom:12vw}
 .service.pageTitleDiv .intro:before{top:45%}
 section.service.intro-text-wrap,section.intro-text-wrap{margin-top:0 !important}
-section.service.intro-text-wrap .section-two h2,section.intro-text-wrap .section-two h2{font-size:6em !important;line-height:1.1}
+section.service.intro-text-wrap .section-two h2,section.intro-text-wrap .section-two h2{font-size:5.65em !important;line-height:1.1}
 .three-steps-section{margin-top:0}
 section.service .content.faqs-content{padding-bottom:0}
 section.service-title-block{background-color:#71cbef;padding-top:50px;padding-bottom:50px;position:relative}

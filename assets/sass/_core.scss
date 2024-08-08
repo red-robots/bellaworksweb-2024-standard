@@ -388,12 +388,12 @@ section.service {
 			width: auto;
 			position: relative;
 			display: inline-block;
-			font-weight: 400 !important;
+			font-weight: 500 !important;
 	    font-size: 7em !important;
 	    line-height: 1;
 	    color: $green;
       strong {
-        font-weight: 500 !important;
+        font-weight: 600 !important;
       }
 
 			strong {
@@ -1725,7 +1725,7 @@ section.service.intro-text-wrap,
 section.intro-text-wrap {
   margin-top: 0!important;
   .section-two h2 {
-    font-size: 6em !important;
+    font-size: 5.65em !important;
     line-height: 1.1;
   }
 }

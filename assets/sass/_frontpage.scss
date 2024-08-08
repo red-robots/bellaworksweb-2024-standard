@@ -1717,9 +1717,12 @@ body.page, body.single {
     width: 50%;
     h2 {
       font-size: 7em;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 1.1;
       margin: 0 0 40px;
+      strong {
+        font-weight: 600!important;
+      }
       @include max($tabwidth) {
         font-size: 5em;
       }
