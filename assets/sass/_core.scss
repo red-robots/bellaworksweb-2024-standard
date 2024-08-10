@@ -974,7 +974,7 @@ section.single-portfolio {
 		width: 100%;
 		padding: 100px 0;
 		clear: both;
-		@include tab() {
+		@include tab {
 			display: flex;
 			flex-direction: row;
 			align-items: stretch;
@@ -983,7 +983,7 @@ section.single-portfolio {
 		.color-logo {
 			width: 100%;
 			padding-top: 20px;
-			@include tab() {
+			@include tab {
 				width: 50%;
 				padding-top: 0;
 				display: flex;
@@ -1001,8 +1001,9 @@ section.single-portfolio {
 		.blurb {
 			font-size: 22px;
 			padding: 30px;
-			@include tab() {
+			@include tab {
 				width: 50%;
+				padding-right: 6vw;
 			}
 		}
 	}
@@ -1011,7 +1012,7 @@ section.single-portfolio {
     figure {
       margin: 0 0;
     }
-		@include tab() {
+		@include tab {
 			display: flex;
 			flex-direction: row;
 			align-items: stretch;
@@ -1056,7 +1057,7 @@ section.single-portfolio {
 			}
 			@include tab {
 				margin-top: 10px;
-				padding: 50px;
+				padding: 50px 50px 50px 6vw;
 			}
       .buttondiv {
         margin-top: 20px;
@@ -1176,6 +1177,12 @@ section.single-portfolio {
 			img {
 				width: 100%;
 			}
+		}
+	}
+
+	&.half {
+		.testimonial-info {
+			margin-top: 0!important;
 		}
 	}
 }

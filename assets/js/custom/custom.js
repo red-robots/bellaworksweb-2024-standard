@@ -223,5 +223,13 @@ $('.question').click(function() {
 			}
 		}
 
+		if( $('.single-portfolio').length ) {
+			if( $('.single-portfolio .details .left').length && $('.single-portfolio .details .right').length ) {
+				//Do nothing...
+			} else {
+				$('.single-portfolio').addClass('half');
+			}
+		}
+
 
   });

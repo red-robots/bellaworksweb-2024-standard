@@ -1816,6 +1816,7 @@ section.single-portfolio .colors .right .flexwrap.full .fxcol{width:100% !import
 section.single-portfolio .detail-photos{width:100%}
 section.single-portfolio .detail-photos .photo{width:100%;padding:10px}
 section.single-portfolio .detail-photos .photo img{width:100%}
+section.single-portfolio.half .testimonial-info{margin-top:0 !important}
 section.news{width:100%;background-color:#8dceb6}
 section.news .left{width:100%}
 section.news .right{width:100%;padding:30px 0}
@@ -2003,12 +2004,12 @@ section.single-portfolio .intro .left{padding-right:70px}
 section.single-portfolio .intro .right{padding-left:70px;border-left:1px solid rgba(255,255,255,.3)}
 section.single-portfolio .blurbs{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 section.single-portfolio .blurbs .color-logo{width:50%;padding-top:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
-section.single-portfolio .blurbs .blurb{width:50%}
+section.single-portfolio .blurbs .blurb{width:50%;padding-right:6vw}
 section.single-portfolio .details{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch}
 section.single-portfolio .details .left,section.single-portfolio .details .right{width:50%}
 section.single-portfolio .details .left{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 section.single-portfolio .details .right{padding-left:20px}
-section.single-portfolio .details .key-features{margin-top:10px;padding:50px}
+section.single-portfolio .details .key-features{margin-top:10px;padding:50px 50px 50px 6vw}
 section.single-portfolio .colors{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 section.single-portfolio .colors .left,section.single-portfolio .colors .right{width:50%}
 section.single-portfolio .colors .left{padding:50px}
