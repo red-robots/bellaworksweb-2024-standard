@@ -1804,7 +1804,7 @@ section.single-portfolio .details .key-features .buttondiv{margin-top:20px}
 section.single-portfolio .colors{width:100%}
 section.single-portfolio .colors .left,section.single-portfolio .colors .right{width:100%;padding:30px}
 section.single-portfolio .colors .left{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;font-size:22px}
-section.single-portfolio .colors .left.testimonial-info{width:100%;padding-top:60px;padding-bottom:60px;background-color:#223e60;color:#fff}
+section.single-portfolio .colors .left.testimonial-info{width:100%;margin-top:10px;padding-top:60px;padding-bottom:60px;background-color:#223e60;color:#fff}
 section.single-portfolio .colors .left.testimonial-info .inner{max-width:1100px;width:100%;margin:0 auto;padding:0 30px;text-align:center}
 section.single-portfolio .colors .right{display:block;width:100%}
 section.single-portfolio .colors .right .color{width:100px;height:100px;border-radius:50%;margin:20px}
@@ -2008,7 +2008,7 @@ section.single-portfolio .details{display:-webkit-box;display:-ms-flexbox;displa
 section.single-portfolio .details .left,section.single-portfolio .details .right{width:50%}
 section.single-portfolio .details .left{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 section.single-portfolio .details .right{padding-left:20px}
-section.single-portfolio .details .key-features{margin-top:20px;padding:50px}
+section.single-portfolio .details .key-features{margin-top:10px;padding:50px}
 section.single-portfolio .colors{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 section.single-portfolio .colors .left,section.single-portfolio .colors .right{width:50%}
 section.single-portfolio .colors .left{padding:50px}
@@ -2033,6 +2033,7 @@ section.service-title-block .flexwrap .left{width:50%;-webkit-box-pack:end;-ms-f
 section.service-title-block .flexwrap .right{width:50%;padding:20px 30px}
 body.page-template-page-green-body div.wp-site-blocks.green-content main{max-width:1000px !important}
 }@media(min-width:980px){.row_5_content .inner{padding-right:15vw}
+section.single-portfolio .details .right{position:relative}
 .news-page-content .featured-post-item .inside a.postlink{min-height:200px}
 .news-page-content .bottomSection .post-item{width:33.333%}
 .news-page-content .bottomSection .post-item a.postlink{min-height:200px}

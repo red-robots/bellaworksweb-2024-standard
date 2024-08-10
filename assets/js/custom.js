@@ -198,4 +198,21 @@ jQuery(document).ready(function ($) {
   //   $('.stepsContent .wp-block-column').last().addClass('last');
   // }
 
+
+  adjustPortfolioColumns();
+  $(window).on('resize', function () {
+    adjustPortfolioColumns();
+  });
+
+  function adjustPortfolioColumns() {
+    if ($('section.single-portfolio .details .right img').length && $('section.single-portfolio .details .left').length) {
+      var imageRightHeight = $('section.single-portfolio .details .right img').height();
+
+      if ($(window).width() > 879) {
+        $('section.single-portfolio .details .left').css('height', imageRightHeight + 'px');
+      } else {
+        $('section.single-portfolio .details .left').css('height', '');
+      }
+    }
+  }
 });
