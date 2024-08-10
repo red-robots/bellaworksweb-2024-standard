@@ -2009,7 +2009,7 @@ section.single-portfolio .details{display:-webkit-box;display:-ms-flexbox;displa
 section.single-portfolio .details .left,section.single-portfolio .details .right{width:50%}
 section.single-portfolio .details .left{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 section.single-portfolio .details .right{padding-left:20px}
-section.single-portfolio .details .key-features{margin-top:10px;padding:50px 50px 50px 6vw}
+section.single-portfolio .details .key-features{margin-top:10px;padding:50px 5vw 50px 7vw}
 section.single-portfolio .colors{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 section.single-portfolio .colors .left,section.single-portfolio .colors .right{width:50%}
 section.single-portfolio .colors .left{padding:50px}
