@@ -17,7 +17,7 @@
 }
 .padding-home {
 	padding: 0 40px !important;
-	@include tab() {
+	@include tab {
 		padding: 0;
 	}
 }
@@ -31,7 +31,7 @@
 	padding: 20px 0;
 	.footer-contents {
 		width: 100%;
-		@include tab() {
+		@include tab {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
@@ -40,7 +40,7 @@
 		div {
 			width: 100%;
 			margin-bottom: 20px;
-			@include tab() {
+			@include tab {
 				width: auto;
 				margin-bottom: 0;
 			}
@@ -54,7 +54,7 @@ nav.footer {
 		flex-direction: row;
 		justify-content: flex-start;
 		padding: 0;
-		@include tab() {
+		@include tab {
 			justify-content: flex-end;
 		}
 	}
@@ -67,7 +67,7 @@ nav.footer {
 		color: $dark-gray;
 		text-decoration: none;
 		padding: 10px 5px;
-		@include tab() {
+		@include tab {
 			padding: 10px 15px;
 		}
 	}
@@ -82,7 +82,7 @@ p.pretty {
 	width: 100%;
 	margin: 0 auto;
 	font-size: 22px;
-	@include tab() {
+	@include tab {
 		width: 60%;
 	}
 }
@@ -94,7 +94,7 @@ p.home-p {
 	font-size: 22px;
 }
 h2.pretty.wp-block-heading {
-	@include tab() {padding: 2vh 5vw 1vh 5vw;}
+	@include tab {padding: 2vh 5vw 1vh 5vw;}
 }
 a.cta {
 	font-size: 16px;
@@ -118,7 +118,7 @@ a.cta {
 	width: 100%;
 	clear: both;
 	padding-top: 110px;
-	@include tab() {
+	@include tab {
 		padding-top: 100px;
 	}
   h3.type {
@@ -178,14 +178,15 @@ body.single-post {
 }
 section.services {
 	width: 100%;
-
-	@include tab() {
+	@include tab {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
 	}
 	h2 {
 		font-size: 5rem;
+		font-weight: 600 !important;
+    letter-spacing: 0.015em !important;
 		color: #fff;
 		margin: 0 0 10px 0;
 	}
@@ -248,10 +249,10 @@ section.services {
 	padding: 0px 0;
 	text-align: center;
 	position: relative;
-	@include tab() {
+	@include tab {
 		padding: 30px 0 0;
 	}
-	@include tab() {
+	@include tab {
 		&:before {
 			content: "";
 		    display: block;
@@ -287,7 +288,7 @@ section.service {
 	width: 100%;
 	color: #fff;
 
-	@include tab() {
+	@include tab {
 		// display: flex;
 		// flex-direction: row;
 		// align-items: stretch;
@@ -334,13 +335,13 @@ section.service {
 		    animation-duration: 0.5s;
 		    animation-name: homeArrowLeft;
 		    z-index: 10;
-		    @include tab() {
+		    @include tab {
 		    	border-left: 100px solid #FFF;
 		    	border-top: 50px solid transparent;
 		    	border-bottom: 50px solid transparent;
 		    }
 		}
-	    @include tab() {
+	    @include tab {
 	    	// width: 50%;
 	    	padding-top: 10vw;
 		    padding-right: 4rem;
@@ -352,7 +353,7 @@ section.service {
 	    	float:left;
 	    	width: 150px;
 	    	margin: 20px 0;
-	    	@include tab() {
+	    	@include tab {
 	    		width: 250px;
 	    		float:right;
 	    	}
@@ -368,7 +369,7 @@ section.service {
 	    	font-size: 80px;
 	    	margin: 0;
 	    	padding-left: 50px;
-	    	@include tab() {
+	    	@include tab {
 	    		font-size: calc(clamp(6.25rem, 5.593vw + 2.664rem, 9.375rem));
 	    	}
 	    }
@@ -378,7 +379,7 @@ section.service {
 		overflow: hidden;
 		background-color: #fff;
 
-		@include tab() {
+		@include tab {
 			display: flex;
 			flex-direction: row;
 			align-items: stretch;
@@ -418,7 +419,7 @@ section.service {
 		.left {
 
 			padding: 30px;
-			@include tab() {
+			@include tab {
 				width: 50%;
 				float: left;
 				display: flex;
@@ -436,7 +437,7 @@ section.service {
 			background-color: $green;
 			padding: 30px;
 			font-size: 26px;
-			@include tab() {
+			@include tab {
 				width: 50%;
 				padding: 150px 10% 150px 80px;
 				float: right;
@@ -449,7 +450,7 @@ section.service {
 		background-color: $baby-blue;
 		color: #fff;
 		font-size: 26px;
-		@include tab() {
+		@include tab {
 			display: flex;
 			flex-direction: row;
 			align-items: stretch;
@@ -463,7 +464,7 @@ section.service {
 			width: 100%;
 			background-color: $blue;
 			padding: 30px;
-			@include tab() {
+			@include tab {
 				border-top-right-radius: 250px;
 				padding: 150px;
 				width: 50%;
@@ -472,7 +473,7 @@ section.service {
 		.right {
 			width: 100%;
 			padding: 30px;
-			@include tab() {
+			@include tab {
 				padding: 150px;
 				width: 50%;
 			}
@@ -483,7 +484,7 @@ section.service {
 		background-color: #fff;
 		color: #fff;
 		font-size: 26px;
-		@include tab() {
+		@include tab {
 			display: flex;
 			flex-direction: row;
 			align-items: stretch;
@@ -497,13 +498,13 @@ section.service {
 			width: 100%;
 			background-color: $header-blue;
 			padding: 30px;
-			@include tab() {
+			@include tab {
 				border-bottom-right-radius: 250px;
 				padding: 150px;
 				width: 50%;
 			}
 			&.alt {
-				@include tab() {
+				@include tab {
 					border-top-right-radius: 250px;
 					border-bottom-right-radius: 0px;
 				}
@@ -513,7 +514,7 @@ section.service {
 			width: 100%;
 			padding: 30px;
 			color: $dark-gray;
-			@include tab() {
+			@include tab {
 				padding: 150px;
 				width: 50%;
 			}
@@ -533,7 +534,7 @@ section.service {
 	    font-size: 22px;
 	    color: $header-blue;
 	    background-color: #fff;
-	    @include tab() {
+	    @include tab {
 	    	// width: 50%;
 	    	padding-top: 10vw;
 		    padding-right: 4rem;
@@ -558,7 +559,7 @@ section.service {
 section.about {
 	width: 100%;
 
-	@include tab() {
+	@include tab {
 		display: flex;
 		flex-direction: row;
 	}
@@ -606,7 +607,7 @@ section.about {
 	    color: $header-blue;
 	    font-size: 22px;
 	    overflow: hidden;
-	    @include tab() {
+	    @include tab {
 	    	width: 50%;
 	    	padding-top: 3rem;
 		    padding-right: 5rem;
@@ -657,7 +658,7 @@ section.big-form {
 		h1 {
 			color: $header-blue;
 		}
-		@include tab() {
+		@include tab {
 			width: 60%;
 			margin: 0 auto;
 		}
@@ -721,7 +722,7 @@ section.faqs {
 	.faq-title {
 		width: auto;
 
-		@include tab() {
+		@include tab {
 			padding-right: 100px;
 			position: absolute;
 			top: 100px;
@@ -751,7 +752,7 @@ section.faqs {
 		}
 	}
 
- @include tab() {
+ @include tab {
     width: 100%;
     padding-left: 180px;
     left: 0;
@@ -808,7 +809,7 @@ section.faqs {
 	color: $dark-gray;
 	background-color: #fff;
 	border: 1px solid $mustard;
-	@include tab() {
+	@include tab {
 		width: 98%;
 	}
 }
@@ -831,7 +832,7 @@ section.work {
 		width: 50%;
 		position: relative;
 		line-height: 0;
-		@include tab() {
+		@include tab {
 			width: 33.333%;
 		}
 		img {
@@ -915,13 +916,15 @@ section.single-portfolio {
 			text-align: center;
 			margin: 50px auto;
 			font-size: 5rem;
+			font-weight: 600 !important;
+			letter-spacing: 0.025em !important;
 			display: inline-block;
 		}
 		.desc {
 			width: 100%;
 			margin: 0 auto;
 			font-size: 22px;
-			@include tab() {
+			@include tab {
 				width: 50%;
 				max-width: 800px;
 			}
@@ -929,7 +932,7 @@ section.single-portfolio {
 		.intro-wrap {
 			width: auto;
 			margin: 0 auto;
-			@include tab() {
+			@include tab {
 				display: flex;
 				flex-direction: row;
 				justify-content: center;
@@ -952,7 +955,7 @@ section.single-portfolio {
       }
 		}
 		.left {
-			@include tab() {
+			@include tab {
 				padding-right: 70px;
 			}
 		}
@@ -1066,7 +1069,7 @@ section.single-portfolio {
 	}
 	.colors {
 		width: 100%;
-		@include tab() {
+		@include tab {
 			display: flex;
       flex-wrap: wrap;
 			flex-direction: row;
@@ -1076,7 +1079,7 @@ section.single-portfolio {
 		.left, .right {
 			width: 100%;
 			padding: 30px;
-			@include tab() {
+			@include tab {
 				width: 50%;
 			}
 		}
@@ -1085,7 +1088,7 @@ section.single-portfolio {
 			flex-direction: column;
 			justify-content: center;
 			font-size: 22px;
-			@include tab() {
+			@include tab {
 				padding: 50px;
 			}
       &.testimonial-info {
@@ -1116,7 +1119,7 @@ section.single-portfolio {
 				height: 100px;
 				border-radius: 50%;
 				margin: 20px;
-				@include tab() {
+				@include tab {
 					width: 200px;
 					height: 200px;
 				}
@@ -1162,7 +1165,7 @@ section.single-portfolio {
 	}
 	.detail-photos {
 		width: 100%;
-		@include tab() {
+		@include tab {
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
@@ -1170,7 +1173,7 @@ section.single-portfolio {
 		.photo {
 			width: 100%;
 			padding: 10px;
-			@include tab() {
+			@include tab {
 				width: 50%;
 
 			}
@@ -1189,21 +1192,21 @@ section.single-portfolio {
 section.news {
 	width: 100%;
 	background-color: $green;
-	@include tab() {
+	@include tab {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
 	}
 	.left {
 		width: 100%;
-		@include tab() {
+		@include tab {
 			width: 50%;
 		}
 	}
 	.right {
 		width: 100%;
 		padding: 30px 0;
-		@include tab() {
+		@include tab {
 			width: 50%;
 		}
 	}
@@ -1215,7 +1218,7 @@ section.news {
 		a {
 			display: block;
 			text-decoration: none;
-			@include tab() {
+			@include tab {
 				display: flex;
 				flex-direction: row;
 			}
@@ -1223,14 +1226,14 @@ section.news {
 
 			}
 		}
-		@include tab() {
+		@include tab {
 			// width: 28%;
 		}
 		.img {
 			width: 25%;
 			line-height: 0;
 			float: left;
-			@include tab() {
+			@include tab {
 				width: 150px;
 			}
 			img {
@@ -1245,7 +1248,7 @@ section.news {
 			float: left;
 			color: $header-blue;
 			letter-spacing: 1px;
-			@include tab() {
+			@include tab {
 				flex-grow: 1;
 				display: flex;
 			flex-direction: column;
@@ -1255,7 +1258,7 @@ section.news {
 			h2 {
 				font-size: 1.5rem;
 				margin: 0;
-				@include tab() {
+				@include tab {
 					font-size: 2rem;
 				}
 			}
@@ -1827,8 +1830,10 @@ section.service-title-block {
       margin-right: -15px;
     }
     .inner {
-      width: 15vw;
-      height: 15vw;
+      // width: 15vw;
+      // height: 15vw;
+			width: 100%;
+			min-height: 15vw;
       padding: 15px;
       text-decoration: none;
       color: #FFF!important;
@@ -1855,6 +1860,9 @@ section.service-title-block {
     }
     .square {
       padding: 15px;
+			@include tab {
+				width: 50%;
+			}
       &.square-1 .inner {
         border-top-left-radius: 70px;
       }

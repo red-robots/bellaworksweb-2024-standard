@@ -559,7 +559,7 @@ body.page, body.single {
 	  flex-wrap: wrap;
 	  gap: 0;
 	  width: 100%;
-	  
+
 	  position: relative;
 	  @include tab() {
 	  	height: 100vh;
@@ -777,7 +777,7 @@ body.page, body.single {
 				align-items: end !important;
 			}
 		}
-		
+
 	}
 	.solutions-two {
 		.wp-block-column {
@@ -785,7 +785,7 @@ body.page, body.single {
 				align-items: start !important;
 			}
 		}
-		
+
 	}
 	.titleWrap {
 	  display: flex;
@@ -825,7 +825,7 @@ body.page, body.single {
 			height: 100%;
 			display: flex;
 			text-decoration: none;
-			
+
 			h4 {
 				margin: 0;
 			}
@@ -918,10 +918,10 @@ body.page, body.single {
 	.partners {
 		width: 200px;
 		height: 200px;
-		
+
 		// background-color: #e6e7e8;
 		position: relative;
-		
+
 		@include tab() {
 			width: 200px;
 			height: 200px;
@@ -930,7 +930,7 @@ body.page, body.single {
 			width: 270px;
 			height: 270px;
 		}
-		
+
 		img {
 			width: 80%;
 			display: inline-block;
@@ -981,7 +981,7 @@ body.page, body.single {
 		// flex-grow: unset!important;
 		box-sizing: border-box;
 		padding: 15px;
-		
+
 	  }
 	  .inner {
 		background-color: #e6e7e8;
@@ -1898,7 +1898,7 @@ body.page, body.single {
       align-items: flex-start!important;
       justify-content: flex-start;
     }
-    
+
     .group {
       width: 100%;
       display: flex;
@@ -2070,7 +2070,7 @@ body.page, body.single {
       }
     }
   }
-  
+
 }
 
 
@@ -2162,11 +2162,11 @@ body.page, body.single {
       &:before {
         content:"";
         display: block;
-        width: 0; 
+        width: 0;
         height: 0;
         border-top: 100px solid $btn-orange;
-        border-left: 50px solid transparent; 
-        border-right: 50px solid transparent; 
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
         position: absolute;
         top: 15px;
         left: 0;
@@ -2318,7 +2318,7 @@ body.page, body.single {
       width: 100%;
       color: $gray;
       font-family: $font_secondary!important;
-      font-weight: 500;
+      font-weight: 600;
       font-style: normal;
       font-size: 25px;
     }
@@ -2444,7 +2444,7 @@ body.page, body.single {
   //     transform: perspective(18em) rotateX(15deg);
   //   }
   // }
-  
+
   .buttondiv {
     margin-top: 20px;
     text-align: center;
