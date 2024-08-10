@@ -2102,3 +2102,27 @@ h1 {
 body.page-template-page-contact h1 {
   font-weight: 600!important;
 }
+body.page-template-page-contact {
+	section.about div.right  {
+		color: #FFF!important;
+		h2,h3,h4 {
+			font-weight:600!important;
+			letter-spacing:0.03em!important;
+		}
+		h2,h3,p {
+			color: #FFF!important;
+		}
+	}
+	.contact-contents .c-block a.cta {
+		display: inline-block;
+    margin-top: 15px;
+	}
+	.contact-contents .c-block:has(h2) {
+		h2 {
+			margin-bottom: 5px!important;
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+}
