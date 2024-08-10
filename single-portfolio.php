@@ -31,12 +31,12 @@ get_header(); ?>
 		            $text_color = get_sub_field('text_color');
 		            $name = get_sub_field('name');
 		            $intro_text = get_sub_field('intro_text');
-	             
+
               $taxonomy = 'business-type';
               $terms = get_the_terms( get_the_ID(), $taxonomy );
               $category = ( isset($terms[0]) ) ? $terms[0]->name : '';
 
-		        ?>  
+		        ?>
 		        <div class="intro" style="background-color: <?php echo $background_color;  ?>;">
 		        	<div class="intro-wrap">
                 <div class="titleWrap">
@@ -54,7 +54,7 @@ get_header(); ?>
 			        		<h1 style="color: <?php echo $text_color; ?>"><?php the_title(); ?></h1>
 			        	</div> -->
 		        	</div>
-		        	
+
 		        	<?php if ($intro_text) { ?>
 		        	<div class="desc" style="color: <?php echo $text_color; ?>">
 		        		<?php echo $intro_text; ?>
@@ -63,16 +63,16 @@ get_header(); ?>
 		        </div>
 		        <?php
 		        // Case: Download layout.
-		        elseif( get_row_layout() == 'hero' ): 
+		        elseif( get_row_layout() == 'hero' ):
 		          if( $hero_image = get_sub_field('hero_image') ) { ?>
   		        <div class="hero">
   		        	<img src="<?php echo $hero_image['url']; ?>">
   		        </div>
               <?php } ?>
-		        
+
             <?php
 		        // Case: Download layout.
-		        elseif( get_row_layout() == 'second_section' ): 
+		        elseif( get_row_layout() == 'second_section' ):
 	            $color_logo = get_sub_field('color_logo');
 	            $small_blurg = get_sub_field('small_blurg');
               if( $color_logo || $small_blurg ) { ?>
@@ -92,14 +92,14 @@ get_header(); ?>
                 <?php } ?>
   		        </div>
               <?php } ?>
-		        <?php 
+		        <?php
 		        // Case: Download layout.
-		        elseif( get_row_layout() == 'third_section' ): 
+		        elseif( get_row_layout() == 'third_section' ):
 	            $detail_photo = get_sub_field('detail_photo');
               $detail_photo2 = get_sub_field('detail_photo2');
 	            $full_site_photo = get_sub_field('full_site_photo');
-	            $key_features = get_sub_field('key_features'); 
-              $website_url = get_sub_field('website__url'); 
+	            $key_features = get_sub_field('key_features');
+              $website_url = get_sub_field('website__url');
               ?>
   		        <div class="details">
   		        	<div class="left">
@@ -127,7 +127,7 @@ get_header(); ?>
   		        		</div>
                   <?php } ?>
 
-                  
+
 
   		        	</div>
                 <?php if ($full_site_photo) { ?>
@@ -139,21 +139,13 @@ get_header(); ?>
 
 		        <?php
 		        // Case: Download layout.
-		        elseif( get_row_layout() == 'color_palette' ): 
+		        elseif( get_row_layout() == 'color_palette' ):
 	            $text_field = get_sub_field('text_field');
 	            $colorsText = get_sub_field('colors_description');
               $colors = get_sub_field('colors');
               $color_class = ($colorsText && $colors) ? 'half':'full';
   		        if ($text_field || $colors || $colorsText) { ?>
   		        <div class="colors">
-                <?php if ($text_field) { ?>
-  		        	<div class="left testimonial-info">
-                  <div class="inner">
-                    <?php echo $text_field; ?>
-                  </div>
-  		        	</div>
-                <?php } ?>
-
                 <?php if ($colors || $colorsText) { ?>
   		        	<div class="right">
                   <div class="flexwrap <?php echo $color_class ?>">
@@ -170,17 +162,25 @@ get_header(); ?>
                   </div>
   		        	</div>
                 <?php } ?>
+
+								<?php if ($text_field) { ?>
+  		        	<div class="left testimonial-info">
+                  <div class="inner">
+                    <?php echo $text_field; ?>
+                  </div>
+  		        	</div>
+                <?php } ?>
   		        </div>
               <?php } ?>
-		            
+
 
 		        <?php
 				// Case: Download layout.
-		        elseif( get_row_layout() == 'detail_photos' ): 
+		        elseif( get_row_layout() == 'detail_photos' ):
 		          $photos = get_sub_field('photos');
               if($photos) { ?>
   		        <div class="detail-photos">
-  		        	<?php foreach( $photos as $ph ) { 
+  		        	<?php foreach( $photos as $ph ) {
   		        		?>
   			        	<div class="photo">
   			        		<img src="<?php echo $ph['photo']['url']; ?>">
@@ -188,11 +188,11 @@ get_header(); ?>
   		        	<?php } ?>
   		        </div>
             <?php } ?>
-		            
 
-		            
 
-		    <?php 
+
+
+		    <?php
 
 		        endif;
 
