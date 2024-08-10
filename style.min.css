@@ -1906,7 +1906,7 @@ section.service-title-block .flexwrap .left h1 small{font-size:80%}
 section.service-title-block .flexwrap .right{width:100%;padding:20px 20px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 section.service-title-block .service-blocks .flexwrap{max-width:600px;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:-15px;margin-right:-15px}
 section.service-title-block .service-blocks .inner{width:100%;min-height:15vw;padding:15px;text-decoration:none;color:#fff !important;background:#3689b4;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
-section.service-title-block .service-blocks .inner span{font-family:"Trump Gothic Pro","Oswald",sans-serif;font-size:3.65rem;font-weight:500;line-height:1;letter-spacing:.03em;text-transform:uppercase;text-align:right}
+section.service-title-block .service-blocks .inner span{font-family:"Trump Gothic Pro","Oswald",sans-serif;font-size:3.65rem;font-weight:600;line-height:1;letter-spacing:.032em;text-transform:uppercase;text-align:right}
 section.service-title-block .service-blocks a.inner{-webkit-transition:all ease .3s;transition:all ease .3s}
 section.service-title-block .service-blocks a.inner:hover,section.service-title-block .service-blocks a.inner:focus{background:#db6e35}
 section.service-title-block .service-blocks .square{padding:15px}
@@ -1933,7 +1933,7 @@ body.page-template-page-green-body div.wp-site-blocks.green-content main .gform_
 body.page-template-page-green-body div.wp-site-blocks.green-content main .gform_wrapper .gform_button.button{border:0;border-radius:150px;background-color:#db6e35;color:#fff;font-size:20px;font-weight:600;padding:8px 20px 10px;min-width:150px;-webkit-transition:all ease .3s;transition:all ease .3s}
 body.page-template-page-green-body div.wp-site-blocks.green-content main .gform_wrapper .gform_button.button:hover,body.page-template-page-green-body div.wp-site-blocks.green-content main .gform_wrapper .gform_button.button:focus{color:#223e60;background-color:#d1d374;-webkit-box-shadow:0 3px 10px rgba(0,0,0,.11);box-shadow:0 3px 10px rgba(0,0,0,.11)}
 body.page-template-page-green-body div.wp-site-blocks.green-content main .gform_legacy_markup_wrapper .top_label div.ginput_container{margin-top:2px}
-h1{font-weight:500 !important;letter-spacing:.02em !important}
+h1{font-weight:600 !important;letter-spacing:.02em !important}
 body.page-template-page-contact h1{font-weight:600 !important}
 body.page-template-page-contact section.about div.right{color:#fff !important}
 body.page-template-page-contact section.about div.right h2,body.page-template-page-contact section.about div.right h3,body.page-template-page-contact section.about div.right h4{font-weight:600 !important;letter-spacing:.03em !important}
