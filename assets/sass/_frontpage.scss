@@ -1820,7 +1820,7 @@ body.page, body.single {
         text-align: right;
       }
       h2 {
-        font-weight: 500 !important;
+        font-weight: 600 !important;
         line-height: .9;
         font-size: 7rem;
         letter-spacing: 0.015em;
@@ -1867,12 +1867,12 @@ body.page, body.single {
         color: #FFF;
         text-decoration: none;
         font-family: $font_secondary!important;
-        font-size: 3.5rem;
-        font-weight: 500;
+        font-size: 3.65rem;
+        font-weight: 600;
         letter-spacing: 0.02em;
         line-height: 1.1;
         text-transform: uppercase;
-        padding: 10px 20px;
+        padding: 10px 15px;
         transition: transform 0.6s;
         // transform-style: preserve-3d;
         &:hover {

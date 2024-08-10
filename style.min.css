@@ -1590,14 +1590,14 @@ header.wp-block-template-part button[aria-label="Open menu"] span.bar:after{top:
 .homeSection4 .wp-block-columns{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important}
 .homeSection4 .leftCol{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;padding-right:30px;width:50%}
 .homeSection4 .leftCol .inner h2,.homeSection4 .leftCol .inner h3,.homeSection4 .leftCol .inner p{color:#fff;text-align:right}
-.homeSection4 .leftCol .inner h2{font-weight:500 !important;line-height:.9;font-size:7rem;letter-spacing:.015em;margin:0}
+.homeSection4 .leftCol .inner h2{font-weight:600 !important;line-height:.9;font-size:7rem;letter-spacing:.015em;margin:0}
 .homeSection4 .leftCol .inner h3{margin:10px 0 0;font-size:5rem;font-weight:500;letter-spacing:.02em}
 .homeSection4 .leftCol .inner .button{padding-left:40px;padding-right:40px}
 .homeSection4 .leftCol .inner p:has(.custom-button-element){text-align:center}
 .homeSection4 .rightCol{width:50%;padding-right:15vw}
 .homeSection4 .rightCol .rounded-top-blocks{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:30px}
 .homeSection4 .rightCol .rounded-top{width:48%;margin:20px 0}
-.homeSection4 .rightCol .rounded-top a{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;min-height:260px;width:100%;height:100%;background:#3689b4;color:#fff;text-decoration:none;font-family:"Trump Gothic Pro","Oswald",sans-serif !important;font-size:3.5rem;font-weight:500;letter-spacing:.02em;line-height:1.1;text-transform:uppercase;padding:10px 20px;-webkit-transition:-webkit-transform .6s;transition:-webkit-transform .6s;transition:transform .6s;transition:transform .6s,-webkit-transform .6s}
+.homeSection4 .rightCol .rounded-top a{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;min-height:260px;width:100%;height:100%;background:#3689b4;color:#fff;text-decoration:none;font-family:"Trump Gothic Pro","Oswald",sans-serif !important;font-size:3.65rem;font-weight:600;letter-spacing:.02em;line-height:1.1;text-transform:uppercase;padding:10px 15px;-webkit-transition:-webkit-transform .6s;transition:-webkit-transform .6s;transition:transform .6s;transition:transform .6s,-webkit-transform .6s}
 .homeSection4 .rightCol .rounded-top a:hover{-webkit-transform:perspective(7em) rotateY(-18deg);transform:perspective(7em) rotateY(-18deg)}
 .homeSection4 .rightCol .rounded-top:first-child a{border-top-left-radius:70px}
 .homeSection4 .rightCol .rounded-top:last-child a{border-bottom-right-radius:70px}
@@ -1907,8 +1907,8 @@ section.service-title-block .flexwrap .right{width:100%;padding:20px 20px;displa
 section.service-title-block .service-blocks .flexwrap{max-width:600px;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:-15px;margin-right:-15px}
 section.service-title-block .service-blocks .inner{width:100%;min-height:15vw;padding:15px;text-decoration:none;color:#fff !important;background:#3689b4;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
 section.service-title-block .service-blocks .inner span{font-family:"Trump Gothic Pro","Oswald",sans-serif;font-size:3.65rem;font-weight:600;line-height:1;letter-spacing:.032em;text-transform:uppercase;text-align:right}
-section.service-title-block .service-blocks a.inner{-webkit-transition:all ease .3s;transition:all ease .3s}
-section.service-title-block .service-blocks a.inner:hover,section.service-title-block .service-blocks a.inner:focus{background:#db6e35}
+section.service-title-block .service-blocks a.inner{transition:transform .6s,-webkit-transform .6s}
+section.service-title-block .service-blocks a.inner:hover,section.service-title-block .service-blocks a.inner:focus{-webkit-transform:perspective(16em) rotateY(-18deg);transform:perspective(16em) rotateY(-18deg)}
 section.service-title-block .service-blocks .square{padding:15px}
 section.service-title-block .service-blocks .square.square-1 .inner{border-top-left-radius:70px}
 section.service-title-block .service-blocks .square.square-2 .inner{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
