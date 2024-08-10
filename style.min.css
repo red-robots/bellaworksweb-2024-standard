@@ -1785,7 +1785,7 @@ section.single-portfolio .intro .intro-wrap{width:auto;margin:0 auto}
 section.single-portfolio .intro .intro-wrap .titleWrap{padding-top:30px;text-align:center}
 section.single-portfolio .intro .intro-wrap .titleWrap h1{margin:0}
 section.single-portfolio .intro .intro-wrap .titleWrap div.type{color:#fff;font-size:35px;line-height:1.2;margin-top:10px}
-section.single-portfolio .hero{width:100%}
+section.single-portfolio .hero{width:100%;margin-top:10px}
 section.single-portfolio .hero img{width:100%}
 section.single-portfolio .blurbs{width:100%;padding:100px 0;clear:both}
 section.single-portfolio .blurbs .color-logo{width:100%;padding-top:20px}
