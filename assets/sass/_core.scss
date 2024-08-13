@@ -1820,7 +1820,7 @@ section.service-title-block {
 
   .service-blocks {
     .flexwrap {
-      max-width: 600px;
+      max-width: 75%;
       width: 100%;
       display: flex;
       flex-wrap: wrap;
@@ -1844,12 +1844,16 @@ section.service-title-block {
       justify-content: flex-end;
       span {
         font-family: $font_secondary;
-        font-size: 3.65rem;
+        font-size: 2.65rem;
         font-weight: 600;
         line-height: 1;
         letter-spacing: 0.032em;
         text-transform: uppercase;
         text-align: right;
+        transition: all ease .3s;
+        @media screen and (min-width:1500px) {
+          font-size: 3.25rem;
+        }
       }
     }
     a.inner {
@@ -1897,9 +1901,21 @@ section.service-title-block {
       }
       .service-blocks {
         .inner span {
-          font-size: 4vw;
+          font-size: 3.3vw;
         }
       }
+    }
+    .service-blocks .flexwrap {
+      max-width: 85%;
+    }
+  }
+
+  @media screen and (max-width:1300px) {
+    .service-blocks .flexwrap {
+      max-width: 100%;
+    }
+    .flexwrap .service-blocks .inner span {
+      font-size: 2.5vw;
     }
   }
 
@@ -1914,8 +1930,8 @@ section.service-title-block {
       }
       .service-blocks {
         .inner {
-          width: 18vw;
-          height: 18vw;
+          width: 100%;
+          min-height: 185px;
         }
         .inner span {
           font-size: 3.5vw;
@@ -1948,9 +1964,9 @@ section.service-title-block {
       }
       .service-blocks {
         .flexwrap {
-          max-width: 680px;
+          max-width: 600px;
           margin-left: -10px;
-        margin-right: -10px;
+          margin-right: -10px;
         }
         .square {
           width: 50%;
@@ -1958,14 +1974,21 @@ section.service-title-block {
         }
         .inner {
           width: 100%;
-          padding-bottom: 100%;
+          padding-bottom: 80%;
           position: relative;
         }
         .inner span {
           display: block;
           position: absolute;
           z-index: 5;
-          font-size: 4.25vw;
+          font-size: 5vw;
+        }
+        .square-1,
+        .square-2 {
+          .inner span {
+            top: unset;
+            bottom: 20px;
+          }
         }
       }
     }
