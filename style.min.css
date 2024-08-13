@@ -1693,7 +1693,7 @@ body.single-post article h1:before{display:inline-block;content:"";width:0;heigh
 body.single-post article h2,body.single-post article h3,body.single-post article h4{color:#223e60}
 section.services{width:100%}
 section.services h2{font-size:5rem;font-weight:600 !important;letter-spacing:.015em !important;color:#fff;margin:0 0 10px 0}
-section.services h3{font-size:4rem;color:#fff;margin:0 0 25px 0}
+section.services h3{font-size:4rem;font-weight:500;letter-spacing:.02em;color:#fff;margin:0 0 25px 0}
 section.services .desc{font-size:22px;margin-bottom:40px}
 section.services .cube{width:100%;padding:60px 20px;color:#fff}
 section.services .cube:nth-child(1){background-color:#3689b4}
@@ -1703,7 +1703,7 @@ section.services .cube:nth-child(4){background-color:#223e60}
 section.services .cube .pic{width:100%}
 section.services .cube .pic img{width:100%}
 .section-title{width:100%;padding:0;text-align:center;position:relative}
-.section-title h2{color:#d0d2d3;font-size:4rem;margin:2rem 0 1rem}
+.section-title h2{color:#d0d2d3;font-size:4rem;font-weight:600;margin:2rem 0 1rem}
 .section-title h2.large-gray{color:#d0d2d3}
 section.service{width:100%;color:#fff}
 section.service .dots{width:200px;margin:20px auto}
