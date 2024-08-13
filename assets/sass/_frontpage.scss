@@ -889,8 +889,11 @@ body.page, body.single {
         }
         .group .rounded-top,
         .rounded-top {
-          width: 100%;
           margin-bottom: 20px;
+          a {
+            min-height: 195px;
+            font-size: 2.2rem;
+          }
         }
       }
     }
@@ -1907,6 +1910,15 @@ body.page, body.single {
       margin: 15px 0;
       .rounded-top {
         margin: 0 0;
+        a {
+          font-size: 2.5rem;
+          @media screen and (min-width: 1700px) {
+            font-size: 3.65rem;
+          }
+          @media screen and (min-width: 1500px) {
+            font-size: 3rem;
+          }
+        }
       }
     }
     .group:first-child {
@@ -1917,6 +1929,10 @@ body.page, body.single {
     .group:last-child {
       .rounded-top:first-child a {
         border-top-left-radius: 0;
+      }
+      .rounded-top a {
+        display: flex;
+        align-items: flex-start;
       }
     }
   }

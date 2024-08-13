@@ -1606,8 +1606,10 @@ header.wp-block-template-part button[aria-label="Open menu"] span.bar:after{top:
 .homeSection4 .rightCol .rounded-top:nth-child(3) a{text-align:left;-webkit-box-align:start !important;-ms-flex-align:start !important;align-items:flex-start !important;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
 .homeSection4 .rightCol .group{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin:15px 0}
 .homeSection4 .rightCol .group .rounded-top{margin:0}
+.homeSection4 .rightCol .group .rounded-top a{font-size:2.5rem}
 .homeSection4 .rightCol .group:first-child .rounded-top:last-child a{border-bottom-right-radius:0}
 .homeSection4 .rightCol .group:last-child .rounded-top:first-child a{border-top-left-radius:0}
+.homeSection4 .rightCol .group:last-child .rounded-top a{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}
 .portfolio-section{position:relative}
 .portfolio-section:before{content:"";display:block;width:0;height:0;border-right:75px solid #8dceb6;border-top:40px solid transparent;border-bottom:40px solid transparent;position:absolute;top:20%;right:0;z-index:10}
 .portfolio-section .titleDiv{position:absolute;top:8px;right:-15px;pointer-events:none}
@@ -2055,8 +2057,10 @@ section.faqs{max-width:1260px;width:100%;padding-left:275px;margin:0 auto;left:-
 }@media(min-width:1500px){header.wp-block-template-part .header-content .siteNavigation ul.menu{gap:4rem}
 .homeSection2 .wp-block-group{padding-top:0;padding-right:5rem;padding-bottom:10rem;padding-left:5rem}
 .global-wrapper{width:90vw;padding-left:0;padding-right:0}
-}@media screen and (min-width:1500px){section.service-title-block .service-blocks .inner span{font-size:3.25rem}
+}@media screen and (min-width:1500px){.homeSection4 .rightCol .group .rounded-top a{font-size:3rem}
+section.service-title-block .service-blocks .inner span{font-size:3.25rem}
 }@media screen and (min-width:1600px){.main-content-home .homeCol .inner{font-size:9.75vw}
+}@media screen and (min-width:1700px){.homeSection4 .rightCol .group .rounded-top a{font-size:3.65rem}
 }@media screen and (max-width:1480px){.homeSection3:before{border-right:55px solid #8dceb6;border-top:30px solid transparent;border-bottom:30px solid transparent}
 .homeSection3 .ourWorkGallery{padding-right:14vw}
 .homeSection3 h2.wp-block-heading{font-size:8vw !important}
@@ -2205,7 +2209,8 @@ section.service-title-block .flexwrap .square.square-1 .inner span,section.servi
 .homeSection4 .wp-block-columns .leftCol .inner h3{font-size:3rem}
 .homeSection4 .wp-block-columns .leftCol{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .homeSection4 .wp-block-columns .rightCol .group{margin-bottom:0;margin-top:0}
-.homeSection4 .wp-block-columns .rightCol .group .rounded-top,.homeSection4 .wp-block-columns .rightCol .rounded-top{width:100%;margin-bottom:20px}
+.homeSection4 .wp-block-columns .rightCol .group .rounded-top,.homeSection4 .wp-block-columns .rightCol .rounded-top{margin-bottom:20px}
+.homeSection4 .wp-block-columns .rightCol .group .rounded-top a,.homeSection4 .wp-block-columns .rightCol .rounded-top a{min-height:195px;font-size:2.2rem}
 section.services .cube{padding-left:30px;padding-right:30px}
 }@media screen and (max-width:600px){section.service-title-block .flexwrap .square .inner span{font-size:2.35rem}
 }@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}
