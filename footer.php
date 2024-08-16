@@ -20,7 +20,7 @@
 			
 				<div class="footer-contents">
 					<div>
-						<p>Bellaworks Web Design<br>436 E 36th Street<br>Charlotte, North Carolina 28205<br>P 704.375.0831<br>M info@bellaworksweb.com</p>
+						<p>Bellaworks Web Design<br>436 E 36th Street<br>Charlotte, North Carolina 28205<br>P 704.375.0831<br>E info@bellaworksweb.com</p>
 					</div>
 
 					<div>
