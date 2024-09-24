@@ -35,6 +35,10 @@ get_header(); ?>
 					$pId = get_the_ID();
 					$id = get_post_thumbnail_id($pId);
 					$iurl = get_the_post_thumbnail_url($pId, 'work');
+					$thumbnail_id = get_post_thumbnail_id( $post->ID );
+					$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+					// echo '<pre>';
+					// print_r($alt);
 					if( $i<7 ) {
 						$src = 'src';
 						$lazy = '';
@@ -63,7 +67,7 @@ get_header(); ?>
                 <h3 class="type"><?php echo $category; ?></h3>
                 <?php } ?>
 							</div>
-							<img src="<?php echo $iurl; ?>">
+							<img src="<?php echo $iurl; ?>" alt="<?php echo $alt; ?>">
 
 						</a>
 

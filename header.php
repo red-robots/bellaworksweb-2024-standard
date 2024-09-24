@@ -8,8 +8,14 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
 <script defer src="<?php bloginfo( 'template_url' ); ?>/assets/svg-with-js/js/fontawesome-all.js"></script>
 
+<link rel='stylesheet' id='wp-block-gallery-css' href='<?php bloginfo('url'); ?>/wp-includes/blocks/gallery/style.min.css?ver=6.5.2' media='all' />
+<link rel='stylesheet' id='wp-block--css' href='<?php bloginfo('template_url'); ?>/scripts-from-block.css?ver=2.0' media='all' />
+<link rel='stylesheet' id='wp-block-navigation-css' href='<?php bloginfo('url'); ?>/wp-includes/blocks/navigation/style.min.css?ver=6.5.2' media='all' />
+<link rel='stylesheet' id='wp-block-image-css' href='<?php bloginfo('url'); ?>/wp-includes/blocks/image/style.min.css?ver=6.5.2' media='all' />
+<script type="module" src="<?php bloginfo('url'); ?>/wp-includes/blocks/navigation/view.min.js?ver=6.5.2" id="@wordpress/block-library/navigation-js-module"></script>
+<link rel="modulepreload" href="<?php bloginfo('url'); ?>/wp-includes/js/dist/interactivity.min.js?ver=6.5.2" id="@wordpress/interactivity-js-modulepreload">
 <?php
-include( locate_template('scripts-from-blocks.php') );
+//include( locate_template('scripts-from-blocks.php') );
  ?>
 
 <?php wp_head(); ?>

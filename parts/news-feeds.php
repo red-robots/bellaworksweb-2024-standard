@@ -16,6 +16,7 @@ if ( $news->have_posts() ) {  $rpcount = $news->found_posts; ?>
     <?php $i=1; while ( $news->have_posts() ) : $news->the_post(); 
       $pid = get_the_ID();
       $attachment_id = get_post_thumbnail_id($pid);
+      $alt = get_post_meta($attachment_id, '_wp_attachment_image_alt', true);
       $image_src = wp_get_attachment_image_src($attachment_id,'full'); 
       $has_image = ($image_src) ? 'has-image':'no-image';
       $is_show_date = false;
@@ -25,7 +26,7 @@ if ( $news->have_posts() ) {  $rpcount = $news->found_posts; ?>
           <a href="<?php echo get_permalink($pid) ?>" class="postlink">
             <?php if($image_src) { ?>
             <figure class="featured-image">
-              <img src="<?php echo $image_src[0] ?>" alt="">
+              <img src="<?php echo $image_src[0] ?>" alt="<?php echo $alt; ?>">
             </figure>
             <?php } ?>
             <div class="titlediv">

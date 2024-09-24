@@ -92,13 +92,15 @@ get_header(); ?>
 						$name = $b['name'];
 						$pic = $b['pic'];
 						$bio = $b['bio'];
+            // echo '<pre>';
+            // print_r($pic);
 
 				 ?>
 					<div class="cube">
 						<h3><?php echo $name; ?></h3>
             <?php if( isset($pic['url']) && $pic['url'] ) { ?>
 						<div class="pic">
-							<img src="<?php echo $pic['url']; ?>">
+							<img src="<?php echo $pic['url']; ?>" alt="<?php echo $pic['alt']; ?>">
 						</div>
             <?php } ?>
 						<div class="desc">
