@@ -1818,11 +1818,11 @@ body.page, body.single {
     padding-right: 30px;
     width: 50%;
     .inner {
-      h2, h3, p {
+      h1, h2, h3, p {
         color: #FFF;
         text-align: right;
       }
-      h2 {
+      h1, h2 {
         font-weight: 600 !important;
         line-height: .9;
         font-size: 7rem;

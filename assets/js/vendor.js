@@ -12975,7 +12975,7 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
     }
     _inherits(n, _Array);
     return _createClass(n);
-  }( /*#__PURE__*/_wrapNativeSuper(Array));
+  }(/*#__PURE__*/_wrapNativeSuper(Array));
   function l() {
     var e = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
     var t = [];
@@ -13107,7 +13107,7 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
         var t = e && e.target && e.target.dom7EventData || [];
         t.indexOf(e) < 0 && t.unshift(e), a.apply(this, t);
       }
-      "function" == typeof e[1] && ((t = e[0], a = e[1], i = e[2]), s = void 0), i || (i = !1);
+      "function" == typeof e[1] && (t = e[0], a = e[1], i = e[2], s = void 0), i || (i = !1);
       var l = t.split(" ");
       var o;
       for (var _e5 = 0; _e5 < this.length; _e5 += 1) {
@@ -13136,7 +13136,7 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
         s = e[1],
         a = e[2],
         i = e[3];
-      "function" == typeof e[1] && ((t = e[0], a = e[1], i = e[2]), s = void 0), i || (i = !1);
+      "function" == typeof e[1] && (t = e[0], a = e[1], i = e[2], s = void 0), i || (i = !1);
       var r = t.split(" ");
       for (var _e8 = 0; _e8 < r.length; _e8 += 1) {
         var _t8 = r[_e8];
