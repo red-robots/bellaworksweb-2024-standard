@@ -1666,6 +1666,7 @@ header.wp-block-template-part button[aria-label="Open menu"] span.bar:after{top:
 .row7_column_content .infobox a:hover,.row7_column_content .infobox a:focus{-webkit-transform:perspective(20em) rotateY(-15deg);transform:perspective(20em) rotateY(-15deg)}
 .row7_column_content .infobox:first-child a:hover,.row7_column_content .infobox:first-child a:focus{-webkit-transform:perspective(20em) rotateY(15deg);transform:perspective(20em) rotateY(15deg)}
 .row7_column_content .buttondiv{margin-top:20px;text-align:center}
+h1.page-default{width:100%;text-align:center;color:#223e60}
 .clear{clear:both}
 .global-wrapper{width:100%;margin:0 auto;position:relative;padding-left:5vw;padding-right:5vw}
 .padding-home{padding:0 40px !important}
@@ -1684,6 +1685,8 @@ a.cta{font-size:16px;font-weight:700;letter-spacing:.05em;padding:10px 30px 12px
 a.cta:hover{background-color:#d1d374;color:#223e60}
 .address{text-align:left}
 .pagewrapper{width:100%;clear:both;padding-top:110px}
+.pagewrapper.default{max-width:800px;margin:0 auto}
+.pagewrapper h1.default{text-align:center}
 .pagewrapper h3.type{margin:0;color:#FFF;font-size:2.65rem;line-height:1.2;letter-spacing:.02em}
 body.single .pagewrapper{background-color:#8dceb6}
 body.single-service .pagewrapper,body.single-post .pagewrapper{background-color:#fff}

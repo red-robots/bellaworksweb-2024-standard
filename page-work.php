@@ -14,11 +14,12 @@ get_header(); ?>
         <div class="pagewrapper">
 
 			<?php
-			// while ( have_posts() ) : the_post();
+			while ( have_posts() ) : the_post(); ?>
+				<h1 class="page-default"><?php the_title(); ?></h1>
 
-			// 	the_content();
+				<?php the_content();
 
-			// endwhile; // End of the loop.
+			endwhile; // End of the loop.
 			?>
 
 			<?php

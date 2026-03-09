@@ -16,11 +16,11 @@ get_header(); ?>
 
 <div class="wp-site-blocks">
 	<main class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
-    <div class="pagewrapper">
+    <div class="pagewrapper default">
 
-		<?php while ( have_posts() ) : the_post();
-
-			the_content();
+		<?php while ( have_posts() ) : the_post(); ?>
+			<h1 class="default"><?php the_title(); ?></h1>
+			<?php the_content();
 
 		  endwhile; // End of the loop.?>
     
