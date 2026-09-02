@@ -14,12 +14,23 @@
  * @return array
  */
 
-// Gogole actions for SEO
+/**
+ * GA4 key events: click_to_call on any tel: link, generate_lead when
+ * Gravity Forms form 8 (Let's do this) submits successfully.
+ */
+
+// Flag a successful submission so the next page load can report it,
+// whatever the confirmation type (message, page, or redirect).
+add_action('gform_after_submission_8', function () {
+  setcookie('bw_lead', '1', time() + 300, '/');
+});
+
 add_action('wp_footer', function () { ?>
 <script>
 (function () {
   if (typeof gtag !== 'function') return;
 
+  // Phone taps anywhere on the site.
   document.addEventListener('click', function (e) {
     var a = e.target.closest('a[href^="tel:"]');
     if (!a) return;
@@ -29,14 +40,17 @@ add_action('wp_footer', function () { ?>
     });
   });
 
-  function lead(formId) {
-    gtag('event', 'generate_lead', { form_id: String(formId), form_name: 'Lets do this' });
+  // Lead form.
+  function lead(source) {
+    gtag('event', 'generate_lead', { form_id: '8', form_name: 'Lets do this', source: source });
   }
   if (window.jQuery) {
-    jQuery(document).on('gform_confirmation_loaded', function (e, formId) { lead(formId); });
+    jQuery(document).on('gform_confirmation_loaded', function () { lead('ajax'); });
   }
-  var conf = document.querySelector('.gform_confirmation_message');
-  if (conf) lead((conf.id || '').replace('gform_confirmation_message_', '') || 'unknown');
+  if (/(^|; )bw_lead=1/.test(document.cookie)) {
+    lead('reload');
+    document.cookie = 'bw_lead=; Max-Age=0; path=/';
+  }
 })();
 </script>
 <?php }, 100);
