@@ -21,7 +21,7 @@ const injectChanges = true;
 
 // >>>>> Style options.
 // Path to main .scss file.
-const styleSRC = './assets/sass/style.scss';
+const styleSRC = './assets/css/style.scss';
 
 // Path to place the compiled CSS file. Default set to root folder.
 const styleDestination = './';
@@ -65,7 +65,7 @@ const imgDST = './assets/img/';
 
 // >>>>> Watch files paths.
 // Path to all *.scss files inside css folder and inside them.
-const watchStyles = './assets/sass/**/*.scss';
+const watchStyles = './assets/css/**/*.scss';
 
 // Path to all vendor JS files.
 const watchJsVendor = './assets/js/vendor/*.js';

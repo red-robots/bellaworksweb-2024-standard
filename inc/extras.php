@@ -14,6 +14,35 @@
  * @return array
  */
 
+// Gogole actions for SEO
+add_action('wp_footer', function () { ?>
+<script>
+(function () {
+  if (typeof gtag !== 'function') return;
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="tel:"]');
+    if (!a) return;
+    gtag('event', 'click_to_call', {
+      phone_number: a.getAttribute('href').replace('tel:', ''),
+      link_text: a.textContent.trim()
+    });
+  });
+
+  function lead(formId) {
+    gtag('event', 'generate_lead', { form_id: String(formId), form_name: 'Lets do this' });
+  }
+  if (window.jQuery) {
+    jQuery(document).on('gform_confirmation_loaded', function (e, formId) { lead(formId); });
+  }
+  var conf = document.querySelector('.gform_confirmation_message');
+  if (conf) lead((conf.id || '').replace('gform_confirmation_message_', '') || 'unknown');
+})();
+</script>
+<?php }, 100);
+
+
+
 $date = new DateTime();
 $date->setTimezone(new DateTimeZone('America/Detroit'));
 $fdate = $date->format('Y-m-d H:i:s');
